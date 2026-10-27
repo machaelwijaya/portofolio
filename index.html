@@ -1,0 +1,3472 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Machael Wijaya, S.Kom. | Digital Solutions Specialist</title>
+  <meta name="description" content="Portofolio resmi Machael Wijaya, S.Kom. — Digital Solutions Specialist di bidang Web Development, Accounting & Taxation, Digital Marketing, SEO, System Analysis, dan AI Prompt Engineering." />
+  <meta name="author" content="Machael Wijaya, S.Kom." />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Machael Wijaya, S.Kom. | Digital Solutions Specialist" />
+  <meta property="og:description" content="Solusi Tepat, Kerja Berkualitas, Bisnis Lebih Berkembang. Jelajahi portofolio, layanan profesional, dan pengalaman Machael Wijaya, S.Kom." />
+  <meta property="og:locale" content="id_ID" />
+
+  <!-- Favicon SVG Inline -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233B82F6'/%3E%3Cstop offset='100%25' stop-color='%2338BDF8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='%23071120'/%3E%3Crect x='4' y='4' width='92' height='92' rx='18' fill='none' stroke='url(%23g)' stroke-width='4'/%3E%3Ctext x='50' y='65' font-family='sans-serif' font-size='44' font-weight='800' fill='%23F8FAFC' text-anchor='middle'%3EMW%3C/text%3E%3C/svg%3E" />
+
+  <!-- Google Fonts: Space Grotesk & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Schema.org Structured Data (Person) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Machael Wijaya, S.Kom.",
+    "jobTitle": "Digital Solutions Specialist",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bekasi",
+      "addressRegion": "Jawa Barat",
+      "addressCountry": "ID"
+    },
+    "email": "mailto:machael.wijaya@alumni.rosma.ac.id",
+    "sameAs": [
+      "https://www.instagram.com/mcalls__/"
+    ]
+  }
+  </script>
+
+  <!--
+  ==============================================================================
+  PANDUAN KONFIGURASI INTERNAL & EKSTERNAL (DOKUMENTASI DALAM 1 FILE)
+  ==============================================================================
+  1. CARA MENGGANTI FOTO PROFIL, CV, & GAMBAR PROYEK:
+     - Gulir ke bagian <script> di bawah dan temukan objek `SITE_CONFIG`.
+     - Tempelkan tautan berbagi Google Drive Anda (format "Anyone with the link"
+       atau ID file) pada `profileImage`, `cvUrl`, `certificate.image`, atau
+       pada masing-masing item di dalam array `projects`.
+     - Sistem secara otomatis mengubah tautan berbagi Google Drive menjadi URL
+       stream gambar (`https://drive.google.com/thumbnail?id=FILE_ID&sz=w1600`)
+       agar kompatibel ditampilkan langsung di tag <img>.
+
+  2. CARA MENAMBAHKAN PROYEK BARU:
+     - Tambahkan objek baru ke dalam `SITE_CONFIG.projects` mengikuti format yang ada.
+     - Pilih kategori dari: 'web', 'accounting', 'marketing'.
+
+  3. CARA MENGUBAH WARNA TEMA:
+     - Edit variabel CSS di dalam `:root` dan `[data-theme="light"]` di bawah ini.
+
+  4. CARA MENGAKTIFKAN / MENONAKTIFKAN EFEK 3D:
+     - Ubah nilai `enable3D: true` menjadi `false` di dalam `SITE_CONFIG.settings`.
+
+  5. PANDUAN ROBOTS.TXT & SITEMAP.XML (JIKA HOSTING MENDUKUNG):
+     - robots.txt:
+       User-agent: *
+       Allow: /
+       Sitemap: https://domain-anda.com/sitemap.xml
+  ==============================================================================
+  -->
+
+  <style>
+    /* ==========================================================================
+       1. CSS VARIABLES & THEME PALETTE
+       ========================================================================== */
+    :root {
+      --bg-primary: #071120;
+      --bg-secondary: #0B1728;
+      --bg-card: rgba(11, 23, 40, 0.68);
+      --bg-card-hover: rgba(17, 34, 58, 0.85);
+      --bg-glass: rgba(7, 17, 32, 0.78);
+      --text-primary: #F8FAFC;
+      --text-secondary: #94A3B8;
+      --text-muted: #64748B;
+      --accent-blue: #3B82F6;
+      --accent-cyan: #38BDF8;
+      --accent-gradient: linear-gradient(135deg, #3B82F6 0%, #38BDF8 100%);
+      --border-color: rgba(56, 189, 248, 0.16);
+      --border-hover: rgba(56, 189, 248, 0.45);
+      --glow-blue: 0 0 28px rgba(59, 130, 246, 0.35);
+      --glow-cyan: 0 0 25px rgba(56, 189, 248, 0.3);
+      --shadow-card: 0 18px 40px -15px rgba(0, 0, 0, 0.6);
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --radius-sm: 10px;
+      --font-heading: 'Space Grotesk', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --transition: all 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    [data-theme="light"] {
+      --bg-primary: #F1F5F9;
+      --bg-secondary: #E2E8F0;
+      --bg-card: rgba(255, 255, 255, 0.85);
+      --bg-card-hover: rgba(255, 255, 255, 0.98);
+      --bg-glass: rgba(248, 250, 252, 0.85);
+      --text-primary: #0F172A;
+      --text-secondary: #334155;
+      --text-muted: #64748B;
+      --accent-blue: #2563EB;
+      --accent-cyan: #0284C7;
+      --accent-gradient: linear-gradient(135deg, #2563EB 0%, #0284C7 100%);
+      --border-color: rgba(37, 99, 235, 0.15);
+      --border-hover: rgba(37, 99, 235, 0.45);
+      --glow-blue: 0 10px 25px rgba(37, 99, 235, 0.2);
+      --glow-cyan: 0 8px 20px rgba(2, 132, 199, 0.18);
+      --shadow-card: 0 14px 32px -10px rgba(15, 23, 42, 0.08);
+    }
+
+    /* ==========================================================================
+       2. RESET & BASE STYLES
+       ========================================================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 88px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.65;
+      overflow-x: hidden;
+      transition: background-color 0.35s ease, color 0.35s ease;
+      position: relative;
+    }
+
+    /* Futuristic Ambient Grid & Glow Background */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image: 
+        radial-gradient(circle at 15% 15%, rgba(59, 130, 246, 0.12), transparent 35%),
+        radial-gradient(circle at 85% 80%, rgba(56, 189, 248, 0.10), transparent 35%),
+        linear-gradient(rgba(56, 189, 248, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(56, 189, 248, 0.03) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 48px 48px, 48px 48px;
+      pointer-events: none;
+      z-index: -2;
+    }
+
+    /* 3D Canvas Container */
+    #bg-canvas {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      pointer-events: none;
+      opacity: 0.75;
+    }
+
+    /* Custom Cursor Glow (Desktop Only) */
+    .cursor-glow {
+      position: fixed;
+      width: 340px;
+      height: 340px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(56, 189, 248, 0.11) 0%, rgba(59, 130, 246, 0.04) 45%, transparent 70%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      z-index: 0;
+      transition: opacity 0.3s ease;
+      display: none;
+    }
+    @media (pointer: fine) {
+      .cursor-glow { display: block; }
+    }
+
+    /* Scroll Progress Bar */
+    #scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      width: 0%;
+      background: var(--accent-gradient);
+      box-shadow: var(--glow-cyan);
+      z-index: 1001;
+      transition: width 0.1s linear;
+    }
+
+    /* Focus Accessibility */
+    :focus-visible {
+      outline: 2px solid var(--accent-cyan);
+      outline-offset: 3px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    ul { list-style: none; }
+    img { max-width: 100%; display: block; }
+    button, input, select, textarea {
+      font-family: inherit;
+      color: inherit;
+    }
+
+    /* ==========================================================================
+       3. LAYOUT & REUSABLE COMPONENTS
+       ========================================================================== */
+    .container {
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 2;
+    }
+
+    section {
+      padding: 100px 0;
+      position: relative;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 60px;
+    }
+
+    .section-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent-cyan);
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid var(--border-color);
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: clamp(1.9rem, 3.5vw, 2.75rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      letter-spacing: -0.02em;
+    }
+
+    .gradient-text {
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .section-subtitle {
+      color: var(--text-secondary);
+      font-size: 1.02rem;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 13px 24px;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      font-size: 0.94rem;
+      cursor: pointer;
+      transition: var(--transition);
+      border: 1px solid transparent;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--accent-gradient);
+      color: #FFFFFF;
+      box-shadow: var(--glow-blue);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(56, 189, 248, 0.45);
+    }
+
+    .btn-outline {
+      background: rgba(56, 189, 248, 0.06);
+      color: var(--text-primary);
+      border-color: var(--border-hover);
+      backdrop-filter: blur(10px);
+    }
+
+    .btn-outline:hover {
+      background: rgba(56, 189, 248, 0.16);
+      border-color: var(--accent-cyan);
+      transform: translateY(-3px);
+      box-shadow: var(--glow-cyan);
+    }
+
+    .btn-sm {
+      padding: 9px 16px;
+      font-size: 0.85rem;
+    }
+
+    /* Glass Card */
+    .glass-card {
+      background: var(--bg-card);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-card);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .glass-card:hover {
+      border-color: var(--border-hover);
+      background: var(--bg-card-hover);
+      box-shadow: var(--shadow-card), var(--glow-blue);
+    }
+
+    /* ==========================================================================
+       4. NAVBAR
+       ========================================================================== */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+      padding: 18px 0;
+      transition: var(--transition);
+    }
+
+    .navbar.scrolled {
+      padding: 12px 0;
+      background: var(--bg-glass);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border-color);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 1.15rem;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 11px;
+      background: var(--accent-gradient);
+      display: grid;
+      place-items: center;
+      color: #fff;
+      font-weight: 800;
+      font-size: 1rem;
+      box-shadow: var(--glow-blue);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-link {
+      padding: 8px 13px;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      transition: var(--transition);
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--text-primary);
+      background: rgba(56, 189, 248, 0.12);
+    }
+
+    .nav-link.active {
+      color: var(--accent-cyan);
+      font-weight: 600;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .icon-btn {
+      height: 38px;
+      padding: 0 12px;
+      border-radius: 9px;
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid var(--border-color);
+      color: var(--text-primary);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .icon-btn:hover {
+      border-color: var(--accent-cyan);
+      background: rgba(56, 189, 248, 0.18);
+    }
+
+    .hamburger {
+      display: none;
+      width: 40px;
+      height: 38px;
+      padding: 0;
+    }
+
+    /* ==========================================================================
+       5. HERO SECTION
+       ========================================================================== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 120px;
+      padding-bottom: 80px;
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 7px 16px;
+      border-radius: 999px;
+      background: rgba(59, 130, 246, 0.12);
+      border: 1px solid var(--border-hover);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--accent-cyan);
+      margin-bottom: 20px;
+    }
+
+    .status-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #22C55E;
+      box-shadow: 0 0 12px #22C55E;
+      animation: pulseDot 2s infinite;
+    }
+
+    @keyframes pulseDot {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.35); opacity: 0.65; }
+    }
+
+    .hero-name {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 8px;
+    }
+
+    .hero-title {
+      font-family: var(--font-heading);
+      font-size: clamp(2.4rem, 4.8vw, 4.1rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 20px;
+    }
+
+    .hero-slogan {
+      font-family: var(--font-heading);
+      font-size: 1.12rem;
+      font-weight: 600;
+      color: var(--accent-cyan);
+      margin-bottom: 14px;
+    }
+
+    .hero-desc {
+      font-size: 1.06rem;
+      color: var(--text-secondary);
+      max-width: 580px;
+      margin-bottom: 24px;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-bottom: 32px;
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+    }
+
+    .hero-meta-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 32px;
+    }
+
+    .hero-socials {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .social-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 11px;
+      display: grid;
+      place-items: center;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-secondary);
+      transition: var(--transition);
+    }
+
+    .social-icon:hover {
+      color: #fff;
+      background: var(--accent-gradient);
+      border-color: transparent;
+      transform: translateY(-3px);
+      box-shadow: var(--glow-blue);
+    }
+
+    /* Hero Right: 3D Perspective Profile Frame */
+    .hero-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      perspective: 1100px;
+    }
+
+    .profile-3d-stage {
+      position: relative;
+      width: 100%;
+      max-width: 400px;
+      aspect-ratio: 4 / 4.7;
+      transform-style: preserve-3d;
+      transition: transform 0.2s ease-out;
+    }
+
+    /* Futuristic Rotating Rings */
+    .orbital-ring {
+      position: absolute;
+      inset: -20px;
+      border-radius: 30px;
+      border: 1px dashed rgba(56, 189, 248, 0.35);
+      transform: translateZ(-30px) rotate(-6deg);
+      pointer-events: none;
+      animation: floatSlow 7s ease-in-out infinite;
+    }
+
+    .orbital-ring-2 {
+      position: absolute;
+      inset: -10px;
+      border-radius: 26px;
+      border: 1px solid rgba(59, 130, 246, 0.25);
+      transform: translateZ(-15px) rotate(4deg);
+      pointer-events: none;
+    }
+
+    @keyframes floatSlow {
+      0%, 100% { transform: translateZ(-30px) rotate(-6deg) translateY(0px); }
+      50% { transform: translateZ(-30px) rotate(-3deg) translateY(-10px); }
+    }
+
+    .profile-frame {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      border-radius: 24px;
+      background: linear-gradient(160deg, rgba(59, 130, 246, 0.22), rgba(11, 23, 40, 0.9));
+      border: 1.5px solid rgba(56, 189, 248, 0.45);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.65), var(--glow-blue);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: translateZ(20px);
+    }
+
+    .profile-frame::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(7, 17, 32, 0.85) 0%, transparent 45%);
+      pointer-events: none;
+    }
+
+    .profile-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      transition: transform 0.5s ease;
+    }
+
+    /* Clean Placeholder when Google Drive photo is not yet configured */
+    .profile-placeholder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 32px;
+      color: var(--text-primary);
+      z-index: 2;
+    }
+
+    .placeholder-avatar {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background: var(--accent-gradient);
+      display: grid;
+      place-items: center;
+      font-family: var(--font-heading);
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: #fff;
+      box-shadow: var(--glow-cyan);
+      margin-bottom: 18px;
+    }
+
+    /* Floating 3D Badges around Photo */
+    .floating-badge {
+      position: absolute;
+      padding: 10px 16px;
+      border-radius: 14px;
+      background: var(--bg-glass);
+      backdrop-filter: blur(14px);
+      border: 1px solid var(--border-hover);
+      box-shadow: var(--shadow-card);
+      font-size: 0.8rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      transform: translateZ(50px);
+      z-index: 5;
+    }
+
+    .badge-top-right {
+      top: 18px;
+      right: -18px;
+    }
+
+    .badge-bottom-left {
+      bottom: 22px;
+      left: -20px;
+    }
+
+    /* ==========================================================================
+       6. ABOUT ME & VALUES
+       ========================================================================== */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 36px;
+      align-items: stretch;
+    }
+
+    .about-story {
+      padding: 36px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 18px;
+    }
+
+    .about-story p {
+      color: var(--text-secondary);
+      font-size: 1rem;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .value-card {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .value-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: rgba(56, 189, 248, 0.12);
+      color: var(--accent-cyan);
+      display: grid;
+      place-items: center;
+    }
+
+    .value-title {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.05rem;
+    }
+
+    .value-desc {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+    }
+
+    /* ==========================================================================
+       7. SKILLS & SOFT SKILLS
+       ========================================================================== */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 24px;
+    }
+
+    .skill-category-card {
+      padding: 28px;
+    }
+
+    .skill-cat-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+
+    .skill-cat-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      background: var(--accent-gradient);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      box-shadow: var(--glow-blue);
+    }
+
+    .skill-cat-title {
+      font-family: var(--font-heading);
+      font-size: 1.18rem;
+      font-weight: 700;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+    }
+
+    .skill-tag {
+      padding: 7px 13px;
+      border-radius: 8px;
+      font-size: 0.84rem;
+      font-weight: 500;
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid var(--border-color);
+      color: var(--text-primary);
+      transition: var(--transition);
+    }
+
+    .skill-tag:hover {
+      border-color: var(--accent-cyan);
+      background: rgba(56, 189, 248, 0.18);
+      transform: translateY(-2px);
+    }
+
+    .soft-skills-box {
+      margin-top: 40px;
+      padding: 32px;
+      text-align: center;
+    }
+
+    .soft-skills-box h3 {
+      font-family: var(--font-heading);
+      font-size: 1.35rem;
+      margin-bottom: 20px;
+    }
+
+    .soft-tags-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    /* ==========================================================================
+       8. SERVICES SECTION
+       ========================================================================== */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 26px;
+    }
+
+    .service-card {
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 22px;
+    }
+
+    .service-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: rgba(59, 130, 246, 0.15);
+      border: 1px solid var(--border-hover);
+      color: var(--accent-cyan);
+      display: grid;
+      place-items: center;
+      margin-bottom: 16px;
+    }
+
+    .service-title {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .service-desc {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+    }
+
+    .service-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .service-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+    }
+
+    .service-list li::before {
+      content: "▹";
+      color: var(--accent-cyan);
+      font-weight: 700;
+    }
+
+    .service-benefit {
+      padding: 12px 14px;
+      border-radius: 10px;
+      background: rgba(56, 189, 248, 0.07);
+      border-left: 3px solid var(--accent-cyan);
+      font-size: 0.83rem;
+      color: var(--text-primary);
+    }
+
+    /* ==========================================================================
+       9. TIMELINE (EXPERIENCE & EDUCATION)
+       ========================================================================== */
+    .timeline {
+      position: relative;
+      max-width: 920px;
+      margin: 0 auto;
+      padding-left: 32px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      top: 8px;
+      bottom: 8px;
+      left: 7px;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--accent-blue), var(--accent-cyan), transparent);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 32px;
+    }
+
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: -32px;
+      top: 26px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--bg-primary);
+      border: 3px solid var(--accent-cyan);
+      box-shadow: var(--glow-cyan);
+    }
+
+    .timeline-card {
+      padding: 28px 32px;
+    }
+
+    .timeline-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .timeline-role {
+      font-family: var(--font-heading);
+      font-size: 1.22rem;
+      font-weight: 700;
+    }
+
+    .timeline-company {
+      color: var(--accent-cyan);
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .timeline-period {
+      padding: 5px 13px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      background: rgba(59, 130, 246, 0.14);
+      border: 1px solid var(--border-color);
+      color: var(--accent-cyan);
+    }
+
+    .timeline-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .timeline-list li {
+      position: relative;
+      padding-left: 18px;
+      font-size: 0.93rem;
+      color: var(--text-secondary);
+    }
+
+    .timeline-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--accent-cyan);
+      font-weight: bold;
+    }
+
+    /* ==========================================================================
+       10. PORTFOLIO & GOOGLE DRIVE PROJECTS
+       ========================================================================== */
+    .portfolio-filters {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 42px;
+    }
+
+    .filter-btn {
+      padding: 9px 18px;
+      border-radius: 999px;
+      font-size: 0.86rem;
+      font-weight: 600;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--accent-gradient);
+      color: #fff;
+      border-color: transparent;
+      box-shadow: var(--glow-blue);
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 28px;
+    }
+
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .project-thumb {
+      position: relative;
+      height: 220px;
+      background: linear-gradient(135deg, #0B1728 0%, #1E293B 100%);
+      overflow: hidden;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .project-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .project-card:hover .project-thumb img {
+      transform: scale(1.06);
+    }
+
+    .demo-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: rgba(7, 17, 32, 0.88);
+      color: var(--accent-cyan);
+      border: 1px solid var(--accent-cyan);
+      backdrop-filter: blur(8px);
+      z-index: 3;
+    }
+
+    .project-fallback {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      text-align: center;
+      background: radial-gradient(circle at 50% 30%, rgba(59, 130, 246, 0.24), rgba(11, 23, 40, 0.95));
+    }
+
+    .project-body {
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .project-cat {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-cyan);
+      margin-bottom: 6px;
+    }
+
+    .project-title {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .project-desc {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      margin-bottom: 14px;
+    }
+
+    .project-tools {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 8px;
+    }
+
+    .tool-pill {
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: rgba(56, 189, 248, 0.09);
+      color: var(--text-secondary);
+      border: 1px solid var(--border-color);
+    }
+
+    .project-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border-color);
+    }
+
+    /* ==========================================================================
+       11. EDUCATION, CERTIFICATION & ORGANIZATION GRID
+       ========================================================================== */
+    .credentials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+      gap: 28px;
+    }
+
+    .cred-card {
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .cert-preview {
+      width: 100%;
+      height: 180px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+      background: rgba(7, 17, 32, 0.55);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .cert-preview img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background-color: var(--bg-card);
+      padding: 8px;
+    }
+
+    /* ==========================================================================
+       12. CONTACT SECTION & CTA
+       ========================================================================== */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 36px;
+    }
+
+    .contact-info-card {
+      padding: 34px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .contact-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 11px;
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid var(--border-color);
+      color: var(--accent-cyan);
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+    }
+
+    .contact-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .contact-value {
+      font-weight: 600;
+      font-size: 0.96rem;
+      word-break: break-all;
+    }
+
+    .contact-quick-btns {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    .contact-form-card {
+      padding: 36px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.86rem;
+      font-weight: 600;
+      margin-bottom: 7px;
+      color: var(--text-primary);
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 12px 15px;
+      border-radius: 10px;
+      background: rgba(7, 17, 32, 0.55);
+      border: 1px solid var(--border-color);
+      color: var(--text-primary);
+      font-size: 0.94rem;
+      transition: var(--transition);
+    }
+
+    [data-theme="light"] .form-control {
+      background: #F8FAFC;
+    }
+
+    .form-control:focus {
+      border-color: var(--accent-cyan);
+      box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.18);
+      outline: none;
+    }
+
+    textarea.form-control {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .form-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    /* Call To Action Banner */
+    .cta-banner {
+      padding: 56px 40px;
+      text-align: center;
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.18) 0%, rgba(56, 189, 248, 0.08) 100%);
+      border: 1px solid var(--border-hover);
+      border-radius: 26px;
+      margin-bottom: 80px;
+    }
+
+    .cta-banner h2 {
+      font-family: var(--font-heading);
+      font-size: clamp(1.6rem, 3vw, 2.3rem);
+      max-width: 720px;
+      margin: 0 auto 26px;
+    }
+
+    /* ==========================================================================
+       13. FOOTER & BACK TO TOP
+       ========================================================================== */
+    .footer {
+      border-top: 1px solid var(--border-color);
+      padding: 56px 0 36px;
+      background: var(--bg-secondary);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr 1fr;
+      gap: 36px;
+      margin-bottom: 40px;
+    }
+
+    .footer-bottom {
+      padding-top: 24px;
+      border-top: 1px solid var(--border-color);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      font-size: 0.86rem;
+      color: var(--text-secondary);
+    }
+
+    #back-to-top {
+      position: fixed;
+      bottom: 26px;
+      right: 26px;
+      width: 46px;
+      height: 46px;
+      border-radius: 13px;
+      background: var(--accent-gradient);
+      color: #fff;
+      border: none;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      box-shadow: var(--glow-blue);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(15px);
+      transition: var(--transition);
+      z-index: 990;
+    }
+
+    #back-to-top.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    /* ==========================================================================
+       14. MODAL (PROJECT DETAIL & LIGHTBOX)
+       ========================================================================== */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(4, 10, 20, 0.82);
+      backdrop-filter: blur(10px);
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+    }
+
+    .modal-backdrop.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-content {
+      width: 100%;
+      max-width: 780px;
+      max-height: 90vh;
+      overflow-y: auto;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-hover);
+      border-radius: var(--radius-lg);
+      box-shadow: 0 25px 70px rgba(0, 0, 0, 0.75);
+      padding: 32px;
+      position: relative;
+      transform: scale(0.95);
+      transition: var(--transition);
+    }
+
+    .modal-backdrop.open .modal-content {
+      transform: scale(1);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid var(--border-color);
+      color: var(--text-primary);
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+    }
+
+    .modal-media {
+      width: 100%;
+      max-height: 380px;
+      border-radius: 14px;
+      overflow: hidden;
+      margin-bottom: 22px;
+      border: 1px solid var(--border-color);
+      background: #071120;
+    }
+
+    .modal-media img {
+      width: 100%;
+      height: 100%;
+      max-height: 380px;
+      object-fit: contain;
+    }
+
+    /* ==========================================================================
+       15. SCROLL REVEAL & RESPONSIVE DESIGN
+       ========================================================================== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.65s ease, transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      .reveal { opacity: 1; transform: none; }
+    }
+
+    @media (max-width: 992px) {
+      .hero-grid,
+      .about-grid,
+      .contact-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-visual {
+        order: -1;
+        margin-bottom: 20px;
+      }
+
+      .profile-3d-stage {
+        max-width: 320px;
+      }
+
+      .nav-links {
+        position: fixed;
+        top: 70px;
+        left: 16px;
+        right: 16px;
+        background: var(--bg-secondary);
+        border: 1px solid var(--border-hover);
+        border-radius: 16px;
+        padding: 20px;
+        flex-direction: column;
+        align-items: stretch;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: var(--transition);
+      }
+
+      .nav-links.open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      .hamburger {
+        display: inline-flex;
+      }
+    }
+
+    @media (max-width: 576px) {
+      section { padding: 72px 0; }
+      .values-grid,
+      .contact-quick-btns {
+        grid-template-columns: 1fr;
+      }
+      .skills-grid,
+      .services-grid,
+      .portfolio-grid,
+      .credentials-grid {
+        grid-template-columns: 1fr;
+      }
+      .badge-top-right, .badge-bottom-left {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Custom Cursor Glow -->
+  <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
+
+  <!-- 3D Futuristic Particle Background (Three.js + CSS Fallback) -->
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <!-- ========================================================================
+       NAVIGATION BAR
+       ======================================================================== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="brand" aria-label="Machael Wijaya Home">
+        <span class="brand-logo">MAW</span>
+        <span>Machael Wijaya<span class="gradient-text">, S.Kom.</span></span>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#home" class="nav-link active" data-i18n="nav.home">Home</a></li>
+          <li><a href="#about" class="nav-link" data-i18n="nav.about">About</a></li>
+          <li><a href="#skills" class="nav-link" data-i18n="nav.skills">Skills</a></li>
+          <li><a href="#services" class="nav-link" data-i18n="nav.services">Services</a></li>
+          <li><a href="#experience" class="nav-link" data-i18n="nav.experience">Experience</a></li>
+          <li><a href="#portfolio" class="nav-link" data-i18n="nav.portfolio">Portfolio</a></li>
+          <li><a href="#education" class="nav-link" data-i18n="nav.education">Education</a></li>
+          <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="lang-toggle" type="button" aria-label="Ganti Bahasa ID/EN">
+          <span id="lang-label">ID</span>
+        </button>
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Ganti Mode Gelap atau Terang">
+          <span id="theme-icon">☀️</span>
+        </button>
+        <button class="icon-btn hamburger" id="menu-toggle" type="button" aria-label="Buka Menu Navigasi" aria-expanded="false">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================================================================
+         HERO SECTION
+         ====================================================================== -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <!-- Left Column -->
+        <div class="hero-content reveal">
+          <div class="status-pill">
+            <span class="status-dot"></span>
+            <span data-i18n="hero.badge">DIGITAL SOLUTIONS SPECIALIST</span>
+          </div>
+
+          <p class="hero-name">Machael Wijaya, S.Kom.</p>
+          <h1 class="hero-title">
+            Turning Ideas Into <span class="gradient-text">Digital Solutions.</span>
+          </h1>
+          <p class="hero-slogan" data-i18n="hero.slogan">
+            “Solusi Tepat, Kerja Berkualitas, Bisnis Lebih Berkembang.”
+          </p>
+          <p class="hero-desc" data-i18n="hero.desc">
+            Saya membantu mengembangkan solusi digital melalui teknologi, analisis, kreativitas, dan pemahaman bisnis.
+          </p>
+
+          <div class="hero-meta">
+            <span class="hero-meta-item">
+              📍 <span data-i18n="hero.location">Bekasi, Jawa Barat, Indonesia</span>
+            </span>
+            <span class="hero-meta-item">
+              💼 <span data-i18n="hero.status">Terbuka untuk Kerja, Freelance, Remote & Kolaborasi Bisnis</span>
+            </span>
+          </div>
+
+          <div class="hero-cta">
+            <a href="#portfolio" class="btn btn-primary">
+              <span data-i18n="hero.btnPortfolio">Lihat Portofolio</span> →
+            </a>
+            <a href="#contact" class="btn btn-outline" data-i18n="hero.btnContact">
+              Hubungi Saya
+            </a>
+            <a href="#" id="hero-cv-btn" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+              📄 <span data-i18n="hero.btnCv">Unduh CV</span>
+            </a>
+          </div>
+
+          <div class="hero-socials">
+            <a href="#" id="social-wa" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.126.556 4.124 1.529 5.855l-1.529 5.581 5.729-1.503c1.694.909 3.631 1.427 5.691 1.427 6.627 0 12-5.373 12-12s-5.373-11.36-11.42-11.36z"/></svg>
+            </a>
+            <a href="#" id="social-ig" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="#" id="social-email" class="social-icon" aria-label="Kirim Email">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: 3D Parallax Frame -->
+        <div class="hero-visual reveal">
+          <div class="profile-3d-stage" id="profile-stage">
+            <div class="orbital-ring" aria-hidden="true"></div>
+            <div class="orbital-ring-2" aria-hidden="true"></div>
+
+            <div class="floating-badge badge-top-right">
+              <span>⚡</span> <span data-i18n="hero.float1">IT • Tax • Digital</span>
+            </div>
+
+            <div class="floating-badge badge-bottom-left">
+              <span>🎯</span> <span data-i18n="hero.float2">Machael Wijaya, S.Kom.</span>
+            </div>
+
+            <div class="profile-frame" id="profile-frame-container">
+              <!-- Diisi otomatis dari SITE_CONFIG.profileImage -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         ABOUT ME SECTION
+         ====================================================================== -->
+    <section id="about">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-badge" data-i18n="about.badge">TENTANG SAYA</span>
+          <h2 class="section-title" data-i18n="about.title">Profil & Nilai Profesional</h2>
+          <p class="section-subtitle" data-i18n="about.subtitle">
+            Menggabungkan keahlian teknologi informasi, akuntansi & perpajakan, serta pemasaran digital untuk menghadirkan solusi bisnis yang terukur.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="glass-card about-story reveal">
+            <p data-i18n="about.p1">
+              Saya adalah profesional yang memiliki ketertarikan dan pengalaman lintas bidang dalam teknologi informasi, pengembangan website, pemrograman, akuntansi, perpajakan, digital marketing, SEO, analisis sistem, dan AI Prompt Engineering.
+            </p>
+            <p data-i18n="about.p2">
+              Saya senang mempelajari teknologi baru, menganalisis permasalahan, dan menciptakan solusi yang efektif serta inovatif untuk kebutuhan bisnis. Dengan menggabungkan kemampuan teknis dan pemahaman proses bisnis, saya berupaya membantu pekerjaan menjadi lebih terstruktur, efisien, dan bernilai.
+            </p>
+            <p data-i18n="about.p3">
+              Melalui website ini, saya menampilkan perjalanan profesional, keterampilan, pengalaman, dan berbagai proyek sebagai representasi kemampuan serta komitmen saya terhadap pembelajaran berkelanjutan.
+            </p>
+          </div>
+
+          <div class="values-grid reveal" id="values-container">
+            <!-- Dirender dari data bahasa -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SKILLS & COMPETENCIES SECTION
+         ====================================================================== -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-badge" data-i18n="skills.badge">KEAHLIAN & KOMPETENSI</span>
+          <h2 class="section-title" data-i18n="skills.title">Keterampilan Teknis & Tools</h2>
+          <p class="section-subtitle" data-i18n="skills.subtitle">
+            Kompetensi lintas disiplin yang mendukung pengembangan sistem, pengelolaan keuangan & pajak, serta pertumbuhan digital.
+          </p>
+        </div>
+
+        <div class="skills-grid" id="skills-grid">
+          <!-- Dirender secara dinamis melalui JavaScript -->
+        </div>
+
+        <div class="glass-card soft-skills-box reveal">
+          <h3 data-i18n="skills.softTitle">Soft Skills & Karakter Kerja</h3>
+          <div class="soft-tags-wrap" id="soft-skills-list">
+            <!-- Dirender secara dinamis -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SERVICES SECTION
+         ====================================================================== -->
+    <section id="services">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-badge" data-i18n="services.badge">LAYANAN PROFESIONAL</span>
+          <h2 class="section-title" data-i18n="services.title">Solusi yang Saya Tawarkan</h2>
+          <p class="section-subtitle" data-i18n="services.subtitle">
+            Pilih layanan yang sesuai dengan kebutuhan bisnis atau proyek Anda. Setiap tombol akan menghubungkan Anda langsung melalui WhatsApp.
+          </p>
+        </div>
+
+        <div class="services-grid" id="services-grid">
+          <!-- Dirender secara dinamis melalui JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         WORK EXPERIENCE SECTION
+         ====================================================================== -->
+    <section id="experience">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-badge" data-i18n="exp.badge">REKAM JEJAK</span>
+          <h2 class="section-title" data-i18n="exp.title">Pengalaman Kerja</h2>
+          <p class="section-subtitle" data-i18n="exp.subtitle">
+            Perjalanan karier dalam konsultasi akuntansi & perpajakan, pelatihan teknis-administrasi, serta dukungan operasional.
+          </p>
+        </div>
+
+        <div class="timeline" id="experience-timeline">
+          <!-- Dirender secara dinamis melalui JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         PORTFOLIO & DEMO PROJECTS SECTION
+         ====================================================================== -->
+    <section id="portfolio">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-badge" data-i18n="portfolio.badge">PORTOFOLIO & KARYA</span>
+          <h2 class="section-title" data-i18n="portfolio.title">Proyek & Konsep Demonstrasi</h2>
+          <p class="section-subtitle" data-i18n="portfolio.subtitle">
+            Menampilkan konsep proyek demonstrasi dan dokumentasi kerja yang terintegrasi dengan Google Drive.
+          </p>
+        </div>
+
+        <div class="portfolio-filters reveal" id="portfolio-filters">
+          <!-- Tombol filter dirender via JS -->
+        </div>
+
+        <div class="portfolio-grid" id="portfolio-grid">
+          <!-- Kartu proyek dirender dari SITE_CONFIG.projects -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         EDUCATION, CERTIFICATION & ORGANIZATION SECTION
+         ====================================================================== -->
+    <section id="education">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-badge" data-i18n="edu.badge">AKADEMIK & KEPEMIMPINAN</span>
+          <h2 class="section-title" data-i18n="edu.title">Pendidikan, Sertifikasi & Organisasi</h2>
+          <p class="section-subtitle" data-i18n="edu.subtitle">
+            Latar belakang akademik di bidang Sistem Informasi dan Komputerisasi Akuntansi beserta pengalaman kepemimpinan organisasi.
+          </p>
+        </div>
+
+        <div class="credentials-grid">
+          <!-- Education Timeline Card -->
+          <div class="glass-card cred-card reveal">
+            <div>
+              <span class="section-badge" data-i18n="edu.eduLabel">Pendidikan Formal</span>
+              <div id="education-list" style="margin-top: 14px; display: flex; flex-direction: column; gap: 20px;">
+                <!-- Dirender via JS -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Certification Card -->
+          <div class="glass-card cred-card reveal">
+            <div>
+              <span class="section-badge" data-i18n="edu.certLabel">Sertifikasi & Pelatihan</span>
+              <h3 class="service-title" id="cert-title" style="margin-top: 10px;">Kursus Mahir Akuntansi</h3>
+              <p class="service-desc" id="cert-meta"></p>
+              <div class="cert-preview" id="cert-preview-box">
+                <!-- Gambar sertifikat dari Google Drive atau placeholder -->
+              </div>
+            </div>
+            <div id="cert-action-wrap"></div>
+          </div>
+
+          <!-- Organization & Leadership Card -->
+          <div class="glass-card cred-card reveal">
+            <div>
+              <span class="section-badge" data-i18n="edu.orgLabel">Organisasi & Kepemimpinan</span>
+              <h3 class="service-title" style="margin-top: 10px;" data-i18n="edu.orgRole">Ketua PMK (2022–2026)</h3>
+              <p style="color: var(--accent-cyan); font-weight: 600; margin-bottom: 12px;" data-i18n="edu.orgName">
+                Persekutuan Mahasiswa Kristen (PMK)
+              </p>
+              <p class="service-desc" data-i18n="edu.orgDesc">
+                Pengalaman kepemimpinan dalam organisasi mahasiswa, koordinasi kegiatan, komunikasi tim, pengelolaan tanggung jawab, dan pengembangan kemampuan kerja sama.
+              </p>
+            </div>
+            <div class="service-benefit" data-i18n="edu.orgHighlight">
+              Fokus: Kepemimpinan Tim, Koordinasi Program & Manajemen Tanggung Jawab.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         CONTACT SECTION
+         ====================================================================== -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-badge" data-i18n="contact.badge">HUBUNGI SAYA</span>
+          <h2 class="section-title" data-i18n="contact.title">Mari Berdiskusi & Berkolaborasi</h2>
+          <p class="section-subtitle" data-i18n="contact.subtitle">
+            Terbuka untuk peluang kerja full-time, proyek freelance, remote work, maupun kolaborasi bisnis.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Details -->
+          <div class="glass-card contact-info-card reveal">
+            <div>
+              <h3 class="service-title" data-i18n="contact.infoTitle">Informasi Kontak Langsung</h3>
+              <p class="service-desc" data-i18n="contact.infoDesc">
+                Silakan hubungi saya melalui saluran resmi di bawah ini atau salin alamat email untuk korespondensi langsung.
+              </p>
+
+              <div class="contact-list" style="margin-top: 24px;">
+                <div class="contact-item">
+                  <div class="contact-icon">✉️</div>
+                  <div>
+                    <div class="contact-label">Email</div>
+                    <div class="contact-value" id="display-email">machael.wijaya@alumni.rosma.ac.id</div>
+                    <button type="button" class="btn btn-outline btn-sm" id="copy-email-btn" style="margin-top: 8px;">
+                      📋 <span data-i18n="contact.copyEmail">Salin Email</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <div class="contact-icon">💬</div>
+                  <div>
+                    <div class="contact-label">WhatsApp</div>
+                    <div class="contact-value">085158902121</div>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <div class="contact-icon">📸</div>
+                  <div>
+                    <div class="contact-label">Instagram</div>
+                    <div class="contact-value">@mcalls__</div>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <div class="contact-icon">📍</div>
+                  <div>
+                    <div class="contact-label" data-i18n="contact.locLabel">Lokasi & Ketersediaan</div>
+                    <div class="contact-value" data-i18n="contact.locValue">
+                      Bekasi, Jawa Barat, Indonesia — Freelance, Remote Work, Peluang Kerja & Kolaborasi
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-quick-btns">
+              <a href="#" id="contact-wa-btn" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                WhatsApp Me
+              </a>
+              <a href="#" id="contact-mailto-btn" class="btn btn-outline btn-sm">
+                Send Email
+              </a>
+              <a href="#" id="contact-ig-btn" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                Instagram
+              </a>
+              <a href="#" id="contact-cv-btn" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                Download CV
+              </a>
+            </div>
+          </div>
+
+          <!-- Contact Form (Redirect to WhatsApp / Email Client truthfully) -->
+          <div class="glass-card contact-form-card reveal">
+            <h3 class="service-title" data-i18n="contact.formTitle">Formulir Pesan Cepat</h3>
+            <p class="service-desc" data-i18n="contact.formNote">
+              Website ini beroperasi sebagai halaman statis. Pengiriman formulir akan diteruskan secara langsung ke WhatsApp atau aplikasi Email Anda.
+            </p>
+
+            <form id="contact-form">
+              <div class="form-group">
+                <label class="form-label" for="sender-name" data-i18n="contact.labelName">Nama Lengkap</label>
+                <input class="form-control" type="text" id="sender-name" required placeholder="Nama Anda / Perusahaan" />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="sender-email" data-i18n="contact.labelEmail">Alamat Email</label>
+                <input class="form-control" type="email" id="sender-email" required placeholder="nama@email.com" />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="sender-category" data-i18n="contact.labelCategory">Kategori Kebutuhan</label>
+                <select class="form-control" id="sender-category" required>
+                  <option value="Peluang Kerja / Rekrutmen">Peluang Kerja / Rekrutmen</option>
+                  <option value="IT Solutions & Website Development">IT Solutions & Website Development</option>
+                  <option value="Accounting & Tax Services">Accounting & Tax Services</option>
+                  <option value="Digital Marketing & SEO">Digital Marketing & SEO</option>
+                  <option value="AI & Automation">AI & Automation</option>
+                  <option value="Content Creation & Data Support">Content Creation & Data Support</option>
+                  <option value="Kolaborasi Bisnis Lainnya">Kolaborasi Bisnis Lainnya</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="sender-subject" data-i18n="contact.labelSubject">Subjek</label>
+                <input class="form-control" type="text" id="sender-subject" required placeholder="Topik diskusi" />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="sender-message" data-i18n="contact.labelMessage">Pesan</label>
+                <textarea class="form-control" id="sender-message" required placeholder="Tuliskan detail kebutuhan atau peluang kerja sama..."></textarea>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" data-send-mode="wa" class="btn btn-primary">
+                  💬 <span data-i18n="contact.sendWa">Kirim via WhatsApp</span>
+                </button>
+                <button type="button" id="send-email-form-btn" class="btn btn-outline">
+                  ✉️ <span data-i18n="contact.sendMail">Buka di Aplikasi Email</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         CALL TO ACTION BANNER
+         ====================================================================== -->
+    <div class="container">
+      <div class="cta-banner reveal">
+        <h2 data-i18n="cta.heading">
+          “Punya ide atau kebutuhan digital? Mari kita wujudkan menjadi solusi yang tepat.”
+        </h2>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 14px;">
+          <a href="#" id="cta-discuss-btn" target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-i18n="cta.btnDiscuss">
+            Diskusikan Proyek
+          </a>
+          <a href="#contact" class="btn btn-outline" data-i18n="cta.btnContact">
+            Hubungi Saya
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand" style="margin-bottom: 12px;">
+            <span class="brand-logo">MAW</span>
+            <span>Machael Wijaya, S.Kom.</span>
+          </div>
+          <p style="color: var(--accent-cyan); font-weight: 600; font-size: 0.92rem; margin-bottom: 8px;">
+            Digital Solutions Specialist
+          </p>
+          <p style="color: var(--text-secondary); font-size: 0.9rem;" data-i18n="hero.slogan">
+            “Solusi Tepat, Kerja Berkualitas, Bisnis Lebih Berkembang.”
+          </p>
+        </div>
+
+        <div>
+          <h4 style="font-family: var(--font-heading); margin-bottom: 14px;" data-i18n="footer.navTitle">Navigasi Cepat</h4>
+          <ul style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; font-size: 0.9rem; color: var(--text-secondary);">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="font-family: var(--font-heading); margin-bottom: 14px;" data-i18n="footer.connectTitle">Kontak & Media Sosial</h4>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 6px;">
+            machael.wijaya@alumni.rosma.ac.id
+          </p>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 14px;">
+            Bekasi, Jawa Barat, Indonesia
+          </p>
+          <div class="hero-socials">
+            <a href="https://wa.me/6285158902121" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="WhatsApp">WA</a>
+            <a href="https://www.instagram.com/mcalls__/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">IG</a>
+            <a href="mailto:machael.wijaya@alumni.rosma.ac.id" class="social-icon" aria-label="Email">@</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span id="current-year"></span> Machael Wijaya, S.Kom. All rights reserved.</p>
+        <p data-i18n="footer.builtWith">Futuristic 3D Personal Branding Portfolio</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back To Top Button -->
+  <button id="back-to-top" type="button" aria-label="Kembali ke atas">↑</button>
+
+  <!-- ========================================================================
+       PROJECT DETAIL & IMAGE LIGHTBOX MODAL
+       ======================================================================== -->
+  <div class="modal-backdrop" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close-btn" type="button" aria-label="Tutup Modal">✕</button>
+      <div class="modal-media" id="modal-media-box"></div>
+      <div class="project-cat" id="modal-category"></div>
+      <h3 class="service-title" id="modal-title"></h3>
+      <p class="service-desc" id="modal-desc"></p>
+      <div class="project-tools" id="modal-tools" style="margin-bottom: 20px;"></div>
+      <div class="project-actions" id="modal-links"></div>
+    </div>
+  </div>
+
+  <!-- Optional Three.js CDN (Graceful CSS fallback if offline/blocked) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+
+  <!-- ========================================================================
+       MAIN JAVASCRIPT (SITE_CONFIG, GOOGLE DRIVE PARSER, I18N, INTERACTIVITY)
+       ======================================================================== -->
+  <script>
+    /**************************************************************************
+     * 1. KONFIGURASI UTAMA (SITE_CONFIG) — EDIT TAUTAN GOOGLE DRIVE DI SINI
+     **************************************************************************/
+    const SITE_CONFIG = {
+      // Tempel link berbagi Google Drive foto profil Anda di bawah ini:
+      profileImage: "https://drive.google.com/file/d/1hVpqPhzY5xV8nmDkqgY8XIHsmBDDVO0W/view?usp=drive_link",
+
+      // Tempel link Google Drive untuk file PDF CV Anda di bawah ini:
+      cvUrl: "https://drive.google.com/file/d/1howy048LJxIVGaGMhI8L458VhMdP0P71/view?usp=drive_link",
+
+      // Opsional: Isi jika domain pribadi sudah dimiliki (contoh: "https://machaelwijaya.my.id")
+      domain: "https://machaelwijaya.my.id",
+
+      // Pengaturan efek visual 3D
+      settings: {
+        enable3D: true,
+        defaultLanguage: "id",
+        defaultTheme: "dark" 
+      },
+
+      // Informasi Kontak Resmi
+      contact: {
+        email: "machael.wijaya@alumni.rosma.ac.id",
+        whatsapp: "6285158902121",
+        whatsappDefaultMessage: "Halo Machael, saya melihat website portofolio Anda dan ingin berdiskusi mengenai peluang kerja sama atau kebutuhan layanan profesional.",
+        instagram: "https://www.instagram.com/mcalls__/",
+        location: "Bekasi, Jawa Barat, Indonesia"
+      },
+
+      // Konfigurasi Sertifikat (Jangan mengarang tahun/penerbit jika belum diisi)
+      certificate: {
+        title_id: "Kursus Mahir Akuntansi",
+        title_en: "Advanced Accounting Course (Kursus Mahir Akuntansi)",
+        issuer: "Focus Training Center", 
+        year: "2024", 
+        image: "https://drive.google.com/file/d/1g1JT2qesjk_rNFhrcsAFQt340J4ZCjQg/view?usp=drive_link",
+        docUrl: "https://drive.google.com/file/d/1g1JT2qesjk_rNFhrcsAFQt340J4ZCjQg/view?usp=drive_link"
+      },
+
+      // Daftar Proyek Portofolio (Mendukung Gambar, Dokumen, PDF, Demo, Video dari Google Drive)
+      projects: [
+        {
+          id: "proj-1",
+          isDemoConcept: true,
+          category: "web",
+          categoryLabel_id: "Web Development",
+          categoryLabel_en: "Web Development",
+          title_id: "Business Profile Website",
+          title_en: "Business Profile Website",
+          image: "https://drive.google.com/file/d/1ZSuKD0qxlUXIN0ZGzhxNw4Jjlf_ZS1HB/view?usp=drive_link",
+          description_id: "Konsep website profil bisnis modern dengan informasi perusahaan, layanan, dan formulir kontak.",
+          description_en: "Modern business profile website concept featuring company information, services showcase, and interactive contact form.",
+          tools: ["HTML5", "CSS3", "JavaScript", "Responsive UI", "SEO Structure"],
+          demoUrl: "",
+          docUrl: "",
+          pdfUrl: "",
+          videoUrl: "https://drive.google.com/file/d/1PgA-CtW_B__bGQ9ie5weVut5ma1-fce8/view?usp=drive_link"
+        },
+        {
+          id: "proj-2",
+          isDemoConcept: true,
+          category: "accounting",
+          categoryLabel_id: "Accounting",
+          categoryLabel_en: "Accounting",
+          title_id: "Accounting Dashboard",
+          title_en: "Accounting Dashboard",
+          image: "https://drive.google.com/file/d/1L6QV__xnDno_SspTo9nG4_JEqT47vw08/view?usp=drive_link",
+          description_id: "Konsep dashboard pencatatan transaksi dan ringkasan keuangan menggunakan data simulasi.",
+          description_en: "Transaction recording and financial summary dashboard concept built using structured simulation data.",
+          tools: ["Microsoft Excel", "Google Sheets", "Coretax", "Financial Reporting", "Data Analysis"],
+          demoUrl: "",
+          docUrl: "",
+          pdfUrl: "",
+          videoUrl: "https://drive.google.com/file/d/1iDMiV28ZKfRHHJhhadaTPSVEl9929rkj/view?usp=drive_link"
+        },
+        {
+          id: "proj-3",
+          isDemoConcept: true,
+          category: "marketing",
+          categoryLabel_id: "Digital Marketing",
+          categoryLabel_en: "Digital Marketing",
+          title_id: "Digital Marketing Analytics Dashboard",
+          title_en: "Digital Marketing Analytics Dashboard",
+          image: "https://drive.google.com/file/d/1LYcW6wibGo5iwBoxuGzQ7B6ADk19w1Sb/view?usp=drive_link",
+          description_id: "Konsep dashboard analisis performa pemasaran digital menggunakan data simulasi.",
+          description_en: "Digital marketing performance analytics dashboard concept utilizing campaign simulation metrics.",
+          tools: ["Google Search Console", "Google Ads", "SEO Analysis", "Spreadsheet", "Performance Metrics"],
+          demoUrl: "",
+          docUrl: "",
+          pdfUrl: "",
+          videoUrl: "https://drive.google.com/file/d/1yJp8t6UglgYRL3v2xk5YCXdKyhxW6ux1/view?usp=drive_link"
+        }
+      ]
+    };
+
+    /**************************************************************************
+     * 2. FUNGSI KONVERSI TAUTAN GOOGLE DRIVE OTOMATIS
+     **************************************************************************/
+    function isPlaceholderLink(url) {
+      if (!url || typeof url !== "string") return true;
+      const trimmed = url.trim();
+      if (trimmed === "" || trimmed.startsWith("TEMPEL_LINK_")) return true;
+      return false;
+    }
+
+    function extractGoogleDriveFileId(url) {
+      if (isPlaceholderLink(url)) return null;
+      // Pola 1: /file/d/FILE_ID/view
+      const fileMatch = url.match(/\/file\/d\/([a-zA-Z0-9_-]+)/);
+      if (fileMatch && fileMatch[1]) return fileMatch[1];
+      // Pola 2: ?id=FILE_ID atau &id=FILE_ID
+      const idParamMatch = url.match(/[?&]id=([a-zA-Z0-9_-]+)/);
+      if (idParamMatch && idParamMatch[1]) return idParamMatch[1];
+      // Pola 3: /d/FILE_ID
+      const shortMatch = url.match(/\/d\/([a-zA-Z0-9_-]+)/);
+      if (shortMatch && shortMatch[1]) return shortMatch[1];
+      return null;
+    }
+
+    function resolveImageUrl(rawUrl) {
+      if (isPlaceholderLink(rawUrl)) return "";
+      const driveId = extractGoogleDriveFileId(rawUrl);
+      if (driveId) {
+        // Endpoint thumbnail resolusi tinggi Google Drive yang paling kompatibel untuk <img>
+        return `https://drive.google.com/thumbnail?id=${driveId}&sz=w1600`;
+      }
+      return rawUrl.trim();
+    }
+
+    /**************************************************************************
+     * 3. KAMUS BAHASA (INDONESIA & INGGRIS)
+     **************************************************************************/
+    const I18N_DATA = {
+      id: {
+        nav: {
+          home: "Beranda",
+          about: "Tentang",
+          skills: "Keahlian",
+          services: "Layanan",
+          experience: "Pengalaman",
+          portfolio: "Portofolio",
+          education: "Pendidikan",
+          contact: "Kontak"
+        },
+        hero: {
+          badge: "DIGITAL SOLUTIONS SPECIALIST",
+          slogan: "“Solusi Tepat, Kerja Berkualitas, Bisnis Lebih Berkembang.”",
+          desc: "Saya membantu mengembangkan solusi digital melalui teknologi, analisis, kreativitas, dan pemahaman bisnis.",
+          location: "Bekasi, Jawa Barat, Indonesia",
+          status: "Terbuka untuk peluang kerja, freelance, proyek digital, kerja jarak jauh, dan kolaborasi bisnis",
+          btnPortfolio: "Lihat Portofolio",
+          btnContact: "Hubungi Saya",
+          btnCv: "Unduh CV",
+          float1: "IT • Akuntansi • Digital",
+          float2: "Machael Wijaya, S.Kom."
+        },
+        about: {
+          badge: "TENTANG SAYA",
+          title: "Profil & Nilai Profesional",
+          subtitle: "Menggabungkan keahlian teknologi informasi, akuntansi & perpajakan, serta pemasaran digital untuk menghadirkan solusi bisnis yang terukur.",
+          p1: "Saya adalah profesional yang memiliki ketertarikan dan pengalaman lintas bidang dalam teknologi informasi, pengembangan website, pemrograman, akuntansi, perpajakan, digital marketing, SEO, analisis sistem, dan AI Prompt Engineering.",
+          p2: "Saya senang mempelajari teknologi baru, menganalisis permasalahan, dan menciptakan solusi yang efektif serta inovatif untuk kebutuhan bisnis. Dengan menggabungkan kemampuan teknis dan pemahaman proses bisnis, saya berupaya membantu pekerjaan menjadi lebih terstruktur, efisien, dan bernilai.",
+          p3: "Melalui website ini, saya menampilkan perjalanan profesional, keterampilan, pengalaman, dan berbagai proyek sebagai representasi kemampuan serta komitmen saya terhadap pembelajaran berkelanjutan.",
+          values: [
+            { icon: "🛡️", title: "Professional", desc: "Menjaga etika kerja, komunikasi, dan standar kualitas tinggi." },
+            { icon: "🔍", title: "Detail-Oriented", desc: "Teliti dalam kode, data keuangan, maupun administrasi pajak." },
+            { icon: "⚡", title: "Adaptive", desc: "Cepat beradaptasi dengan teknologi, sistem, dan regulasi baru." },
+            { icon: "🧩", title: "Solution-Oriented", desc: "Berfokus pada penyelesaian masalah secara terstruktur & praktis." },
+            { icon: "💡", title: "Creative", desc: "Menghadirkan pendekatan visual dan strategi digital yang segar." },
+            { icon: "🤝", title: "Trustworthy", desc: "Menjaga integritas serta kerahasiaan data bisnis dan klien." }
+          ]
+        },
+        skills: {
+          badge: "KEAHLIAN & KOMPETENSI",
+          title: "Keterampilan Teknis & Tools",
+          subtitle: "Kompetensi lintas disiplin yang mendukung pengembangan sistem, pengelolaan keuangan & pajak, serta pertumbuhan digital.",
+          softTitle: "Soft Skills & Karakter Profesional",
+          categories: [
+            {
+              icon: "💻",
+              title: "Web Development & Programming",
+              items: ["HTML", "CSS", "JavaScript", "Front-end Development", "Back-end Development", "Website Management", "Database Management", "SQL dan MySQL", "Troubleshooting"]
+            },
+            {
+              icon: "📊",
+              title: "Accounting & Taxation",
+              items: ["Bookkeeping", "Pencatatan Transaksi", "Rekonsiliasi", "Laporan Keuangan", "Administrasi Perpajakan", "Perhitungan & Pelaporan Pajak", "Pengelolaan Dokumen Perpajakan", "Coretax DJP", "DJP Online", "Microsoft Excel"]
+            },
+            {
+              icon: "🚀",
+              title: "Digital Marketing & SEO",
+              items: ["Digital Marketing", "Search Engine Optimization (SEO)", "Google Search Console", "Google Ads", "Social Media Management", "Content Planning", "Digital Performance Analysis", "Website Optimization"]
+            },
+            {
+              icon: "⚙️",
+              title: "System Analysis & Data",
+              items: ["System Analysis", "Data Processing", "Data Analysis", "Business Process Analysis", "Problem Solving", "Process Improvement", "Documentation"]
+            },
+            {
+              icon: "🤖",
+              title: "AI & Automation",
+              items: ["AI Prompt Engineering", "ChatGPT", "Google Gemini", "AI-Assisted Productivity", "Workflow Automation", "Pemanfaatan AI untuk Bisnis"]
+            },
+            {
+              icon: "🛠️",
+              title: "Tools & Software",
+              items: ["Microsoft Excel, Word, PowerPoint", "Google Sheets, Docs, Drive", "Visual Studio Code", "GitHub", "MySQL", "WordPress", "Canva", "CapCut", "Adobe Photoshop", "Google Search Console", "Google Ads", "Coretax DJP", "DJP Online"]
+            }
+          ],
+          softSkills: [
+            "Communication", "Critical Thinking", "Problem Solving", "Time Management",
+            "Teamwork", "Adaptability", "Attention to Detail", "Analytical Thinking",
+            "Creativity", "Discipline", "Project Management", "Negotiation",
+            "Decision Making", "Prioritization", "Client Service",
+            "Professionalism and Integrity", "Independent Working", "Continuous Learning"
+          ]
+        },
+        services: {
+          badge: "LAYANAN PROFESIONAL",
+          title: "Solusi yang Saya Tawarkan",
+          subtitle: "Pilih layanan yang sesuai dengan kebutuhan bisnis atau proyek Anda. Setiap tombol akan menghubungkan Anda langsung melalui WhatsApp.",
+          btnAction: "Konsultasi Layanan Ini",
+          list: [
+            {
+              icon: "🌐",
+              title: "IT Solutions & Website Development",
+              desc: "Perancangan dan pengelolaan website modern yang cepat, responsif, dan sesuai identitas bisnis Anda.",
+              items: [
+                "Website profil perusahaan",
+                "Landing page",
+                "Website portofolio",
+                "Website UMKM",
+                "Aplikasi web sesuai kebutuhan",
+                "Pengelolaan website",
+                "Analisis kebutuhan sistem",
+                "Konsultasi teknologi informasi"
+              ],
+              benefit: "Manfaat: Meningkatkan kredibilitas digital dan efisiensi sistem bisnis."
+            },
+            {
+              icon: "📑",
+              title: "Accounting & Tax Services",
+              desc: "Dukungan pembukuan, laporan keuangan, dan administrasi perpajakan yang rapi serta terstruktur.",
+              items: [
+                "Administrasi akuntansi",
+                "Pencatatan transaksi",
+                "Rekonsiliasi",
+                "Laporan keuangan",
+                "Administrasi dokumen perpajakan",
+                "Bantuan administrasi pelaporan pajak",
+                "Pengelolaan arsip dan dokumen pendukung"
+              ],
+              benefit: "Manfaat: Data keuangan lebih tertata dan kepatuhan administrasi lebih terjaga."
+            },
+            {
+              icon: "📈",
+              title: "Digital Marketing & SEO",
+              desc: "Optimasi visibilitas mesin pencari dan pengelolaan kampanye digital berbasis data.",
+              items: [
+                "Optimasi SEO",
+                "Pengelolaan media sosial",
+                "Perencanaan konten",
+                "Optimasi website",
+                "Google Search Console",
+                "Bantuan pengelolaan Google Ads",
+                "Analisis performa digital marketing"
+              ],
+              benefit: "Manfaat: Jangkauan audiens lebih luas dan performa pemasaran terukur."
+            },
+            {
+              icon: "🤖",
+              title: "AI & Automation",
+              desc: "Pemanfaatan teknologi kecerdasan buatan untuk mempercepat alur kerja dan produktivitas tim.",
+              items: [
+                "Penyusunan prompt AI",
+                "Pemanfaatan AI untuk produktivitas",
+                "Otomatisasi pekerjaan sederhana",
+                "Workflow digital",
+                "Konsultasi penggunaan AI untuk bisnis"
+              ],
+              benefit: "Manfaat: Menghemat waktu operasional dan meningkatkan kualitas output kerja."
+            },
+            {
+              icon: "🎨",
+              title: "Content Creation & Design",
+              desc: "Produksi visual kreatif untuk memperkuat komunikasi brand di media digital.",
+              items: [
+                "Desain konten media sosial",
+                "Materi promosi",
+                "Penyuntingan video pendek",
+                "Desain grafis",
+                "Perencanaan visual konten"
+              ],
+              benefit: "Manfaat: Tampilan brand lebih profesional, menarik, dan konsisten."
+            },
+            {
+              icon: "🗂️",
+              title: "Data & Business Support",
+              desc: "Pengolahan data spreadsheet, dokumentasi sistem, dan analisis proses operasional.",
+              items: [
+                "Pengolahan data",
+                "Pengelolaan spreadsheet",
+                "Laporan operasional",
+                "Analisis proses bisnis",
+                "Dokumentasi sistem",
+                "Administrasi dan dukungan operasional"
+              ],
+              benefit: "Manfaat: Pengambilan keputusan lebih cepat berkat data yang bersih dan rapi."
+            }
+          ]
+        },
+        exp: {
+          badge: "REKAM JEJAK",
+          title: "Pengalaman Kerja",
+          subtitle: "Perjalanan karier dalam konsultasi akuntansi & perpajakan, pelatihan teknis-administrasi, serta dukungan operasional.",
+          items: [
+          {
+              company: "Independen / Usaha Mandiri & Klien Bisnis",
+              role: "Freelance Digital Solutions Specialist & Pengusaha",
+              period: "Oktober 2026 – Sekarang",
+              tasks: [
+                "Mengelola kegiatan usaha mandiri dari tahap perencanaan produk, branding visual, pemasaran digital, hingga operasional dan distribusi.",
+                "Menyediakan layanan profesional secara independen di bidang pengembangan website, aplikasi web finansial, pembukuan akuntansi, serta kepatuhan dan pelaporan perpajakan (Coretax DJP & SPT).",
+                "Merancang materi kreatif promosi, optimasi SEO, dan manajemen konten media sosial untuk meningkatkan jangkauan pasar serta pertumbuhan penjualan.",
+                "Menjalankan dukungan operasional bisnis mencakup pencatatan transaksi, rekonsiliasi keuangan, manajemen inventaris, pengolahan spreadsheet, dan pemanfaatan AI untuk efisiensi kerja."
+              ]
+            },
+            {
+              company: "PT Hunu Osias Padmada Eara",
+              role: "Staff Konsultan Akuntansi dan Perpajakan",
+              period: "Februari 2025 – Oktober 2026",
+              tasks: [
+                "Menganalisis kebutuhan bisnis dan administrasi klien.",
+                "Mengolah data keuangan, pencatatan transaksi, rekonsiliasi, dan laporan keuangan.",
+                "Membantu administrasi perpajakan dan dokumentasi.",
+                "Berkomunikasi dengan klien serta membantu pengelolaan dokumen dan tenggat pekerjaan.",
+                "Mendukung perbaikan proses kerja melalui pemanfaatan teknologi."
+              ]
+            },
+            {
+              company: "CV Focus Etania Zashika",
+              role: "Peserta Program Pelatihan Tenaga Kerja Khusus",
+              period: "Juli 2024 – Januari 2025",
+              tasks: [
+                "Mengembangkan kompetensi teknis dan administrasi.",
+                "Meningkatkan kemampuan komunikasi dan kerja sama tim.",
+                "Mempelajari prosedur kerja dan penyelesaian tugas secara terstruktur.",
+                "Melatih kemampuan analisis dan pemecahan masalah."
+              ]
+            },
+            {
+              company: "CV Rizki Utama Teknik",
+              role: "Helper Operasional dan Teknik",
+              period: "Januari – Maret 2021",
+              tasks: [
+                "Mendukung kegiatan operasional dan pekerjaan teknis.",
+                "Membantu pemeliharaan peralatan.",
+                "Membantu penanganan masalah teknis sederhana.",
+                "Mendukung pengelolaan inventaris.",
+                "Menerapkan prosedur keselamatan dan kesehatan kerja."
+              ]
+            }
+          ]
+        },
+        portfolio: {
+          badge: "PORTOFOLIO & KARYA",
+          title: "Proyek & Konsep Demonstrasi",
+          subtitle: "Menampilkan konsep proyek demonstrasi dan dokumentasi kerja yang terintegrasi dengan Google Drive.",
+          demoLabel: "PROYEK DEMONSTRASI",
+          btnDetail: "Detail & Perbesar",
+          btnDemo: "Lihat Demo Website",
+          btnDoc: "Lihat Dokumentasi",
+          btnPdf: "Buka PDF",
+          btnVideo: "Tonton Demo Video",
+          btnVisual: "Lihat Demo Visual",
+          filters: [
+            { key: "all", label: "All Projects" },
+            { key: "web", label: "Web Development" },
+            { key: "accounting", label: "Accounting" },
+            { key: "marketing", label: "Digital Marketing" }
+          ]
+        },
+        edu: {
+          badge: "AKADEMIK & KEPEMIMPINAN",
+          title: "Pendidikan, Sertifikasi & Organisasi",
+          subtitle: "Latar belakang akademik di bidang Sistem Informasi dan Komputerisasi Akuntansi beserta pengalaman kepemimpinan organisasi.",
+          eduLabel: "Pendidikan Formal",
+          certLabel: "Sertifikasi & Pelatihan",
+          orgLabel: "Organisasi & Kepemimpinan",
+          orgRole: "Ketua PMK (2022–2026)",
+          orgName: "Persekutuan Mahasiswa Kristen (PMK)",
+          orgDesc: "Pengalaman kepemimpinan dalam organisasi mahasiswa, koordinasi kegiatan, komunikasi tim, pengelolaan tanggung jawab, dan pengembangan kemampuan kerja sama.",
+          orgHighlight: "Fokus: Kepemimpinan Tim, Koordinasi Program & Manajemen Tanggung Jawab.",
+          eduItems: [
+            { degree: "S1 Sistem Informasi", school: "STMIK Rosma", period: "2025–2026", GPA : "3,52" },
+            { degree: "D3 Komputerisasi Akuntansi", school: "STMIK Rosma", period: "2022–2025", GPA : "3,46" }
+          ]
+        },
+        contact: {
+          badge: "HUBUNGI SAYA",
+          title: "Mari Berdiskusi & Berkolaborasi",
+          subtitle: "Terbuka untuk peluang kerja full-time, proyek freelance, remote work, maupun kolaborasi bisnis.",
+          infoTitle: "Informasi Kontak Langsung",
+          infoDesc: "Silakan hubungi saya melalui saluran resmi di bawah ini atau salin alamat email untuk korespondensi langsung.",
+          copyEmail: "Salin Email",
+          copiedEmail: "Email Tersalin!",
+          locLabel: "Lokasi & Ketersediaan",
+          locValue: "Bekasi, Jawa Barat, Indonesia — Freelance, Remote Work, Peluang Kerja & Kolaborasi",
+          formTitle: "Formulir Pesan Cepat",
+          formNote: "Website ini beroperasi sebagai halaman statis. Pengiriman formulir akan diteruskan secara langsung ke WhatsApp atau aplikasi Email Anda.",
+          labelName: "Nama Lengkap",
+          labelEmail: "Alamat Email",
+          labelCategory: "Kategori Kebutuhan",
+          labelSubject: "Subjek",
+          labelMessage: "Pesan",
+          sendWa: "Kirim via WhatsApp",
+          sendMail: "Buka di Aplikasi Email"
+        },
+        cta: {
+          heading: "“Punya ide atau kebutuhan digital? Mari kita wujudkan menjadi solusi yang tepat.”",
+          btnDiscuss: "Diskusikan Proyek",
+          btnContact: "Hubungi Saya"
+        },
+        footer: {
+          navTitle: "Navigasi Cepat",
+          connectTitle: "Kontak & Media Sosial",
+          builtWith: "Portofolio Personal Branding Futuristik 3D"
+        }
+      },
+
+      en: {
+        nav: {
+          home: "Home",
+          about: "About",
+          skills: "Skills",
+          services: "Services",
+          experience: "Experience",
+          portfolio: "Portfolio",
+          education: "Education",
+          contact: "Contact"
+        },
+        hero: {
+          badge: "DIGITAL SOLUTIONS SPECIALIST",
+          slogan: "“Right Solutions, Quality Work, Growing Your Business.”",
+          desc: "I help develop digital solutions through technology, analysis, creativity, and business understanding.",
+          location: "Bekasi, West Java, Indonesia",
+          status: "Open to job opportunities, freelance, digital projects, remote work, and business collaboration",
+          btnPortfolio: "View Portfolio",
+          btnContact: "Contact Me",
+          btnCv: "Download CV",
+          float1: "IT • Accounting • Digital",
+          float2: "Machael Wijaya, S.Kom."
+        },
+        about: {
+          badge: "ABOUT ME",
+          title: "Professional Profile & Core Values",
+          subtitle: "Combining expertise in information technology, accounting & taxation, and digital marketing to deliver measurable business solutions.",
+          p1: "I am a cross-disciplinary professional with keen interest and experience in information technology, website development, programming, accounting, taxation, digital marketing, SEO, system analysis, and AI Prompt Engineering.",
+          p2: "I enjoy learning new technologies, analyzing problems, and creating effective, innovative solutions for business needs. By combining technical capabilities with business process understanding, I strive to make work more structured, efficient, and valuable.",
+          p3: "Through this website, I showcase my professional journey, skills, experience, and various projects as a representation of my capabilities and commitment to continuous learning.",
+          values: [
+            { icon: "🛡️", title: "Professional", desc: "Upholding strong work ethics, clear communication, and high quality standards." },
+            { icon: "🔍", title: "Detail-Oriented", desc: "Meticulous in code, financial records, and tax administration." },
+            { icon: "⚡", title: "Adaptive", desc: "Quickly adapting to emerging technologies, systems, and regulations." },
+            { icon: "🧩", title: "Solution-Oriented", desc: "Focused on structured, practical, and effective problem solving." },
+            { icon: "💡", title: "Creative", desc: "Delivering fresh visual concepts and impactful digital strategies." },
+            { icon: "🤝", title: "Trustworthy", desc: "Maintaining integrity and strict confidentiality of client & business data." }
+          ]
+        },
+        skills: {
+          badge: "SKILLS & COMPETENCIES",
+          title: "Technical Skills & Tools",
+          subtitle: "Cross-functional competencies supporting system development, financial & tax administration, and digital growth.",
+          softTitle: "Soft Skills & Work Ethic",
+          categories: [
+            {
+              icon: "💻",
+              title: "Web Development & Programming",
+              items: ["HTML", "CSS", "JavaScript", "Front-end Development", "Back-end Development", "Website Management", "Database Management", "SQL & MySQL", "Troubleshooting"]
+            },
+            {
+              icon: "📊",
+              title: "Accounting & Taxation",
+              items: ["Bookkeeping", "Transaction Recording", "Reconciliation", "Financial Statements", "Tax Administration", "Tax Calculation & Reporting", "Tax Document Management", "Coretax DJP", "DJP Online", "Microsoft Excel"]
+            },
+            {
+              icon: "🚀",
+              title: "Digital Marketing & SEO",
+              items: ["Digital Marketing", "Search Engine Optimization (SEO)", "Google Search Console", "Google Ads", "Social Media Management", "Content Planning", "Digital Performance Analysis", "Website Optimization"]
+            },
+            {
+              icon: "⚙️",
+              title: "System Analysis & Data",
+              items: ["System Analysis", "Data Processing", "Data Analysis", "Business Process Analysis", "Problem Solving", "Process Improvement", "Documentation"]
+            },
+            {
+              icon: "🤖",
+              title: "AI & Automation",
+              items: ["AI Prompt Engineering", "ChatGPT", "Google Gemini", "AI-Assisted Productivity", "Workflow Automation", "AI Utilization for Business"]
+            },
+            {
+              icon: "🛠️",
+              title: "Tools & Software",
+              items: ["Microsoft Excel, Word, PowerPoint", "Google Sheets, Docs, Drive", "Visual Studio Code", "GitHub", "MySQL", "WordPress", "Canva", "CapCut", "Adobe Photoshop", "Google Search Console", "Google Ads", "Coretax DJP", "DJP Online"]
+            }
+          ],
+          softSkills: [
+            "Communication", "Critical Thinking", "Problem Solving", "Time Management",
+            "Teamwork", "Adaptability", "Attention to Detail", "Analytical Thinking",
+            "Creativity", "Discipline", "Project Management", "Negotiation",
+            "Decision Making", "Prioritization", "Client Service",
+            "Professionalism and Integrity", "Independent Working", "Continuous Learning"
+          ]
+        },
+        services: {
+          badge: "PROFESSIONAL SERVICES",
+          title: "Solutions I Offer",
+          subtitle: "Choose the service that fits your business or project needs. Each button connects you directly via WhatsApp.",
+          btnAction: "Inquire About This Service",
+          list: [
+            {
+              icon: "🌐",
+              title: "IT Solutions & Website Development",
+              desc: "Design and management of fast, responsive, and modern websites tailored to your brand identity.",
+              items: [
+                "Company profile website",
+                "Landing page",
+                "Portfolio website",
+                "SME / Small business website",
+                "Custom web applications",
+                "Website management",
+                "System requirements analysis",
+                "IT consultation"
+              ],
+              benefit: "Benefit: Enhances digital credibility and streamlines business operations."
+            },
+            {
+              icon: "📑",
+              title: "Accounting & Tax Services",
+              desc: "Structured bookkeeping, financial statement preparation, and reliable tax administration support.",
+              items: [
+                "Accounting administration",
+                "Transaction recording",
+                "Reconciliation",
+                "Financial statements",
+                "Tax document administration",
+                "Tax reporting administration assistance",
+                "Archive and supporting document management"
+              ],
+              benefit: "Benefit: Organized financial records and well-maintained tax compliance."
+            },
+            {
+              icon: "📈",
+              title: "Digital Marketing & SEO",
+              desc: "Search engine visibility optimization and data-driven digital marketing management.",
+              items: [
+                "SEO optimization",
+                "Social media management",
+                "Content planning",
+                "Website optimization",
+                "Google Search Console",
+                "Google Ads management assistance",
+                "Digital marketing performance analysis"
+              ],
+              benefit: "Benefit: Wider audience reach and measurable marketing performance."
+            },
+            {
+              icon: "🤖",
+              title: "AI & Automation",
+              desc: "Leveraging artificial intelligence to accelerate workflows and boost team productivity.",
+              items: [
+                "AI prompt engineering",
+                "AI utilization for productivity",
+                "Simple task automation",
+                "Digital workflow design",
+                "Business AI consultation"
+              ],
+              benefit: "Benefit: Saves operational time and improves output consistency."
+            },
+            {
+              icon: "🎨",
+              title: "Content Creation & Design",
+              desc: "Creative visual production to strengthen brand communication across digital platforms.",
+              items: [
+                "Social media content design",
+                "Promotional materials",
+                "Short-form video editing",
+                "Graphic design",
+                "Visual content planning"
+              ],
+              benefit: "Benefit: More professional, engaging, and consistent brand visuals."
+            },
+            {
+              icon: "🗂️",
+              title: "Data & Business Support",
+              desc: "Spreadsheet management, system documentation, and operational process analysis.",
+              items: [
+                "Data processing",
+                "Spreadsheet management",
+                "Operational reporting",
+                "Business process analysis",
+                "System documentation",
+                "Administrative and operational support"
+              ],
+              benefit: "Benefit: Faster decision-making powered by clean, structured data."
+            }
+          ]
+        },
+        exp: {
+          badge: "TRACK RECORD",
+          title: "Work Experience",
+          subtitle: "Professional career in accounting & tax consulting, specialized workforce training, and technical operations.",
+          items: [
+            {
+              company: "PT Hunu Osias Padmada Eara",
+              role: "Accounting and Tax Consultant Staff",
+              period: "February 2025 – October 2026",
+              tasks: [
+                "Analyze client business and administrative requirements.",
+                "Process financial data, transaction recording, reconciliation, and financial statements.",
+                "Assist with tax administration and documentation.",
+                "Communicate with clients and help manage documents and project deadlines.",
+                "Support workflow improvements through technology utilization."
+              ]
+            },
+            {
+              company: "CV Focus Etania Zashika",
+              role: "Specialized Workforce Training Program Participant",
+              period: "July 2024 – January 2025",
+              tasks: [
+                "Developed technical and administrative competencies.",
+                "Enhanced communication and teamwork skills.",
+                "Learned standard operating procedures and structured task execution.",
+                "Practiced analytical thinking and problem-solving skills."
+              ]
+            },
+            {
+              company: "CV Rizki Utama Teknik",
+              role: "Operational and Technical Helper",
+              period: "January – March 2021",
+              tasks: [
+                "Supported daily operational and technical tasks.",
+                "Assisted with equipment maintenance.",
+                "Helped troubleshoot simple technical issues.",
+                "Supported inventory management.",
+                "Applied occupational health and safety (OHS) procedures."
+              ]
+            }
+          ]
+        },
+        portfolio: {
+          badge: "PORTFOLIO & WORKS",
+          title: "Projects & Demonstration Concepts",
+          subtitle: "Showcasing demonstration project concepts and documentation integrated with Google Drive.",
+          demoLabel: "DEMO CONCEPT",
+          btnDetail: "Details & Zoom",
+          btnDemo: "View Live Demo",
+          btnDoc: "View Documentation",
+          btnPdf: "Open PDF",
+          btnVideo: "Watch Video Demo",
+          btnVisual: "View Visual Demo",
+          filters: [
+            { key: "all", label: "All Projects" },
+            { key: "web", label: "Web Development" },
+            { key: "accounting", label: "Accounting" },
+            { key: "marketing", label: "Digital Marketing" }
+          ]
+        },
+        edu: {
+          badge: "ACADEMIC & LEADERSHIP",
+          title: "Education, Certification & Organization",
+          subtitle: "Academic background in Information Systems and Computerized Accounting alongside student leadership experience.",
+          eduLabel: "Formal Education",
+          certLabel: "Certification & Training",
+          orgLabel: "Organization & Leadership",
+          orgRole: "Chairman of PMK (2022–2026)",
+          orgName: "Christian Student Fellowship (Persekutuan Mahasiswa Kristen / PMK)",
+          orgDesc: "Leadership experience in a student organization, coordinating events, team communication, responsibility management, and fostering collaboration.",
+          orgHighlight: "Focus: Team Leadership, Program Coordination & Responsibility Management.",
+          eduItems: [
+            { degree: "Bachelor of Information Systems (S1)", school: "STMIK Rosma", period: "2025–2026", GPA : "3,52" },
+            { degree: "Associate Degree in Computerized Accounting (D3)", school: "STMIK Rosma", period: "2022–2025", GPA : "3,46" }
+          ]
+        },
+        contact: {
+          badge: "GET IN TOUCH",
+          title: "Let's Discuss & Collaborate",
+          subtitle: "Available for full-time roles, freelance projects, remote work, and business collaborations.",
+          infoTitle: "Direct Contact Information",
+          infoDesc: "Reach out through the official channels below or copy my email address for direct correspondence.",
+          copyEmail: "Copy Email",
+          copiedEmail: "Email Copied!",
+          locLabel: "Location & Availability",
+          locValue: "Bekasi, West Java, Indonesia — Freelance, Remote Work, Job Opportunities & Collaboration",
+          formTitle: "Quick Message Form",
+          formNote: "This website runs as a static page. Submitting this form will forward your message directly to WhatsApp or your Email client.",
+          labelName: "Full Name",
+          labelEmail: "Email Address",
+          labelCategory: "Service / Inquiry Category",
+          labelSubject: "Subject",
+          labelMessage: "Message",
+          sendWa: "Send via WhatsApp",
+          sendMail: "Open in Email App"
+        },
+        cta: {
+          heading: "“Have an idea or digital need? Let's turn it into the right solution.”",
+          btnDiscuss: "Discuss a Project",
+          btnContact: "Contact Me"
+        },
+        footer: {
+          navTitle: "Quick Navigation",
+          connectTitle: "Contact & Socials",
+          builtWith: "Futuristic 3D Personal Branding Portfolio"
+        }
+      }
+    };
+
+    /**************************************************************************
+     * 4. STATE APLIKASI & RENDER DINAMIS
+     **************************************************************************/
+    let currentLang = SITE_CONFIG.settings.defaultLanguage || "id";
+    let currentTheme = SITE_CONFIG.settings.defaultTheme || "dark";
+    let activePortfolioFilter = "all";
+
+    function buildWhatsAppUrl(customText) {
+      const phone = SITE_CONFIG.contact.whatsapp.replace(/[^0-9]/g, "");
+      const text = encodeURIComponent(customText || SITE_CONFIG.contact.whatsappDefaultMessage);
+      return `https://wa.me/${phone}?text=${text}`;
+    }
+
+    // Render Foto Profil dari Google Drive + Fallback Rapi
+    function renderProfilePhoto() {
+      const container = document.getElementById("profile-frame-container");
+      const imgUrl = resolveImageUrl(SITE_CONFIG.profileImage);
+
+      const fallbackHtml = `
+        <div class="profile-placeholder">
+          <div class="placeholder-avatar">MAW</div>
+          <h3 style="font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: 6px;">Machael Wijaya, S.Kom.</h3>
+          <p style="font-size: 0.85rem; color: var(--accent-cyan);">Digital Solutions Specialist</p>
+        </div>
+      `;
+
+      if (!imgUrl) {
+        container.innerHTML = fallbackHtml;
+        return;
+      }
+
+      const img = document.createElement("img");
+      img.className = "profile-img";
+      img.src = imgUrl;
+      img.alt = "Foto Profil Machael Wijaya, S.Kom.";
+      img.loading = "eager";
+      img.onerror = () => {
+        container.innerHTML = fallbackHtml;
+      };
+      container.innerHTML = "";
+      container.appendChild(img);
+    }
+
+    // Render Tautan Kontak & CV
+    function setupConfiguredLinks() {
+      const defaultWaUrl = buildWhatsAppUrl(SITE_CONFIG.contact.whatsappDefaultMessage);
+      const mailtoUrl = `mailto:${SITE_CONFIG.contact.email}`;
+      const igUrl = SITE_CONFIG.contact.instagram;
+
+      document.getElementById("social-wa").href = defaultWaUrl;
+      document.getElementById("social-ig").href = igUrl;
+      document.getElementById("social-email").href = mailtoUrl;
+
+      document.getElementById("contact-wa-btn").href = defaultWaUrl;
+      document.getElementById("contact-mailto-btn").href = mailtoUrl;
+      document.getElementById("contact-ig-btn").href = igUrl;
+      document.getElementById("cta-discuss-btn").href = defaultWaUrl;
+      document.getElementById("display-email").textContent = SITE_CONFIG.contact.email;
+
+      // Penanganan Tombol CV
+      const heroCvBtn = document.getElementById("hero-cv-btn");
+      const contactCvBtn = document.getElementById("contact-cv-btn");
+      if (isPlaceholderLink(SITE_CONFIG.cvUrl)) {
+        const askCvWa = buildWhatsAppUrl(
+          currentLang === "id"
+            ? "Halo Machael, saya tertarik melihat CV terbaru Anda."
+            : "Hello Machael, I would like to request your latest CV."
+        );
+        heroCvBtn.href = askCvWa;
+        contactCvBtn.href = askCvWa;
+      } else {
+        heroCvBtn.href = SITE_CONFIG.cvUrl;
+        contactCvBtn.href = SITE_CONFIG.cvUrl;
+      }
+    }
+
+    // Render Nilai Profesional (About)
+    function renderValues() {
+      const container = document.getElementById("values-container");
+      const values = I18N_DATA[currentLang].about.values;
+      container.innerHTML = values.map(v => `
+        <div class="glass-card value-card">
+          <div class="value-icon">${v.icon}</div>
+          <div class="value-title">${v.title}</div>
+          <p class="value-desc">${v.desc}</p>
+        </div>
+      `).join("");
+    }
+
+    // Render Keterampilan Teknis & Soft Skills
+    function renderSkills() {
+      const grid = document.getElementById("skills-grid");
+      const data = I18N_DATA[currentLang].skills;
+
+      grid.innerHTML = data.categories.map(cat => `
+        <div class="glass-card skill-category-card reveal visible">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">${cat.icon}</div>
+            <h3 class="skill-cat-title">${cat.title}</h3>
+          </div>
+          <div class="skill-tags">
+            ${cat.items.map(item => `<span class="skill-tag">${item}</span>`).join("")}
+          </div>
+        </div>
+      `).join("");
+
+      const softContainer = document.getElementById("soft-skills-list");
+      softContainer.innerHTML = data.softSkills.map(s => `<span class="skill-tag">${s}</span>`).join("");
+    }
+
+    // Render Layanan Profesional (Dengan Tombol WhatsApp Spesifik Layanan)
+    function renderServices() {
+      const grid = document.getElementById("services-grid");
+      const data = I18N_DATA[currentLang].services;
+
+      grid.innerHTML = data.list.map(srv => {
+        const waMsg = currentLang === "id"
+          ? `Halo Machael, saya melihat website portofolio Anda dan ingin berkonsultasi mengenai layanan *${srv.title}*.`
+          : `Hello Machael, I visited your portfolio website and would like to inquire about your *${srv.title}* service.`;
+        const waLink = buildWhatsAppUrl(waMsg);
+
+        return `
+          <div class="glass-card service-card reveal visible">
+            <div>
+              <div class="service-icon">${srv.icon}</div>
+              <h3 class="service-title">${srv.title}</h3>
+              <p class="service-desc">${srv.desc}</p>
+              <ul class="service-list">
+                ${srv.items.map(i => `<li>${i}</li>`).join("")}
+              </ul>
+              <div class="service-benefit">${srv.benefit}</div>
+            </div>
+            <a href="${waLink}" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width: 100%;">
+              💬 ${data.btnAction}
+            </a>
+          </div>
+        `;
+      }).join("");
+    }
+
+    // Render Pengalaman Kerja
+    function renderExperience() {
+      const container = document.getElementById("experience-timeline");
+      const items = I18N_DATA[currentLang].exp.items;
+
+      container.innerHTML = items.map(exp => `
+        <div class="timeline-item reveal visible">
+          <div class="timeline-dot"></div>
+          <div class="glass-card timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">${exp.role}</h3>
+                <div class="timeline-company">${exp.company}</div>
+              </div>
+              <span class="timeline-period">${exp.period}</span>
+            </div>
+            <ul class="timeline-list">
+              ${exp.tasks.map(t => `<li>${t}</li>`).join("")}
+            </ul>
+          </div>
+        </div>
+      `).join("");
+    }
+
+    // Render Filter & Kartu Portofolio
+    function renderPortfolioFilters() {
+      const filterBar = document.getElementById("portfolio-filters");
+      const filters = I18N_DATA[currentLang].portfolio.filters;
+
+      filterBar.innerHTML = filters.map(f => `
+        <button type="button" class="filter-btn ${activePortfolioFilter === f.key ? 'active' : ''}" data-filter="${f.key}">
+          ${f.label}
+        </button>
+      `).join("");
+
+      filterBar.querySelectorAll(".filter-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+          activePortfolioFilter = btn.getAttribute("data-filter");
+          renderPortfolioFilters();
+          renderPortfolioProjects();
+        });
+      });
+    }
+
+    function renderPortfolioProjects() {
+      const grid = document.getElementById("portfolio-grid");
+      const t = I18N_DATA[currentLang].portfolio;
+
+      const filtered = SITE_CONFIG.projects.filter(p => {
+        if (activePortfolioFilter === "all") return true;
+        return p.category === activePortfolioFilter;
+      });
+
+      grid.innerHTML = filtered.map(proj => {
+        const title = currentLang === "id" ? (proj.title_id || proj.title) : (proj.title_en || proj.title_id || proj.title);
+        const desc = currentLang === "id" ? (proj.description_id || proj.description) : (proj.description_en || proj.description_id || proj.description);
+        const catLabel = currentLang === "id" ? (proj.categoryLabel_id || proj.category) : (proj.categoryLabel_en || proj.category);
+        const imgUrl = resolveImageUrl(proj.image);
+
+        // Tombol aksi dinamis: hanya tampilkan jika link tidak kosong
+        const actionButtons = [];
+        actionButtons.push(`
+          <button type="button" class="btn btn-outline btn-sm" data-open-modal="${proj.id}">
+            🔍 ${t.btnDetail}
+          </button>
+        `);
+
+        if (!isPlaceholderLink(proj.demoUrl)) {
+          actionButtons.push(`<a href="${proj.demoUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">🌐 ${t.btnDemo}</a>`);
+        }
+        if (!isPlaceholderLink(proj.docUrl)) {
+          actionButtons.push(`<a href="${proj.docUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">📁 ${t.btnDoc}</a>`);
+        }
+        if (!isPlaceholderLink(proj.pdfUrl)) {
+          actionButtons.push(`<a href="${proj.pdfUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">📄 ${t.btnPdf}</a>`);
+        }
+        if (!isPlaceholderLink(proj.videoUrl)) {
+          actionButtons.push(`<a href="${proj.videoUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">▶️ ${t.btnVideo}</a>`);
+        }
+        if (!isPlaceholderLink(proj.image) && isPlaceholderLink(proj.demoUrl) && isPlaceholderLink(proj.docUrl)) {
+          actionButtons.push(`<a href="${proj.image}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">🖼️ ${t.btnVisual}</a>`);
+        }
+
+        return `
+          <article class="glass-card project-card reveal visible">
+            <div class="project-thumb">
+              ${proj.isDemoConcept !== false ? `<span class="demo-badge">${t.demoLabel}</span>` : ""}
+              ${imgUrl
+                ? `<img src="${imgUrl}" alt="${title}" loading="lazy" onerror="this.outerHTML='<div class=\\'project-fallback\\'><strong style=\\'font-family:var(--font-heading);font-size:1.1rem;\\'>${title}</strong><span style=\\'font-size:0.8rem;color:var(--accent-cyan);margin-top:6px;\\'>${catLabel}</span></div>'" />`
+                : `<div class="project-fallback">
+                     <strong style="font-family: var(--font-heading); font-size: 1.15rem;">${title}</strong>
+                     <span style="font-size: 0.82rem; color: var(--accent-cyan); margin-top: 6px;">${catLabel}</span>
+                   </div>`
+              }
+            </div>
+            <div class="project-body">
+              <div>
+                <div class="project-cat">${catLabel}</div>
+                <h3 class="project-title">${title}</h3>
+                <p class="project-desc">${desc}</p>
+                <div class="project-tools">
+                  ${(proj.tools || []).map(tool => `<span class="tool-pill">${tool}</span>`).join("")}
+                </div>
+              </div>
+              <div class="project-actions">
+                ${actionButtons.join("")}
+              </div>
+            </div>
+          </article>
+        `;
+      }).join("");
+
+      // Pasang event listener untuk modal detail proyek
+      grid.querySelectorAll("[data-open-modal]").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const projId = btn.getAttribute("data-open-modal");
+          openProjectModal(projId);
+        });
+      });
+    }
+
+    // Render Pendidikan & Sertifikat
+    function renderEducationAndCert() {
+      const eduData = I18N_DATA[currentLang].edu;
+      const eduList = document.getElementById("education-list");
+
+      eduList.innerHTML = eduData.eduItems.map(item => `
+        <div style="padding: 16px; border-radius: 12px; background: rgba(56, 189, 248, 0.06); border: 1px solid var(--border-color);">
+          <div style="display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap;">
+            <strong style="font-family: var(--font-heading); font-size: 1.05rem;">${item.degree}</strong>
+            <span class="timeline-period">${item.period}</span>
+          </div>
+          <div style="color: var(--accent-cyan); font-weight: 600; font-size: 0.9rem; margin-top: 4px;">${item.school}</div>
+          <div style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 4px;">GPA: ${item.GPA}</div>
+        </div>
+      `).join("");
+
+      // Sertifikat (Tanpa mengarang tahun atau lembaga penerbit apabila kosong)
+      const cert = SITE_CONFIG.certificate;
+      document.getElementById("cert-title").textContent = currentLang === "id" ? cert.title_id : cert.title_en;
+
+      const metaParts = [];
+      if (cert.issuer && cert.issuer.trim() !== "") metaParts.push(cert.issuer.trim());
+      if (cert.year && cert.year.trim() !== "") metaParts.push(cert.year.trim());
+      document.getElementById("cert-meta").textContent = metaParts.join(" • ");
+
+      const certBox = document.getElementById("cert-preview-box");
+      const certImgUrl = resolveImageUrl(cert.image);
+      
+      const titleText = currentLang === "id" ? cert.title_id : cert.title_en;
+      
+      // Fallback yang jauh lebih rapi, sentral, dan elegan
+      const certFallbackHtml = `
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; padding: 24px; background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.15), transparent);">
+          <div style="font-size: 2.8rem; margin-bottom: 12px; filter: drop-shadow(0 0 12px rgba(56,189,248,0.4));">🏅</div>
+          <div style="font-weight: 800; font-size: 1.1rem; font-family: var(--font-heading); color: var(--text-primary); margin-bottom: 6px;">${titleText}</div>
+          <div style="font-size: 0.8rem; color: var(--accent-cyan); text-transform: uppercase; letter-spacing: 0.05em;">Dokumen Tersedia</div>
+        </div>
+      `;
+
+      // Jika ada URL gambar, kita buat elemen img. Jika gagal (onerror), baru kita ganti isi container-nya.
+      if (certImgUrl) {
+        certBox.innerHTML = `<img src="${certImgUrl}" alt="${titleText}" loading="lazy" style="width: 100%; height: 100%; object-fit: contain; padding: 4px;" />`;
+        // Penanganan error pada gambar
+        const imgEl = certBox.querySelector('img');
+        imgEl.onerror = function() {
+           certBox.innerHTML = certFallbackHtml;
+        };
+      } else {
+        certBox.innerHTML = certFallbackHtml;
+      }
+
+      const certActionWrap = document.getElementById("cert-action-wrap");
+      const certLink = !isPlaceholderLink(cert.docUrl) ? cert.docUrl : (!isPlaceholderLink(cert.image) ? cert.image : "");
+      if (certLink) {
+        certActionWrap.innerHTML = `
+          <a href="${certLink}" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: 100%;">
+            📄 ${currentLang === "id" ? "Lihat Dokumen Sertifikat" : "View Certificate Document"}
+          </a>
+        `;
+      } else {
+        certActionWrap.innerHTML = "";
+      }
+    }
+
+    // Terapkan Terjemahan Statis & Dinamis
+    function applyLanguage(lang) {
+      currentLang = lang;
+      document.documentElement.lang = lang;
+      document.getElementById("lang-label").textContent = lang.toUpperCase();
+
+      const dict = I18N_DATA[lang];
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const keys = el.getAttribute("data-i18n").split(".");
+        let val = dict;
+        for (const k of keys) {
+          if (val && val[k] !== undefined) val = val[k];
+        }
+        if (typeof val === "string") {
+          el.textContent = val;
+        }
+      });
+
+      renderValues();
+      renderSkills();
+      renderServices();
+      renderExperience();
+      renderPortfolioFilters();
+      renderPortfolioProjects();
+      renderEducationAndCert();
+      setupConfiguredLinks();
+    }
+
+    /**************************************************************************
+     * 5. MODAL DETAIL PROYEK (DENGAN TOMBOL CLOSE, ESCAPE, & KLIK LUAR)
+     **************************************************************************/
+    const modalEl = document.getElementById("project-modal");
+
+    function openProjectModal(projId) {
+      const proj = SITE_CONFIG.projects.find(p => p.id === projId);
+      if (!proj) return;
+
+      const t = I18N_DATA[currentLang].portfolio;
+      const title = currentLang === "id" ? (proj.title_id || proj.title) : (proj.title_en || proj.title_id || proj.title);
+      const desc = currentLang === "id" ? (proj.description_id || proj.description) : (proj.description_en || proj.description_id || proj.description);
+      const catLabel = currentLang === "id" ? (proj.categoryLabel_id || proj.category) : (proj.categoryLabel_en || proj.category);
+      const imgUrl = resolveImageUrl(proj.image);
+
+      document.getElementById("modal-category").textContent = `${catLabel} ${proj.isDemoConcept !== false ? "• " + t.demoLabel : ""}`;
+      document.getElementById("modal-title").textContent = title;
+      document.getElementById("modal-desc").textContent = desc;
+
+      const mediaBox = document.getElementById("modal-media-box");
+      if (imgUrl) {
+        mediaBox.innerHTML = `<img src="${imgUrl}" alt="${title}" />`;
+      } else {
+        mediaBox.innerHTML = `
+          <div class="project-fallback" style="height: 220px;">
+            <strong style="font-family: var(--font-heading); font-size: 1.3rem;">${title}</strong>
+            <span style="color: var(--accent-cyan); margin-top: 8px;">${t.demoLabel}</span>
+          </div>
+        `;
+      }
+
+      document.getElementById("modal-tools").innerHTML = (proj.tools || [])
+        .map(tool => `<span class="tool-pill">${tool}</span>`)
+        .join("");
+
+      const links = [];
+      if (!isPlaceholderLink(proj.demoUrl)) {
+        links.push(`<a href="${proj.demoUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">🌐 ${t.btnDemo}</a>`);
+      }
+      if (!isPlaceholderLink(proj.docUrl)) {
+        links.push(`<a href="${proj.docUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">📁 ${t.btnDoc}</a>`);
+      }
+      if (!isPlaceholderLink(proj.pdfUrl)) {
+        links.push(`<a href="${proj.pdfUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">📄 ${t.btnPdf}</a>`);
+      }
+      if (!isPlaceholderLink(proj.videoUrl)) {
+        links.push(`<a href="${proj.videoUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">▶️ ${t.btnVideo}</a>`);
+      }
+      if (!isPlaceholderLink(proj.image)) {
+        links.push(`<a href="${proj.image}" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">🖼️ Google Drive</a>`);
+      }
+      document.getElementById("modal-links").innerHTML = links.join("");
+
+      modalEl.classList.add("open");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeProjectModal() {
+      modalEl.classList.remove("open");
+      document.body.style.overflow = "";
+    }
+
+    document.getElementById("modal-close-btn").addEventListener("click", closeProjectModal);
+    modalEl.addEventListener("click", (e) => {
+      if (e.target === modalEl) closeProjectModal();
+    });
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && modalEl.classList.contains("open")) {
+        closeProjectModal();
+      }
+    });
+
+    /**************************************************************************
+     * 6. INTERAKSI NAVBAR, DARK MODE, FORMULIR KONTAK, & PARALLAX 3D
+     **************************************************************************/
+    function initInteractions() {
+      // Tahun Dinamis Footer
+      document.getElementById("current-year").textContent = new Date().getFullYear();
+
+      // Toggle Bahasa ID / EN
+      document.getElementById("lang-toggle").addEventListener("click", () => {
+        const nextLang = currentLang === "id" ? "en" : "id";
+        applyLanguage(nextLang);
+      });
+
+      // Toggle Dark / Light Mode
+      const themeBtn = document.getElementById("theme-toggle");
+      const themeIcon = document.getElementById("theme-icon");
+      themeBtn.addEventListener("click", () => {
+        currentTheme = currentTheme === "dark" ? "light" : "dark";
+        document.documentElement.setAttribute("data-theme", currentTheme);
+        themeIcon.textContent = currentTheme === "dark" ? "☀️" : "🌙";
+      });
+
+      // Hamburger Mobile Menu
+      const menuToggle = document.getElementById("menu-toggle");
+      const navLinksContainer = document.getElementById("nav-links");
+      menuToggle.addEventListener("click", () => {
+        const isOpen = navLinksContainer.classList.toggle("open");
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+        menuToggle.textContent = isOpen ? "✕" : "☰";
+      });
+
+      navLinksContainer.querySelectorAll(".nav-link").forEach(link => {
+        link.addEventListener("click", () => {
+          navLinksContainer.classList.remove("open");
+          menuToggle.setAttribute("aria-expanded", "false");
+          menuToggle.textContent = "☰";
+        });
+      });
+
+      // Scroll Progress, Sticky Navbar, Active Menu Indicator & Back-To-Top
+      const navbar = document.getElementById("navbar");
+      const progressBar = document.getElementById("scroll-progress");
+      const backToTopBtn = document.getElementById("back-to-top");
+      const sections = document.querySelectorAll("main section[id]");
+      const navLinks = document.querySelectorAll(".nav-link");
+
+      window.addEventListener("scroll", () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        progressBar.style.width = `${progress}%`;
+
+        navbar.classList.toggle("scrolled", scrollTop > 30);
+        backToTopBtn.classList.toggle("show", scrollTop > 420);
+
+        let currentSectionId = "home";
+        sections.forEach(sec => {
+          const top = sec.offsetTop - 140;
+          if (scrollTop >= top) {
+            currentSectionId = sec.getAttribute("id");
+          }
+        });
+
+        navLinks.forEach(link => {
+          link.classList.toggle("active", link.getAttribute("href") === `#${currentSectionId}`);
+        });
+      }, { passive: true });
+
+      backToTopBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+
+      // Tombol Copy Email
+      const copyBtn = document.getElementById("copy-email-btn");
+      copyBtn.addEventListener("click", () => {
+        navigator.clipboard.writeText(SITE_CONFIG.contact.email).then(() => {
+          const originalText = I18N_DATA[currentLang].contact.copyEmail;
+          const copiedText = I18N_DATA[currentLang].contact.copiedEmail;
+          copyBtn.innerHTML = `✅ <span>${copiedText}</span>`;
+          setTimeout(() => {
+            copyBtn.innerHTML = `📋 <span>${originalText}</span>`;
+          }, 2200);
+        });
+      });
+
+      // Formulir Kontak -> WhatsApp atau Aplikasi Email
+      const contactForm = document.getElementById("contact-form");
+      function getFormPayload() {
+        const name = document.getElementById("sender-name").value.trim();
+        const email = document.getElementById("sender-email").value.trim();
+        const category = document.getElementById("sender-category").value;
+        const subject = document.getElementById("sender-subject").value.trim();
+        const message = document.getElementById("sender-message").value.trim();
+        return { name, email, category, subject, message };
+      }
+
+      contactForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const { name, email, category, subject, message } = getFormPayload();
+        const formattedWa =
+          `Halo Machael, saya *${name}* (${email}).\n` +
+          `Kategori: *${category}*\n` +
+          `Subjek: *${subject}*\n\n` +
+          `${message}`;
+        window.open(buildWhatsAppUrl(formattedWa), "_blank", "noopener,noreferrer");
+      });
+
+      document.getElementById("send-email-form-btn").addEventListener("click", () => {
+        if (!contactForm.reportValidity()) return;
+        const { name, email, category, subject, message } = getFormPayload();
+        const mailSubject = encodeURIComponent(`[${category}] ${subject} - ${name}`);
+        const mailBody = encodeURIComponent(
+          `Halo Machael,\n\nNama: ${name}\nEmail: ${email}\nKategori: ${category}\n\nPesan:\n${message}`
+        );
+        window.location.href = `mailto:${SITE_CONFIG.contact.email}?subject=${mailSubject}&body=${mailBody}`;
+      });
+
+      // Custom Cursor Glow & Hero 3D Parallax pada Desktop
+      const cursorGlow = document.getElementById("cursor-glow");
+      const profileStage = document.getElementById("profile-stage");
+      const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      if (!prefersReducedMotion && window.matchMedia("(pointer: fine)").matches) {
+        window.addEventListener("mousemove", (e) => {
+          cursorGlow.style.left = `${e.clientX}px`;
+          cursorGlow.style.top = `${e.clientY}px`;
+
+          if (profileStage && window.innerWidth > 992) {
+            const xAxis = (window.innerWidth / 2 - e.clientX) / 38;
+            const yAxis = (window.innerHeight / 2 - e.clientY) / 38;
+            profileStage.style.transform = `rotateY(${-xAxis}deg) rotateX(${yAxis}deg)`;
+          }
+        }, { passive: true });
+      }
+
+      // Intersection Observer untuk Scroll Reveal
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      }, { threshold: 0.12 });
+
+      document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+    }
+
+    /**************************************************************************
+     * 7. OBJEK 3D & PARTIKEL FUTURISTIK (THREE.JS + FALLBACK AMAN)
+     **************************************************************************/
+    function init3DBackground() {
+      const canvas = document.getElementById("bg-canvas");
+      const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      if (!SITE_CONFIG.settings.enable3D || prefersReducedMotion || typeof THREE === "undefined") {
+        // Fallback visual berbasis CSS tetap aktif dari body::before
+        return;
+      }
+
+      try {
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(65, window.innerWidth / window.innerHeight, 0.1, 1000);
+        camera.position.z = 26;
+
+        const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+        // 1. Wireframe 3D Icosahedron Geometris di sisi kanan belakang
+        const icoGeo = new THREE.IcosahedronGeometry(9, 1);
+        const icoMat = new THREE.MeshBasicMaterial({
+          color: 0x38BDF8,
+          wireframe: true,
+          transparent: true,
+          opacity: 0.14
+        });
+        const icosahedron = new THREE.Mesh(icoGeo, icoMat);
+        icosahedron.position.set(11, 2, -6);
+        scene.add(icosahedron);
+
+        // 2. Partikel Digital
+        const isMobile = window.innerWidth < 768;
+        const particleCount = isMobile ? 90 : 220;
+        const positions = new Float32Array(particleCount * 3);
+
+        for (let i = 0; i < particleCount * 3; i++) {
+          positions[i] = (Math.random() - 0.5) * 65;
+        }
+
+        const partGeo = new THREE.BufferGeometry();
+        partGeo.setAttribute("position", new THREE.BufferAttribute(positions, 3));
+
+        const partMat = new THREE.PointsMaterial({
+          color: 0x3B82F6,
+          size: 0.18,
+          transparent: true,
+          opacity: 0.55
+        });
+
+        const particles = new THREE.Points(partGeo, partMat);
+        scene.add(particles);
+
+        let mouseX = 0;
+        let mouseY = 0;
+        window.addEventListener("mousemove", (e) => {
+          mouseX = (e.clientX / window.innerWidth - 0.5) * 2;
+          mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
+        }, { passive: true });
+
+        function animate() {
+          requestAnimationFrame(animate);
+          icosahedron.rotation.x += 0.0018;
+          icosahedron.rotation.y += 0.0025;
+          particles.rotation.y += 0.0007;
+
+          camera.position.x += (mouseX * 1.6 - camera.position.x) * 0.03;
+          camera.position.y += (-mouseY * 1.6 - camera.position.y) * 0.03;
+          renderer.render(scene, camera);
+        }
+        animate();
+
+        window.addEventListener("resize", () => {
+          camera.aspect = window.innerWidth / window.innerHeight;
+          camera.updateProjectionMatrix();
+          renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+      } catch (err) {
+        // Jika WebGL gagal, halaman tetap berfungsi penuh dengan background CSS
+        console.warn("3D WebGL fallback ke CSS aktif:", err);
+      }
+    }
+
+    /**************************************************************************
+     * 8. INISIALISASI SAAT HALAMAN DIMUAT
+     **************************************************************************/
+    window.addEventListener("DOMContentLoaded", () => {
+      renderProfilePhoto();
+      applyLanguage(currentLang);
+      initInteractions();
+      init3DBackground();
+    });
+  </script>
+</body>
+</html>
