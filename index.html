@@ -3,25 +3,47 @@
 <head>
   <meta name="google-site-verification" content="64HwCtoIaGlxEZmCWLqpm9ar32eCGv4QzORq8Qm5pjg" />
   <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-kGKDkP4uC8relycoqxKRFSIllGzR2NvaVLJWxPaouFA=' 'sha256-flNbosXuzwbMghcWSHzC0GRHCqs9ltMsiOhkdtjvMIY='; style-src-elem 'sha256-816TIMVfUs5YziRQMAzs9xiFbNNByveZhQ4D7Ly2SDs=' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://drive.google.com https://*.googleusercontent.com; connect-src 'none'; frame-src 'none'; object-src 'none'; media-src 'none'; manifest-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <script>
+(function () {
+  // Tolak dibingkai (iframe) oleh situs lain
+  try {
+    if (window.top !== window.self) {
+      document.documentElement.style.display = "none";
+      window.top.location = window.self.location;
+    }
+  } catch (e) { /* diam */ }
+  // Terapkan tema tersimpan sebelum halaman tampil
+  try {
+    var t = localStorage.getItem("mw-theme");
+    if (t === "dark" || t === "light") document.documentElement.setAttribute("data-theme", t);
+  } catch (e) { /* diam */ }
+})();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Machael Wijaya, S.Kom. | Digital Solutions Specialist</title>
   <meta name="description" content="Portofolio resmi Machael Wijaya, S.Kom. — Digital Solutions Specialist di bidang Web Development, Accounting & Taxation, Digital Marketing, SEO, System Analysis, dan AI Prompt Engineering." />
   <meta name="author" content="Machael Wijaya, S.Kom." />
   <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://machaelwijaya.my.id/" />
 
   <!-- Open Graph / Social Media -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Machael Wijaya, S.Kom. | Digital Solutions Specialist" />
   <meta property="og:description" content="Solusi Tepat, Kerja Berkualitas, Bisnis Lebih Berkembang. Jelajahi portofolio, layanan profesional, dan pengalaman Machael Wijaya, S.Kom." />
   <meta property="og:locale" content="id_ID" />
+  <meta property="og:url" content="https://machaelwijaya.my.id/" />
+  <meta property="og:site_name" content="Machael Wijaya, S.Kom." />
+  <meta name="twitter:card" content="summary" />
 
   <!-- Favicon SVG Inline -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233B82F6'/%3E%3Cstop offset='100%25' stop-color='%2338BDF8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='%23071120'/%3E%3Crect x='4' y='4' width='92' height='92' rx='18' fill='none' stroke='url(%23g)' stroke-width='4'/%3E%3Ctext x='50' y='65' font-family='sans-serif' font-size='44' font-weight='800' fill='%23F8FAFC' text-anchor='middle'%3EMW%3C/text%3E%3C/svg%3E" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23E8B04B'/%3E%3Cstop offset='100%25' stop-color='%23E8B04B'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='%230E1013'/%3E%3Crect x='4' y='4' width='92' height='92' rx='18' fill='none' stroke='url(%23g)' stroke-width='4'/%3E%3Ctext x='50' y='65' font-family='sans-serif' font-size='44' font-weight='800' fill='%23F4F1EA' text-anchor='middle'%3EMW%3C/text%3E%3C/svg%3E" />
 
-  <!-- Google Fonts: Space Grotesk & Inter -->
+  <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet" />
 
   <!-- Schema.org Structured Data (Person) -->
   <script type="application/ld+json">
@@ -36,95 +58,65 @@
       "addressRegion": "Jawa Barat",
       "addressCountry": "ID"
     },
-    "email": "mailto:machael.wijaya@alumni.rosma.ac.id",
+    "url": "https://machaelwijaya.my.id/",
+    "email": "machael.wijaya@alumni.rosma.ac.id",
     "sameAs": [
       "https://www.instagram.com/mcalls__/"
     ]
   }
   </script>
 
-  <!--
-  ==============================================================================
-  PANDUAN KONFIGURASI INTERNAL & EKSTERNAL (DOKUMENTASI DALAM 1 FILE)
-  ==============================================================================
-  1. CARA MENGGANTI FOTO PROFIL, CV, & GAMBAR PROYEK:
-     - Gulir ke bagian <script> di bawah dan temukan objek `SITE_CONFIG`.
-     - Tempelkan tautan berbagi Google Drive Anda (format "Anyone with the link"
-       atau ID file) pada `profileImage`, `cvUrl`, `certificate.image`, atau
-       pada masing-masing item di dalam array `projects`.
-     - Sistem secara otomatis mengubah tautan berbagi Google Drive menjadi URL
-       stream gambar (`https://drive.google.com/thumbnail?id=FILE_ID&sz=w1600`)
-       agar kompatibel ditampilkan langsung di tag <img>.
-
-  2. CARA MENAMBAHKAN PROYEK BARU:
-     - Tambahkan objek baru ke dalam `SITE_CONFIG.projects` mengikuti format yang ada.
-     - Pilih kategori dari: 'web', 'accounting', 'marketing'.
-
-  3. CARA MENGUBAH WARNA TEMA:
-     - Edit variabel CSS di dalam `:root` dan `[data-theme="light"]` di bawah ini.
-
-  4. CARA MENGAKTIFKAN / MENONAKTIFKAN EFEK 3D:
-     - Ubah nilai `enable3D: true` menjadi `false` di dalam `SITE_CONFIG.settings`.
-
-  5. PANDUAN ROBOTS.TXT & SITEMAP.XML (JIKA HOSTING MENDUKUNG):
-     - robots.txt:
-       User-agent: *
-       Allow: /
-       Sitemap: https://domain-anda.com/sitemap.xml
-  ==============================================================================
-  -->
+<!-- Edit foto, CV, sertifikat, dan proyek di objek SITE_CONFIG (bagian script di bagian bawah file). -->
 
   <style>
-    /* ==========================================================================
-       1. CSS VARIABLES & THEME PALETTE
-       ========================================================================== */
+    /* Css variables & theme palette */
     :root {
-      --bg-primary: #071120;
-      --bg-secondary: #0B1728;
-      --bg-card: rgba(11, 23, 40, 0.68);
-      --bg-card-hover: rgba(17, 34, 58, 0.85);
-      --bg-glass: rgba(7, 17, 32, 0.78);
-      --text-primary: #F8FAFC;
-      --text-secondary: #94A3B8;
-      --text-muted: #64748B;
-      --accent-blue: #3B82F6;
-      --accent-cyan: #38BDF8;
-      --accent-gradient: linear-gradient(135deg, #3B82F6 0%, #38BDF8 100%);
-      --border-color: rgba(56, 189, 248, 0.16);
-      --border-hover: rgba(56, 189, 248, 0.45);
-      --glow-blue: 0 0 28px rgba(59, 130, 246, 0.35);
-      --glow-cyan: 0 0 25px rgba(56, 189, 248, 0.3);
+      --bg-primary: #0E1013;
+      --bg-secondary: #14171C;
+      --bg-card: rgba(20, 23, 28, 0.68);
+      --bg-card-hover: rgba(28, 32, 39, 0.85);
+      --bg-glass: rgba(14, 16, 19, 0.78);
+      --on-accent: #1B1406;
+      --text-primary: #F4F1EA;
+      --text-secondary: #A8A196;
+      --text-muted: #7C766C;
+      --accent-blue: #E8B04B;
+      --accent-cyan: #E8B04B;
+      --accent-gradient: var(--accent-blue);
+      --border-color: rgba(232, 176, 75, 0.16);
+      --border-hover: rgba(232, 176, 75, 0.45);
+      --glow-blue: 0 0 0 0 transparent;
+      --glow-cyan: 0 0 0 0 transparent;
       --shadow-card: 0 18px 40px -15px rgba(0, 0, 0, 0.6);
       --radius-lg: 20px;
       --radius-md: 14px;
       --radius-sm: 10px;
-      --font-heading: 'Space Grotesk', sans-serif;
-      --font-body: 'Inter', sans-serif;
+      --font-heading: 'Fraunces', Georgia, serif;
+      --font-body: 'DM Sans', system-ui, sans-serif;
       --transition: all 0.32s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     [data-theme="light"] {
-      --bg-primary: #F1F5F9;
-      --bg-secondary: #E2E8F0;
+      --on-accent: #FFFFFF;
+      --bg-primary: #F5F2EC;
+      --bg-secondary: #E9E4DA;
       --bg-card: rgba(255, 255, 255, 0.85);
       --bg-card-hover: rgba(255, 255, 255, 0.98);
-      --bg-glass: rgba(248, 250, 252, 0.85);
-      --text-primary: #0F172A;
-      --text-secondary: #334155;
-      --text-muted: #64748B;
-      --accent-blue: #2563EB;
-      --accent-cyan: #0284C7;
-      --accent-gradient: linear-gradient(135deg, #2563EB 0%, #0284C7 100%);
-      --border-color: rgba(37, 99, 235, 0.15);
-      --border-hover: rgba(37, 99, 235, 0.45);
-      --glow-blue: 0 10px 25px rgba(37, 99, 235, 0.2);
-      --glow-cyan: 0 8px 20px rgba(2, 132, 199, 0.18);
-      --shadow-card: 0 14px 32px -10px rgba(15, 23, 42, 0.08);
+      --bg-glass: rgba(245, 242, 236, 0.85);
+      --text-primary: #1C1A17;
+      --text-secondary: #3F3A33;
+      --text-muted: #7C766C;
+      --accent-blue: #B45309;
+      --accent-cyan: #B45309;
+      --accent-gradient: var(--accent-blue);
+      --border-color: rgba(180, 83, 9, 0.15);
+      --border-hover: rgba(180, 83, 9, 0.45);
+      --glow-blue: 0 0 0 0 transparent;
+      --glow-cyan: 0 0 0 0 transparent;
+      --shadow-card: 0 14px 32px -10px rgba(28, 26, 23, 0.08);
     }
 
-    /* ==========================================================================
-       2. RESET & BASE STYLES
-       ========================================================================== */
+    /* Reset & base styles */
     *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
@@ -146,48 +138,8 @@
       position: relative;
     }
 
-    /* Futuristic Ambient Grid & Glow Background */
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      background-image: 
-        radial-gradient(circle at 15% 15%, rgba(59, 130, 246, 0.12), transparent 35%),
-        radial-gradient(circle at 85% 80%, rgba(56, 189, 248, 0.10), transparent 35%),
-        linear-gradient(rgba(56, 189, 248, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(56, 189, 248, 0.03) 1px, transparent 1px);
-      background-size: 100% 100%, 100% 100%, 48px 48px, 48px 48px;
-      pointer-events: none;
-      z-index: -2;
-    }
 
-    /* 3D Canvas Container */
-    #bg-canvas {
-      position: fixed;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      pointer-events: none;
-      opacity: 0.75;
-    }
 
-    /* Custom Cursor Glow (Desktop Only) */
-    .cursor-glow {
-      position: fixed;
-      width: 340px;
-      height: 340px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(56, 189, 248, 0.11) 0%, rgba(59, 130, 246, 0.04) 45%, transparent 70%);
-      transform: translate(-50%, -50%);
-      pointer-events: none;
-      z-index: 0;
-      transition: opacity 0.3s ease;
-      display: none;
-    }
-    @media (pointer: fine) {
-      .cursor-glow { display: block; }
-    }
 
     /* Scroll Progress Bar */
     #scroll-progress {
@@ -220,9 +172,7 @@
       color: inherit;
     }
 
-    /* ==========================================================================
-       3. LAYOUT & REUSABLE COMPONENTS
-       ========================================================================== */
+    /* Layout & reusable components */
     .container {
       width: 100%;
       max-width: 1240px;
@@ -254,7 +204,7 @@
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--accent-cyan);
-      background: rgba(56, 189, 248, 0.1);
+      background: rgba(232, 176, 75, 0.1);
       border: 1px solid var(--border-color);
       margin-bottom: 16px;
     }
@@ -298,24 +248,24 @@
 
     .btn-primary {
       background: var(--accent-gradient);
-      color: #FFFFFF;
+      color: var(--on-accent);
       box-shadow: var(--glow-blue);
     }
 
     .btn-primary:hover {
       transform: translateY(-3px);
-      box-shadow: 0 12px 28px rgba(56, 189, 248, 0.45);
+      box-shadow: 0 12px 28px rgba(232, 176, 75, 0.45);
     }
 
     .btn-outline {
-      background: rgba(56, 189, 248, 0.06);
+      background: rgba(232, 176, 75, 0.06);
       color: var(--text-primary);
       border-color: var(--border-hover);
       backdrop-filter: blur(10px);
     }
 
     .btn-outline:hover {
-      background: rgba(56, 189, 248, 0.16);
+      background: rgba(232, 176, 75, 0.16);
       border-color: var(--accent-cyan);
       transform: translateY(-3px);
       box-shadow: var(--glow-cyan);
@@ -345,9 +295,7 @@
       box-shadow: var(--shadow-card), var(--glow-blue);
     }
 
-    /* ==========================================================================
-       4. NAVBAR
-       ========================================================================== */
+    /* Navbar */
     .navbar {
       position: fixed;
       top: 0;
@@ -391,7 +339,7 @@
       background: var(--accent-gradient);
       display: grid;
       place-items: center;
-      color: #fff;
+      color: var(--on-accent);
       font-weight: 800;
       font-size: 1rem;
       box-shadow: var(--glow-blue);
@@ -415,7 +363,7 @@
     .nav-link:hover,
     .nav-link.active {
       color: var(--text-primary);
-      background: rgba(56, 189, 248, 0.12);
+      background: rgba(232, 176, 75, 0.12);
     }
 
     .nav-link.active {
@@ -433,7 +381,7 @@
       height: 38px;
       padding: 0 12px;
       border-radius: 9px;
-      background: rgba(56, 189, 248, 0.08);
+      background: rgba(232, 176, 75, 0.08);
       border: 1px solid var(--border-color);
       color: var(--text-primary);
       display: inline-flex;
@@ -448,7 +396,7 @@
 
     .icon-btn:hover {
       border-color: var(--accent-cyan);
-      background: rgba(56, 189, 248, 0.18);
+      background: rgba(232, 176, 75, 0.18);
     }
 
     .hamburger {
@@ -458,9 +406,7 @@
       padding: 0;
     }
 
-    /* ==========================================================================
-       5. HERO SECTION
-       ========================================================================== */
+    /* Hero section */
     .hero {
       min-height: 100vh;
       display: flex;
@@ -483,7 +429,7 @@
       gap: 10px;
       padding: 7px 16px;
       border-radius: 999px;
-      background: rgba(59, 130, 246, 0.12);
+      background: rgba(232, 176, 75, 0.12);
       border: 1px solid var(--border-hover);
       font-size: 0.8rem;
       font-weight: 700;
@@ -578,14 +524,14 @@
     }
 
     .social-icon:hover {
-      color: #fff;
+      color: var(--on-accent);
       background: var(--accent-gradient);
       border-color: transparent;
       transform: translateY(-3px);
       box-shadow: var(--glow-blue);
     }
 
-    /* Hero Right: 3D Perspective Profile Frame */
+    /* Hero kanan: bingkai foto */
     .hero-visual {
       display: flex;
       justify-content: center;
@@ -602,38 +548,16 @@
       transition: transform 0.2s ease-out;
     }
 
-    /* Futuristic Rotating Rings */
-    .orbital-ring {
-      position: absolute;
-      inset: -20px;
-      border-radius: 30px;
-      border: 1px dashed rgba(56, 189, 248, 0.35);
-      transform: translateZ(-30px) rotate(-6deg);
-      pointer-events: none;
-      animation: floatSlow 7s ease-in-out infinite;
-    }
 
-    .orbital-ring-2 {
-      position: absolute;
-      inset: -10px;
-      border-radius: 26px;
-      border: 1px solid rgba(59, 130, 246, 0.25);
-      transform: translateZ(-15px) rotate(4deg);
-      pointer-events: none;
-    }
 
-    @keyframes floatSlow {
-      0%, 100% { transform: translateZ(-30px) rotate(-6deg) translateY(0px); }
-      50% { transform: translateZ(-30px) rotate(-3deg) translateY(-10px); }
-    }
 
     .profile-frame {
       position: relative;
       width: 100%;
       height: 100%;
       border-radius: 24px;
-      background: linear-gradient(160deg, rgba(59, 130, 246, 0.22), rgba(11, 23, 40, 0.9));
-      border: 1.5px solid rgba(56, 189, 248, 0.45);
+      background: linear-gradient(160deg, rgba(232, 176, 75, 0.22), rgba(20, 23, 28, 0.9));
+      border: 1.5px solid rgba(232, 176, 75, 0.45);
       box-shadow: 0 25px 60px rgba(0, 0, 0, 0.65), var(--glow-blue);
       overflow: hidden;
       display: flex;
@@ -646,7 +570,7 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(to top, rgba(7, 17, 32, 0.85) 0%, transparent 45%);
+      background: linear-gradient(to top, rgba(14, 16, 19, 0.85) 0%, transparent 45%);
       pointer-events: none;
     }
 
@@ -680,42 +604,15 @@
       font-family: var(--font-heading);
       font-size: 2.4rem;
       font-weight: 800;
-      color: #fff;
+      color: var(--on-accent);
       box-shadow: var(--glow-cyan);
       margin-bottom: 18px;
     }
 
-    /* Floating 3D Badges around Photo */
-    .floating-badge {
-      position: absolute;
-      padding: 10px 16px;
-      border-radius: 14px;
-      background: var(--bg-glass);
-      backdrop-filter: blur(14px);
-      border: 1px solid var(--border-hover);
-      box-shadow: var(--shadow-card);
-      font-size: 0.8rem;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      gap: 9px;
-      transform: translateZ(50px);
-      z-index: 5;
-    }
 
-    .badge-top-right {
-      top: 18px;
-      right: -18px;
-    }
 
-    .badge-bottom-left {
-      bottom: 22px;
-      left: -20px;
-    }
 
-    /* ==========================================================================
-       6. ABOUT ME & VALUES
-       ========================================================================== */
+    /* About me & values */
     .about-grid {
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
@@ -753,7 +650,7 @@
       width: 42px;
       height: 42px;
       border-radius: 10px;
-      background: rgba(56, 189, 248, 0.12);
+      background: rgba(232, 176, 75, 0.12);
       color: var(--accent-cyan);
       display: grid;
       place-items: center;
@@ -770,9 +667,7 @@
       color: var(--text-secondary);
     }
 
-    /* ==========================================================================
-       7. SKILLS & SOFT SKILLS
-       ========================================================================== */
+    /* Skills & soft skills */
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -795,7 +690,7 @@
       height: 46px;
       border-radius: 12px;
       background: var(--accent-gradient);
-      color: #fff;
+      color: var(--on-accent);
       display: grid;
       place-items: center;
       flex-shrink: 0;
@@ -819,7 +714,7 @@
       border-radius: 8px;
       font-size: 0.84rem;
       font-weight: 500;
-      background: rgba(56, 189, 248, 0.08);
+      background: rgba(232, 176, 75, 0.08);
       border: 1px solid var(--border-color);
       color: var(--text-primary);
       transition: var(--transition);
@@ -827,7 +722,7 @@
 
     .skill-tag:hover {
       border-color: var(--accent-cyan);
-      background: rgba(56, 189, 248, 0.18);
+      background: rgba(232, 176, 75, 0.18);
       transform: translateY(-2px);
     }
 
@@ -850,9 +745,7 @@
       gap: 10px;
     }
 
-    /* ==========================================================================
-       8. SERVICES SECTION
-       ========================================================================== */
+    /* Services section */
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -871,7 +764,7 @@
       width: 52px;
       height: 52px;
       border-radius: 14px;
-      background: rgba(59, 130, 246, 0.15);
+      background: rgba(232, 176, 75, 0.15);
       border: 1px solid var(--border-hover);
       color: var(--accent-cyan);
       display: grid;
@@ -916,15 +809,13 @@
     .service-benefit {
       padding: 12px 14px;
       border-radius: 10px;
-      background: rgba(56, 189, 248, 0.07);
+      background: rgba(232, 176, 75, 0.07);
       border-left: 3px solid var(--accent-cyan);
       font-size: 0.83rem;
       color: var(--text-primary);
     }
 
-    /* ==========================================================================
-       9. TIMELINE (EXPERIENCE & EDUCATION)
-       ========================================================================== */
+    /* Timeline (experience & education) */
     .timeline {
       position: relative;
       max-width: 920px;
@@ -993,7 +884,7 @@
       border-radius: 999px;
       font-size: 0.8rem;
       font-weight: 600;
-      background: rgba(59, 130, 246, 0.14);
+      background: rgba(232, 176, 75, 0.14);
       border: 1px solid var(--border-color);
       color: var(--accent-cyan);
     }
@@ -1019,9 +910,7 @@
       font-weight: bold;
     }
 
-    /* ==========================================================================
-       10. PORTFOLIO & GOOGLE DRIVE PROJECTS
-       ========================================================================== */
+    /* Portfolio & google drive projects */
     .portfolio-filters {
       display: flex;
       flex-wrap: wrap;
@@ -1045,7 +934,7 @@
     .filter-btn:hover,
     .filter-btn.active {
       background: var(--accent-gradient);
-      color: #fff;
+      color: var(--on-accent);
       border-color: transparent;
       box-shadow: var(--glow-blue);
     }
@@ -1065,7 +954,7 @@
     .project-thumb {
       position: relative;
       height: 220px;
-      background: linear-gradient(135deg, #0B1728 0%, #1E293B 100%);
+      background: linear-gradient(135deg, #14171C 0%, #232830 100%);
       overflow: hidden;
       border-bottom: 1px solid var(--border-color);
     }
@@ -1091,7 +980,7 @@
       font-weight: 800;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      background: rgba(7, 17, 32, 0.88);
+      background: rgba(14, 16, 19, 0.88);
       color: var(--accent-cyan);
       border: 1px solid var(--accent-cyan);
       backdrop-filter: blur(8px);
@@ -1107,7 +996,7 @@
       justify-content: center;
       padding: 24px;
       text-align: center;
-      background: radial-gradient(circle at 50% 30%, rgba(59, 130, 246, 0.24), rgba(11, 23, 40, 0.95));
+      background: radial-gradient(circle at 50% 30%, rgba(232, 176, 75, 0.24), rgba(20, 23, 28, 0.95));
     }
 
     .project-body {
@@ -1152,7 +1041,7 @@
       font-size: 0.75rem;
       padding: 4px 10px;
       border-radius: 6px;
-      background: rgba(56, 189, 248, 0.09);
+      background: rgba(232, 176, 75, 0.09);
       color: var(--text-secondary);
       border: 1px solid var(--border-color);
     }
@@ -1165,9 +1054,7 @@
       border-top: 1px solid var(--border-color);
     }
 
-    /* ==========================================================================
-       11. EDUCATION, CERTIFICATION & ORGANIZATION GRID
-       ========================================================================== */
+    /* Education, certification & organization grid */
     .credentials-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
@@ -1188,7 +1075,7 @@
       border-radius: 12px;
       overflow: hidden;
       border: 1px solid var(--border-color);
-      background: rgba(7, 17, 32, 0.55);
+      background: rgba(14, 16, 19, 0.55);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1203,9 +1090,7 @@
       padding: 8px;
     }
 
-    /* ==========================================================================
-       12. CONTACT SECTION & CTA
-       ========================================================================== */
+    /* Contact section & cta */
     .contact-grid {
       display: grid;
       grid-template-columns: 0.95fr 1.05fr;
@@ -1236,7 +1121,7 @@
       width: 44px;
       height: 44px;
       border-radius: 11px;
-      background: rgba(56, 189, 248, 0.12);
+      background: rgba(232, 176, 75, 0.12);
       border: 1px solid var(--border-color);
       color: var(--accent-cyan);
       display: grid;
@@ -1283,7 +1168,7 @@
       width: 100%;
       padding: 12px 15px;
       border-radius: 10px;
-      background: rgba(7, 17, 32, 0.55);
+      background: rgba(14, 16, 19, 0.55);
       border: 1px solid var(--border-color);
       color: var(--text-primary);
       font-size: 0.94rem;
@@ -1291,12 +1176,12 @@
     }
 
     [data-theme="light"] .form-control {
-      background: #F8FAFC;
+      background: #F4F1EA;
     }
 
     .form-control:focus {
       border-color: var(--accent-cyan);
-      box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.18);
+      box-shadow: 0 0 0 3px rgba(232, 176, 75, 0.18);
       outline: none;
     }
 
@@ -1316,7 +1201,7 @@
     .cta-banner {
       padding: 56px 40px;
       text-align: center;
-      background: linear-gradient(135deg, rgba(59, 130, 246, 0.18) 0%, rgba(56, 189, 248, 0.08) 100%);
+      background: linear-gradient(135deg, rgba(232, 176, 75, 0.18) 0%, rgba(232, 176, 75, 0.08) 100%);
       border: 1px solid var(--border-hover);
       border-radius: 26px;
       margin-bottom: 80px;
@@ -1329,9 +1214,7 @@
       margin: 0 auto 26px;
     }
 
-    /* ==========================================================================
-       13. FOOTER & BACK TO TOP
-       ========================================================================== */
+    /* Footer & back to top */
     .footer {
       border-top: 1px solid var(--border-color);
       padding: 56px 0 36px;
@@ -1365,7 +1248,7 @@
       height: 46px;
       border-radius: 13px;
       background: var(--accent-gradient);
-      color: #fff;
+      color: var(--on-accent);
       border: none;
       display: grid;
       place-items: center;
@@ -1384,9 +1267,7 @@
       transform: translateY(0);
     }
 
-    /* ==========================================================================
-       14. MODAL (PROJECT DETAIL & LIGHTBOX)
-       ========================================================================== */
+    /* Modal (project detail & lightbox) */
     .modal-backdrop {
       position: fixed;
       inset: 0;
@@ -1433,7 +1314,7 @@
       width: 38px;
       height: 38px;
       border-radius: 10px;
-      background: rgba(56, 189, 248, 0.12);
+      background: rgba(232, 176, 75, 0.12);
       border: 1px solid var(--border-color);
       color: var(--text-primary);
       cursor: pointer;
@@ -1448,7 +1329,7 @@
       overflow: hidden;
       margin-bottom: 22px;
       border: 1px solid var(--border-color);
-      background: #071120;
+      background: #0E1013;
     }
 
     .modal-media img {
@@ -1458,9 +1339,7 @@
       object-fit: contain;
     }
 
-    /* ==========================================================================
-       15. SCROLL REVEAL & RESPONSIVE DESIGN
-       ========================================================================== */
+    /* Scroll reveal & responsive design */
     .reveal {
       opacity: 0;
       transform: translateY(28px);
@@ -1540,9 +1419,14 @@
       .credentials-grid {
         grid-template-columns: 1fr;
       }
-      .badge-top-right, .badge-bottom-left {
-        display: none;
-      }
+    }
+    /* Penyesuaian tampilan */
+    .glass-card { backdrop-filter: none; -webkit-backdrop-filter: none; }
+    .gradient-text { background: none; -webkit-text-fill-color: currentColor; color: var(--accent-cyan); }
+    .hero-title { font-size: clamp(2rem, 4vw, 3.1rem); font-weight: 600; letter-spacing: -0.02em; line-height: 1.2; }
+    .section-title { font-weight: 600; letter-spacing: -0.015em; }
+    .value-icon, .skill-cat-icon, .service-icon, .brand-logo {
+      font-family: var(--font-heading); font-weight: 600; font-size: 0.95rem; letter-spacing: 0.02em;
     }
   </style>
 </head>
@@ -1551,19 +1435,11 @@
   <!-- Scroll Progress Indicator -->
   <div id="scroll-progress" aria-hidden="true"></div>
 
-  <!-- Custom Cursor Glow -->
-  <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
-
-  <!-- 3D Futuristic Particle Background (Three.js + CSS Fallback) -->
-  <canvas id="bg-canvas" aria-hidden="true"></canvas>
-
-  <!-- ========================================================================
-       NAVIGATION BAR
-       ======================================================================== -->
+  <!-- Navigation bar -->
   <header class="navbar" id="navbar">
     <div class="container nav-container">
       <a href="#home" class="brand" aria-label="Machael Wijaya Home">
-        <span class="brand-logo">MAW</span>
+        <span class="brand-logo">MW</span>
         <span>Machael Wijaya<span class="gradient-text">, S.Kom.</span></span>
       </a>
 
@@ -1585,7 +1461,7 @@
           <span id="lang-label">ID</span>
         </button>
         <button class="icon-btn" id="theme-toggle" type="button" aria-label="Ganti Mode Gelap atau Terang">
-          <span id="theme-icon">☀️</span>
+          <span id="theme-icon"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor"/></svg></span>
         </button>
         <button class="icon-btn hamburger" id="menu-toggle" type="button" aria-label="Buka Menu Navigasi" aria-expanded="false">
           ☰
@@ -1595,9 +1471,7 @@
   </header>
 
   <main>
-    <!-- ======================================================================
-         HERO SECTION
-         ====================================================================== -->
+    <!-- Hero section -->
     <section class="hero" id="home">
       <div class="container hero-grid">
         <!-- Left Column -->
@@ -1608,9 +1482,7 @@
           </div>
 
           <p class="hero-name">Machael Wijaya, S.Kom.</p>
-          <h1 class="hero-title">
-            Turning Ideas Into <span class="gradient-text">Digital Solutions.</span>
-          </h1>
+          <h1 class="hero-title" data-i18n="hero.title">Membantu bisnis merapikan sistem, pembukuan, dan kehadiran digitalnya.</h1>
           <p class="hero-slogan" data-i18n="hero.slogan">
             “Solusi Tepat, Kerja Berkualitas, Bisnis Lebih Berkembang.”
           </p>
@@ -1620,10 +1492,10 @@
 
           <div class="hero-meta">
             <span class="hero-meta-item">
-              📍 <span data-i18n="hero.location">Bekasi, Jawa Barat, Indonesia</span>
+              <span data-i18n="hero.location">Bekasi, Jawa Barat, Indonesia</span>
             </span>
             <span class="hero-meta-item">
-              💼 <span data-i18n="hero.status">Terbuka untuk Kerja, Freelance, Remote & Kolaborasi Bisnis</span>
+              <span data-i18n="hero.status">Terbuka untuk peluang kerja, freelance, proyek digital, kerja jarak jauh, dan kolaborasi bisnis</span>
             </span>
           </div>
 
@@ -1635,7 +1507,7 @@
               Hubungi Saya
             </a>
             <a href="#" id="hero-cv-btn" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
-              📄 <span data-i18n="hero.btnCv">Unduh CV</span>
+              <span data-i18n="hero.btnCv">Lihat CV</span>
             </a>
           </div>
 
@@ -1652,19 +1524,9 @@
           </div>
         </div>
 
-        <!-- Right Column: 3D Parallax Frame -->
+        <!-- Kolom kanan: foto profil -->
         <div class="hero-visual reveal">
           <div class="profile-3d-stage" id="profile-stage">
-            <div class="orbital-ring" aria-hidden="true"></div>
-            <div class="orbital-ring-2" aria-hidden="true"></div>
-
-            <div class="floating-badge badge-top-right">
-              <span>⚡</span> <span data-i18n="hero.float1">IT • Tax • Digital</span>
-            </div>
-
-            <div class="floating-badge badge-bottom-left">
-              <span>🎯</span> <span data-i18n="hero.float2">Machael Wijaya, S.Kom.</span>
-            </div>
 
             <div class="profile-frame" id="profile-frame-container">
               <!-- Diisi otomatis dari SITE_CONFIG.profileImage -->
@@ -1674,9 +1536,7 @@
       </div>
     </section>
 
-    <!-- ======================================================================
-         ABOUT ME SECTION
-         ====================================================================== -->
+    <!-- About me section -->
     <section id="about">
       <div class="container">
         <div class="section-header reveal">
@@ -1707,9 +1567,7 @@
       </div>
     </section>
 
-    <!-- ======================================================================
-         SKILLS & COMPETENCIES SECTION
-         ====================================================================== -->
+    <!-- Skills & competencies section -->
     <section id="skills">
       <div class="container">
         <div class="section-header reveal">
@@ -1721,7 +1579,7 @@
         </div>
 
         <div class="skills-grid" id="skills-grid">
-          <!-- Dirender secara dinamis melalui JavaScript -->
+          <!-- Diisi lewat JS -->
         </div>
 
         <div class="glass-card soft-skills-box reveal">
@@ -1733,9 +1591,7 @@
       </div>
     </section>
 
-    <!-- ======================================================================
-         SERVICES SECTION
-         ====================================================================== -->
+    <!-- Services section -->
     <section id="services">
       <div class="container">
         <div class="section-header reveal">
@@ -1747,14 +1603,12 @@
         </div>
 
         <div class="services-grid" id="services-grid">
-          <!-- Dirender secara dinamis melalui JavaScript -->
+          <!-- Diisi lewat JS -->
         </div>
       </div>
     </section>
 
-    <!-- ======================================================================
-         WORK EXPERIENCE SECTION
-         ====================================================================== -->
+    <!-- Work experience section -->
     <section id="experience">
       <div class="container">
         <div class="section-header reveal">
@@ -1766,14 +1620,12 @@
         </div>
 
         <div class="timeline" id="experience-timeline">
-          <!-- Dirender secara dinamis melalui JavaScript -->
+          <!-- Diisi lewat JS -->
         </div>
       </div>
     </section>
 
-    <!-- ======================================================================
-         PORTFOLIO & DEMO PROJECTS SECTION
-         ====================================================================== -->
+    <!-- Portfolio & demo projects section -->
     <section id="portfolio">
       <div class="container">
         <div class="section-header reveal">
@@ -1794,9 +1646,7 @@
       </div>
     </section>
 
-    <!-- ======================================================================
-         EDUCATION, CERTIFICATION & ORGANIZATION SECTION
-         ====================================================================== -->
+    <!-- Education, certification & organization section -->
     <section id="education">
       <div class="container">
         <div class="section-header reveal">
@@ -1851,9 +1701,7 @@
       </div>
     </section>
 
-    <!-- ======================================================================
-         CONTACT SECTION
-         ====================================================================== -->
+    <!-- Contact section -->
     <section id="contact">
       <div class="container">
         <div class="section-header reveal">
@@ -1875,18 +1723,18 @@
 
               <div class="contact-list" style="margin-top: 24px;">
                 <div class="contact-item">
-                  <div class="contact-icon">✉️</div>
+                  <div class="contact-icon"></div>
                   <div>
                     <div class="contact-label">Email</div>
                     <div class="contact-value" id="display-email">machael.wijaya@alumni.rosma.ac.id</div>
                     <button type="button" class="btn btn-outline btn-sm" id="copy-email-btn" style="margin-top: 8px;">
-                      📋 <span data-i18n="contact.copyEmail">Salin Email</span>
+                      <span data-i18n="contact.copyEmail">Salin Email</span>
                     </button>
                   </div>
                 </div>
 
                 <div class="contact-item">
-                  <div class="contact-icon">💬</div>
+                  <div class="contact-icon"></div>
                   <div>
                     <div class="contact-label">WhatsApp</div>
                     <div class="contact-value">085158902121</div>
@@ -1894,7 +1742,7 @@
                 </div>
 
                 <div class="contact-item">
-                  <div class="contact-icon">📸</div>
+                  <div class="contact-icon"></div>
                   <div>
                     <div class="contact-label">Instagram</div>
                     <div class="contact-value">@mcalls__</div>
@@ -1902,7 +1750,7 @@
                 </div>
 
                 <div class="contact-item">
-                  <div class="contact-icon">📍</div>
+                  <div class="contact-icon"></div>
                   <div>
                     <div class="contact-label" data-i18n="contact.locLabel">Lokasi & Ketersediaan</div>
                     <div class="contact-value" data-i18n="contact.locValue">
@@ -1939,12 +1787,12 @@
             <form id="contact-form">
               <div class="form-group">
                 <label class="form-label" for="sender-name" data-i18n="contact.labelName">Nama Lengkap</label>
-                <input class="form-control" type="text" id="sender-name" required placeholder="Nama Anda / Perusahaan" />
+                <input class="form-control" type="text" id="sender-name" maxlength="80" autocomplete="name" required placeholder="Nama Anda / Perusahaan" data-i18n-placeholder="contact.phName" />
               </div>
 
               <div class="form-group">
                 <label class="form-label" for="sender-email" data-i18n="contact.labelEmail">Alamat Email</label>
-                <input class="form-control" type="email" id="sender-email" required placeholder="nama@email.com" />
+                <input class="form-control" type="email" id="sender-email" maxlength="120" autocomplete="email" required placeholder="nama@email.com" data-i18n-placeholder="contact.phEmail" />
               </div>
 
               <div class="form-group">
@@ -1962,20 +1810,20 @@
 
               <div class="form-group">
                 <label class="form-label" for="sender-subject" data-i18n="contact.labelSubject">Subjek</label>
-                <input class="form-control" type="text" id="sender-subject" required placeholder="Topik diskusi" />
+                <input class="form-control" type="text" id="sender-subject" maxlength="120" autocomplete="off" required placeholder="Topik diskusi" data-i18n-placeholder="contact.phSubject" />
               </div>
 
               <div class="form-group">
                 <label class="form-label" for="sender-message" data-i18n="contact.labelMessage">Pesan</label>
-                <textarea class="form-control" id="sender-message" required placeholder="Tuliskan detail kebutuhan atau peluang kerja sama..."></textarea>
+                <textarea class="form-control" id="sender-message" maxlength="1500" required placeholder="Tuliskan detail kebutuhan atau peluang kerja sama..." data-i18n-placeholder="contact.phMessage"></textarea>
               </div>
 
               <div class="form-actions">
                 <button type="submit" data-send-mode="wa" class="btn btn-primary">
-                  💬 <span data-i18n="contact.sendWa">Kirim via WhatsApp</span>
+                  <span data-i18n="contact.sendWa">Kirim via WhatsApp</span>
                 </button>
                 <button type="button" id="send-email-form-btn" class="btn btn-outline">
-                  ✉️ <span data-i18n="contact.sendMail">Buka di Aplikasi Email</span>
+                  <span data-i18n="contact.sendMail">Buka di Aplikasi Email</span>
                 </button>
               </div>
             </form>
@@ -1984,9 +1832,7 @@
       </div>
     </section>
 
-    <!-- ======================================================================
-         CALL TO ACTION BANNER
-         ====================================================================== -->
+    <!-- Call to action banner -->
     <div class="container">
       <div class="cta-banner reveal">
         <h2 data-i18n="cta.heading">
@@ -2004,15 +1850,13 @@
     </div>
   </main>
 
-  <!-- ========================================================================
-       FOOTER
-       ======================================================================== -->
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div>
           <div class="brand" style="margin-bottom: 12px;">
-            <span class="brand-logo">MAW</span>
+            <span class="brand-logo">MW</span>
             <span>Machael Wijaya, S.Kom.</span>
           </div>
           <p style="color: var(--accent-cyan); font-weight: 600; font-size: 0.92rem; margin-bottom: 8px;">
@@ -2026,14 +1870,14 @@
         <div>
           <h4 style="font-family: var(--font-heading); margin-bottom: 14px;" data-i18n="footer.navTitle">Navigasi Cepat</h4>
           <ul style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; font-size: 0.9rem; color: var(--text-secondary);">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#home" data-i18n="nav.home">Home</a></li>
+            <li><a href="#about" data-i18n="nav.about">About</a></li>
+            <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+            <li><a href="#services" data-i18n="nav.services">Services</a></li>
+            <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+            <li><a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a></li>
+            <li><a href="#education" data-i18n="nav.education">Education</a></li>
+            <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
           </ul>
         </div>
 
@@ -2046,16 +1890,15 @@
             Bekasi, Jawa Barat, Indonesia
           </p>
           <div class="hero-socials">
-            <a href="https://wa.me/6285158902121" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="WhatsApp">WA</a>
-            <a href="https://www.instagram.com/mcalls__/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">IG</a>
-            <a href="mailto:machael.wijaya@alumni.rosma.ac.id" class="social-icon" aria-label="Email">@</a>
+            <a href="https://wa.me/6285158902121" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="WhatsApp"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.126.556 4.124 1.529 5.855l-1.529 5.581 5.729-1.503c1.694.909 3.631 1.427 5.691 1.427 6.627 0 12-5.373 12-12s-5.373-11.36-11.42-11.36z"/></svg></a>
+            <a href="https://www.instagram.com/mcalls__/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+            <a href="mailto:machael.wijaya@alumni.rosma.ac.id" class="social-icon" aria-label="Email"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg></a>
           </div>
         </div>
       </div>
 
       <div class="footer-bottom">
         <p>© <span id="current-year"></span> Machael Wijaya, S.Kom. All rights reserved.</p>
-        <p data-i18n="footer.builtWith">Futuristic 3D Personal Branding Portfolio</p>
       </div>
     </div>
   </footer>
@@ -2063,9 +1906,7 @@
   <!-- Back To Top Button -->
   <button id="back-to-top" type="button" aria-label="Kembali ke atas">↑</button>
 
-  <!-- ========================================================================
-       PROJECT DETAIL & IMAGE LIGHTBOX MODAL
-       ======================================================================== -->
+  <!-- Project detail & image lightbox modal -->
   <div class="modal-backdrop" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
     <div class="modal-content">
       <button class="modal-close" id="modal-close-btn" type="button" aria-label="Tutup Modal">✕</button>
@@ -2078,29 +1919,17 @@
     </div>
   </div>
 
-  <!-- Optional Three.js CDN (Graceful CSS fallback if offline/blocked) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
-
-  <!-- ========================================================================
-       MAIN JAVASCRIPT (SITE_CONFIG, GOOGLE DRIVE PARSER, I18N, INTERACTIVITY)
-       ======================================================================== -->
+  <!-- Main javascript (site_config, google drive parser, i18n, interactivity) -->
   <script>
-    /**************************************************************************
-     * 1. KONFIGURASI UTAMA (SITE_CONFIG) — EDIT TAUTAN GOOGLE DRIVE DI SINI
-     **************************************************************************/
+    // ---- Konfigurasi situs ----
     const SITE_CONFIG = {
-      // Tempel link berbagi Google Drive foto profil Anda di bawah ini:
       profileImage: "https://drive.google.com/file/d/1hVpqPhzY5xV8nmDkqgY8XIHsmBDDVO0W/view?usp=drive_link",
 
-      // Tempel link Google Drive untuk file PDF CV Anda di bawah ini:
       cvUrl: "https://drive.google.com/file/d/1howy048LJxIVGaGMhI8L458VhMdP0P71/view?usp=drive_link",
 
-      // Opsional: Isi jika domain pribadi sudah dimiliki (contoh: "https://machaelwijaya.my.id")
       domain: "https://machaelwijaya.my.id",
 
-      // Pengaturan efek visual 3D
       settings: {
-        enable3D: true,
         defaultLanguage: "id",
         defaultTheme: "dark" 
       },
@@ -2114,7 +1943,7 @@
         location: "Bekasi, Jawa Barat, Indonesia"
       },
 
-      // Konfigurasi Sertifikat (Jangan mengarang tahun/penerbit jika belum diisi)
+      // Sertifikat
       certificate: {
         title_id: "Kursus Mahir Akuntansi",
         title_en: "Advanced Accounting Course (Kursus Mahir Akuntansi)",
@@ -2180,9 +2009,30 @@
       ]
     };
 
-    /**************************************************************************
-     * 2. FUNGSI KONVERSI TAUTAN GOOGLE DRIVE OTOMATIS
-     **************************************************************************/
+    // ---- Konversi tautan Google Drive ----
+    // Hanya izinkan https:, mailto:, atau tautan relatif/anchor. Selain itu (javascript:, data:, dll) ditolak.
+    function safeUrl(raw) {
+      if (typeof raw !== "string") return "#";
+      const u = raw.trim();
+      if (u === "") return "#";
+      if (/^[a-z][a-z0-9+.-]*:/i.test(u)) {
+        return /^(https:|mailto:)/i.test(u) ? u : "#";
+      }
+      return u.startsWith("//") ? "#" : u;
+    }
+    function safeHref(raw) { return escapeHtml(safeUrl(raw)); }
+
+    function escapeHtml(str) {
+      return String(str ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+    }
+
+    function loadPref(key) {
+      try { return localStorage.getItem(key); } catch (e) { return null; }
+    }
+    function savePref(key, value) {
+      try { localStorage.setItem(key, value); } catch (e) { /* abaikan */ }
+    }
+
     function isPlaceholderLink(url) {
       if (!url || typeof url !== "string") return true;
       const trimmed = url.trim();
@@ -2211,12 +2061,13 @@
         // Endpoint thumbnail resolusi tinggi Google Drive yang paling kompatibel untuk <img>
         return `https://drive.google.com/thumbnail?id=${driveId}&sz=w1600`;
       }
-      return rawUrl.trim();
+      const trimmed = rawUrl.trim();
+      if (/^[a-z][a-z0-9+.-]*:/i.test(trimmed) && !/^https:/i.test(trimmed)) return "";
+      if (trimmed.startsWith("//")) return "";
+      return trimmed;
     }
 
-    /**************************************************************************
-     * 3. KAMUS BAHASA (INDONESIA & INGGRIS)
-     **************************************************************************/
+    // ---- Teks dua bahasa ----
     const I18N_DATA = {
       id: {
         nav: {
@@ -2235,9 +2086,10 @@
           desc: "Saya membantu mengembangkan solusi digital melalui teknologi, analisis, kreativitas, dan pemahaman bisnis.",
           location: "Bekasi, Jawa Barat, Indonesia",
           status: "Terbuka untuk peluang kerja, freelance, proyek digital, kerja jarak jauh, dan kolaborasi bisnis",
+          title: "Membantu bisnis merapikan sistem, pembukuan, dan kehadiran digitalnya.",
           btnPortfolio: "Lihat Portofolio",
           btnContact: "Hubungi Saya",
-          btnCv: "Unduh CV",
+          btnCv: "Lihat CV",
           float1: "IT • Akuntansi • Digital",
           float2: "Machael Wijaya, S.Kom."
         },
@@ -2249,12 +2101,12 @@
           p2: "Saya senang mempelajari teknologi baru, menganalisis permasalahan, dan menciptakan solusi yang efektif serta inovatif untuk kebutuhan bisnis. Dengan menggabungkan kemampuan teknis dan pemahaman proses bisnis, saya berupaya membantu pekerjaan menjadi lebih terstruktur, efisien, dan bernilai.",
           p3: "Melalui website ini, saya menampilkan perjalanan profesional, keterampilan, pengalaman, dan berbagai proyek sebagai representasi kemampuan serta komitmen saya terhadap pembelajaran berkelanjutan.",
           values: [
-            { icon: "🛡️", title: "Professional", desc: "Menjaga etika kerja, komunikasi, dan standar kualitas tinggi." },
-            { icon: "🔍", title: "Detail-Oriented", desc: "Teliti dalam kode, data keuangan, maupun administrasi pajak." },
-            { icon: "⚡", title: "Adaptive", desc: "Cepat beradaptasi dengan teknologi, sistem, dan regulasi baru." },
-            { icon: "🧩", title: "Solution-Oriented", desc: "Berfokus pada penyelesaian masalah secara terstruktur & praktis." },
-            { icon: "💡", title: "Creative", desc: "Menghadirkan pendekatan visual dan strategi digital yang segar." },
-            { icon: "🤝", title: "Trustworthy", desc: "Menjaga integritas serta kerahasiaan data bisnis dan klien." }
+            { icon: "01", title: "Professional", desc: "Menjaga etika kerja, komunikasi, dan standar kualitas tinggi." },
+            { icon: "02", title: "Detail-Oriented", desc: "Teliti dalam kode, data keuangan, maupun administrasi pajak." },
+            { icon: "03", title: "Adaptive", desc: "Cepat beradaptasi dengan teknologi, sistem, dan regulasi baru." },
+            { icon: "04", title: "Solution-Oriented", desc: "Berfokus pada penyelesaian masalah secara terstruktur & praktis." },
+            { icon: "05", title: "Creative", desc: "Menghadirkan pendekatan visual dan strategi digital yang segar." },
+            { icon: "06", title: "Trustworthy", desc: "Menjaga integritas serta kerahasiaan data bisnis dan klien." }
           ]
         },
         skills: {
@@ -2264,42 +2116,38 @@
           softTitle: "Soft Skills & Karakter Profesional",
           categories: [
             {
-              icon: "💻",
+              icon: "01",
               title: "Web Development & Programming",
               items: ["HTML", "CSS", "JavaScript", "Front-end Development", "Back-end Development", "Website Management", "Database Management", "SQL dan MySQL", "Troubleshooting"]
             },
             {
-              icon: "📊",
+              icon: "02",
               title: "Accounting & Taxation",
               items: ["Bookkeeping", "Pencatatan Transaksi", "Rekonsiliasi", "Laporan Keuangan", "Administrasi Perpajakan", "Perhitungan & Pelaporan Pajak", "Pengelolaan Dokumen Perpajakan", "Coretax DJP", "DJP Online", "Microsoft Excel"]
             },
             {
-              icon: "🚀",
+              icon: "03",
               title: "Digital Marketing & SEO",
               items: ["Digital Marketing", "Search Engine Optimization (SEO)", "Google Search Console", "Google Ads", "Social Media Management", "Content Planning", "Digital Performance Analysis", "Website Optimization"]
             },
             {
-              icon: "⚙️",
+              icon: "04",
               title: "System Analysis & Data",
               items: ["System Analysis", "Data Processing", "Data Analysis", "Business Process Analysis", "Problem Solving", "Process Improvement", "Documentation"]
             },
             {
-              icon: "🤖",
+              icon: "05",
               title: "AI & Automation",
               items: ["AI Prompt Engineering", "ChatGPT", "Google Gemini", "AI-Assisted Productivity", "Workflow Automation", "Pemanfaatan AI untuk Bisnis"]
             },
             {
-              icon: "🛠️",
+              icon: "06",
               title: "Tools & Software",
               items: ["Microsoft Excel, Word, PowerPoint", "Google Sheets, Docs, Drive", "Visual Studio Code", "GitHub", "MySQL", "WordPress", "Canva", "CapCut", "Adobe Photoshop", "Google Search Console", "Google Ads", "Coretax DJP", "DJP Online"]
             }
           ],
           softSkills: [
-            "Communication", "Critical Thinking", "Problem Solving", "Time Management",
-            "Teamwork", "Adaptability", "Attention to Detail", "Analytical Thinking",
-            "Creativity", "Discipline", "Project Management", "Negotiation",
-            "Decision Making", "Prioritization", "Client Service",
-            "Professionalism and Integrity", "Independent Working", "Continuous Learning"
+            "Communication", "Attention to Detail", "Problem Solving", "Time Management", "Continuous Learning"
           ]
         },
         services: {
@@ -2309,7 +2157,7 @@
           btnAction: "Konsultasi Layanan Ini",
           list: [
             {
-              icon: "🌐",
+              icon: "01",
               title: "IT Solutions & Website Development",
               desc: "Perancangan dan pengelolaan website modern yang cepat, responsif, dan sesuai identitas bisnis Anda.",
               items: [
@@ -2325,7 +2173,7 @@
               benefit: "Manfaat: Meningkatkan kredibilitas digital dan efisiensi sistem bisnis."
             },
             {
-              icon: "📑",
+              icon: "02",
               title: "Accounting & Tax Services",
               desc: "Dukungan pembukuan, laporan keuangan, dan administrasi perpajakan yang rapi serta terstruktur.",
               items: [
@@ -2340,7 +2188,7 @@
               benefit: "Manfaat: Data keuangan lebih tertata dan kepatuhan administrasi lebih terjaga."
             },
             {
-              icon: "📈",
+              icon: "03",
               title: "Digital Marketing & SEO",
               desc: "Optimasi visibilitas mesin pencari dan pengelolaan kampanye digital berbasis data.",
               items: [
@@ -2355,7 +2203,7 @@
               benefit: "Manfaat: Jangkauan audiens lebih luas dan performa pemasaran terukur."
             },
             {
-              icon: "🤖",
+              icon: "04",
               title: "AI & Automation",
               desc: "Pemanfaatan teknologi kecerdasan buatan untuk mempercepat alur kerja dan produktivitas tim.",
               items: [
@@ -2368,7 +2216,7 @@
               benefit: "Manfaat: Menghemat waktu operasional dan meningkatkan kualitas output kerja."
             },
             {
-              icon: "🎨",
+              icon: "05",
               title: "Content Creation & Design",
               desc: "Produksi visual kreatif untuk memperkuat komunikasi brand di media digital.",
               items: [
@@ -2381,7 +2229,7 @@
               benefit: "Manfaat: Tampilan brand lebih profesional, menarik, dan konsisten."
             },
             {
-              icon: "🗂️",
+              icon: "06",
               title: "Data & Business Support",
               desc: "Pengolahan data spreadsheet, dokumentasi sistem, dan analisis proses operasional.",
               items: [
@@ -2501,7 +2349,11 @@
           labelSubject: "Subjek",
           labelMessage: "Pesan",
           sendWa: "Kirim via WhatsApp",
-          sendMail: "Buka di Aplikasi Email"
+          sendMail: "Buka di Aplikasi Email",
+          phName: "Nama Anda / Perusahaan",
+          phEmail: "nama@email.com",
+          phSubject: "Topik diskusi",
+          phMessage: "Tuliskan detail kebutuhan atau peluang kerja sama..."
         },
         cta: {
           heading: "“Punya ide atau kebutuhan digital? Mari kita wujudkan menjadi solusi yang tepat.”",
@@ -2510,8 +2362,7 @@
         },
         footer: {
           navTitle: "Navigasi Cepat",
-          connectTitle: "Kontak & Media Sosial",
-          builtWith: "Portofolio Personal Branding Futuristik 3D"
+          connectTitle: "Kontak & Media Sosial"
         }
       },
 
@@ -2527,6 +2378,7 @@
           contact: "Contact"
         },
         hero: {
+          title: "Helping businesses organize their systems, bookkeeping, and digital presence.",
           badge: "DIGITAL SOLUTIONS SPECIALIST",
           slogan: "“Right Solutions, Quality Work, Growing Your Business.”",
           desc: "I help develop digital solutions through technology, analysis, creativity, and business understanding.",
@@ -2534,7 +2386,7 @@
           status: "Open to job opportunities, freelance, digital projects, remote work, and business collaboration",
           btnPortfolio: "View Portfolio",
           btnContact: "Contact Me",
-          btnCv: "Download CV",
+          btnCv: "View CV",
           float1: "IT • Accounting • Digital",
           float2: "Machael Wijaya, S.Kom."
         },
@@ -2546,12 +2398,12 @@
           p2: "I enjoy learning new technologies, analyzing problems, and creating effective, innovative solutions for business needs. By combining technical capabilities with business process understanding, I strive to make work more structured, efficient, and valuable.",
           p3: "Through this website, I showcase my professional journey, skills, experience, and various projects as a representation of my capabilities and commitment to continuous learning.",
           values: [
-            { icon: "🛡️", title: "Professional", desc: "Upholding strong work ethics, clear communication, and high quality standards." },
-            { icon: "🔍", title: "Detail-Oriented", desc: "Meticulous in code, financial records, and tax administration." },
-            { icon: "⚡", title: "Adaptive", desc: "Quickly adapting to emerging technologies, systems, and regulations." },
-            { icon: "🧩", title: "Solution-Oriented", desc: "Focused on structured, practical, and effective problem solving." },
-            { icon: "💡", title: "Creative", desc: "Delivering fresh visual concepts and impactful digital strategies." },
-            { icon: "🤝", title: "Trustworthy", desc: "Maintaining integrity and strict confidentiality of client & business data." }
+            { icon: "01", title: "Professional", desc: "Upholding strong work ethics, clear communication, and high quality standards." },
+            { icon: "02", title: "Detail-Oriented", desc: "Meticulous in code, financial records, and tax administration." },
+            { icon: "03", title: "Adaptive", desc: "Quickly adapting to emerging technologies, systems, and regulations." },
+            { icon: "04", title: "Solution-Oriented", desc: "Focused on structured, practical, and effective problem solving." },
+            { icon: "05", title: "Creative", desc: "Delivering fresh visual concepts and impactful digital strategies." },
+            { icon: "06", title: "Trustworthy", desc: "Maintaining integrity and strict confidentiality of client & business data." }
           ]
         },
         skills: {
@@ -2561,42 +2413,38 @@
           softTitle: "Soft Skills & Work Ethic",
           categories: [
             {
-              icon: "💻",
+              icon: "01",
               title: "Web Development & Programming",
               items: ["HTML", "CSS", "JavaScript", "Front-end Development", "Back-end Development", "Website Management", "Database Management", "SQL & MySQL", "Troubleshooting"]
             },
             {
-              icon: "📊",
+              icon: "02",
               title: "Accounting & Taxation",
               items: ["Bookkeeping", "Transaction Recording", "Reconciliation", "Financial Statements", "Tax Administration", "Tax Calculation & Reporting", "Tax Document Management", "Coretax DJP", "DJP Online", "Microsoft Excel"]
             },
             {
-              icon: "🚀",
+              icon: "03",
               title: "Digital Marketing & SEO",
               items: ["Digital Marketing", "Search Engine Optimization (SEO)", "Google Search Console", "Google Ads", "Social Media Management", "Content Planning", "Digital Performance Analysis", "Website Optimization"]
             },
             {
-              icon: "⚙️",
+              icon: "04",
               title: "System Analysis & Data",
               items: ["System Analysis", "Data Processing", "Data Analysis", "Business Process Analysis", "Problem Solving", "Process Improvement", "Documentation"]
             },
             {
-              icon: "🤖",
+              icon: "05",
               title: "AI & Automation",
               items: ["AI Prompt Engineering", "ChatGPT", "Google Gemini", "AI-Assisted Productivity", "Workflow Automation", "AI Utilization for Business"]
             },
             {
-              icon: "🛠️",
+              icon: "06",
               title: "Tools & Software",
               items: ["Microsoft Excel, Word, PowerPoint", "Google Sheets, Docs, Drive", "Visual Studio Code", "GitHub", "MySQL", "WordPress", "Canva", "CapCut", "Adobe Photoshop", "Google Search Console", "Google Ads", "Coretax DJP", "DJP Online"]
             }
           ],
           softSkills: [
-            "Communication", "Critical Thinking", "Problem Solving", "Time Management",
-            "Teamwork", "Adaptability", "Attention to Detail", "Analytical Thinking",
-            "Creativity", "Discipline", "Project Management", "Negotiation",
-            "Decision Making", "Prioritization", "Client Service",
-            "Professionalism and Integrity", "Independent Working", "Continuous Learning"
+            "Communication", "Attention to Detail", "Problem Solving", "Time Management", "Continuous Learning"
           ]
         },
         services: {
@@ -2606,7 +2454,7 @@
           btnAction: "Inquire About This Service",
           list: [
             {
-              icon: "🌐",
+              icon: "01",
               title: "IT Solutions & Website Development",
               desc: "Design and management of fast, responsive, and modern websites tailored to your brand identity.",
               items: [
@@ -2622,7 +2470,7 @@
               benefit: "Benefit: Enhances digital credibility and streamlines business operations."
             },
             {
-              icon: "📑",
+              icon: "02",
               title: "Accounting & Tax Services",
               desc: "Structured bookkeeping, financial statement preparation, and reliable tax administration support.",
               items: [
@@ -2637,7 +2485,7 @@
               benefit: "Benefit: Organized financial records and well-maintained tax compliance."
             },
             {
-              icon: "📈",
+              icon: "03",
               title: "Digital Marketing & SEO",
               desc: "Search engine visibility optimization and data-driven digital marketing management.",
               items: [
@@ -2652,7 +2500,7 @@
               benefit: "Benefit: Wider audience reach and measurable marketing performance."
             },
             {
-              icon: "🤖",
+              icon: "04",
               title: "AI & Automation",
               desc: "Leveraging artificial intelligence to accelerate workflows and boost team productivity.",
               items: [
@@ -2665,7 +2513,7 @@
               benefit: "Benefit: Saves operational time and improves output consistency."
             },
             {
-              icon: "🎨",
+              icon: "05",
               title: "Content Creation & Design",
               desc: "Creative visual production to strengthen brand communication across digital platforms.",
               items: [
@@ -2678,7 +2526,7 @@
               benefit: "Benefit: More professional, engaging, and consistent brand visuals."
             },
             {
-              icon: "🗂️",
+              icon: "06",
               title: "Data & Business Support",
               desc: "Spreadsheet management, system documentation, and operational process analysis.",
               items: [
@@ -2787,7 +2635,11 @@
           labelSubject: "Subject",
           labelMessage: "Message",
           sendWa: "Send via WhatsApp",
-          sendMail: "Open in Email App"
+          sendMail: "Open in Email App",
+          phName: "Your name / company",
+          phEmail: "name@email.com",
+          phSubject: "Topic",
+          phMessage: "Describe your needs or the collaboration you have in mind..."
         },
         cta: {
           heading: "“Have an idea or digital need? Let's turn it into the right solution.”",
@@ -2796,17 +2648,15 @@
         },
         footer: {
           navTitle: "Quick Navigation",
-          connectTitle: "Contact & Socials",
-          builtWith: "Futuristic 3D Personal Branding Portfolio"
+          connectTitle: "Contact & Socials"
         }
       }
     };
 
-    /**************************************************************************
-     * 4. STATE APLIKASI & RENDER DINAMIS
-     **************************************************************************/
-    let currentLang = SITE_CONFIG.settings.defaultLanguage || "id";
-    let currentTheme = SITE_CONFIG.settings.defaultTheme || "dark";
+    // ---- Render konten ----
+    let currentLang = ["id", "en"].includes(loadPref("mw-lang")) ? loadPref("mw-lang") : (SITE_CONFIG.settings.defaultLanguage || "id");
+    let currentTheme = ["dark", "light"].includes(loadPref("mw-theme")) ? loadPref("mw-theme") : (SITE_CONFIG.settings.defaultTheme || "dark");
+    if (!["id", "en"].includes(currentLang)) currentLang = "id";
     let activePortfolioFilter = "all";
 
     function buildWhatsAppUrl(customText) {
@@ -2822,7 +2672,7 @@
 
       const fallbackHtml = `
         <div class="profile-placeholder">
-          <div class="placeholder-avatar">MAW</div>
+          <div class="placeholder-avatar">MW</div>
           <h3 style="font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: 6px;">Machael Wijaya, S.Kom.</h3>
           <p style="font-size: 0.85rem; color: var(--accent-cyan);">Digital Solutions Specialist</p>
         </div>
@@ -2848,16 +2698,16 @@
     // Render Tautan Kontak & CV
     function setupConfiguredLinks() {
       const defaultWaUrl = buildWhatsAppUrl(SITE_CONFIG.contact.whatsappDefaultMessage);
-      const mailtoUrl = `mailto:${SITE_CONFIG.contact.email}`;
+      const mailtoUrl = `mailto:${escapeHtml(SITE_CONFIG.contact.email)}`;
       const igUrl = SITE_CONFIG.contact.instagram;
 
       document.getElementById("social-wa").href = defaultWaUrl;
-      document.getElementById("social-ig").href = igUrl;
+      document.getElementById("social-ig").href = safeUrl(igUrl);
       document.getElementById("social-email").href = mailtoUrl;
 
       document.getElementById("contact-wa-btn").href = defaultWaUrl;
       document.getElementById("contact-mailto-btn").href = mailtoUrl;
-      document.getElementById("contact-ig-btn").href = igUrl;
+      document.getElementById("contact-ig-btn").href = safeUrl(igUrl);
       document.getElementById("cta-discuss-btn").href = defaultWaUrl;
       document.getElementById("display-email").textContent = SITE_CONFIG.contact.email;
 
@@ -2873,8 +2723,8 @@
         heroCvBtn.href = askCvWa;
         contactCvBtn.href = askCvWa;
       } else {
-        heroCvBtn.href = SITE_CONFIG.cvUrl;
-        contactCvBtn.href = SITE_CONFIG.cvUrl;
+        heroCvBtn.href = safeUrl(SITE_CONFIG.cvUrl);
+        contactCvBtn.href = safeUrl(SITE_CONFIG.cvUrl);
       }
     }
 
@@ -2884,9 +2734,9 @@
       const values = I18N_DATA[currentLang].about.values;
       container.innerHTML = values.map(v => `
         <div class="glass-card value-card">
-          <div class="value-icon">${v.icon}</div>
-          <div class="value-title">${v.title}</div>
-          <p class="value-desc">${v.desc}</p>
+          <div class="value-icon">${escapeHtml(v.icon)}</div>
+          <div class="value-title">${escapeHtml(v.title)}</div>
+          <p class="value-desc">${escapeHtml(v.desc)}</p>
         </div>
       `).join("");
     }
@@ -2899,17 +2749,17 @@
       grid.innerHTML = data.categories.map(cat => `
         <div class="glass-card skill-category-card reveal visible">
           <div class="skill-cat-header">
-            <div class="skill-cat-icon">${cat.icon}</div>
-            <h3 class="skill-cat-title">${cat.title}</h3>
+            <div class="skill-cat-icon">${escapeHtml(cat.icon)}</div>
+            <h3 class="skill-cat-title">${escapeHtml(cat.title)}</h3>
           </div>
           <div class="skill-tags">
-            ${cat.items.map(item => `<span class="skill-tag">${item}</span>`).join("")}
+            ${cat.items.map(item => `<span class="skill-tag">${escapeHtml(item)}</span>`).join("")}
           </div>
         </div>
       `).join("");
 
       const softContainer = document.getElementById("soft-skills-list");
-      softContainer.innerHTML = data.softSkills.map(s => `<span class="skill-tag">${s}</span>`).join("");
+      softContainer.innerHTML = data.softSkills.map(s => `<span class="skill-tag">${escapeHtml(s)}</span>`).join("");
     }
 
     // Render Layanan Profesional (Dengan Tombol WhatsApp Spesifik Layanan)
@@ -2919,23 +2769,23 @@
 
       grid.innerHTML = data.list.map(srv => {
         const waMsg = currentLang === "id"
-          ? `Halo Machael, saya melihat website portofolio Anda dan ingin berkonsultasi mengenai layanan *${srv.title}*.`
-          : `Hello Machael, I visited your portfolio website and would like to inquire about your *${srv.title}* service.`;
+          ? `Halo Machael, saya melihat website portofolio Anda dan ingin berkonsultasi mengenai layanan *${escapeHtml(srv.title)}*.`
+          : `Hello Machael, I visited your portfolio website and would like to inquire about your *${escapeHtml(srv.title)}* service.`;
         const waLink = buildWhatsAppUrl(waMsg);
 
         return `
           <div class="glass-card service-card reveal visible">
             <div>
-              <div class="service-icon">${srv.icon}</div>
-              <h3 class="service-title">${srv.title}</h3>
-              <p class="service-desc">${srv.desc}</p>
+              <div class="service-icon">${escapeHtml(srv.icon)}</div>
+              <h3 class="service-title">${escapeHtml(srv.title)}</h3>
+              <p class="service-desc">${escapeHtml(srv.desc)}</p>
               <ul class="service-list">
-                ${srv.items.map(i => `<li>${i}</li>`).join("")}
+                ${srv.items.map(i => `<li>${escapeHtml(i)}</li>`).join("")}
               </ul>
-              <div class="service-benefit">${srv.benefit}</div>
+              <div class="service-benefit">${escapeHtml(srv.benefit)}</div>
             </div>
-            <a href="${waLink}" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width: 100%;">
-              💬 ${data.btnAction}
+            <a href="${escapeHtml(waLink)}" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width: 100%;">
+              ${escapeHtml(data.btnAction)}
             </a>
           </div>
         `;
@@ -2953,13 +2803,13 @@
           <div class="glass-card timeline-card">
             <div class="timeline-header">
               <div>
-                <h3 class="timeline-role">${exp.role}</h3>
-                <div class="timeline-company">${exp.company}</div>
+                <h3 class="timeline-role">${escapeHtml(exp.role)}</h3>
+                <div class="timeline-company">${escapeHtml(exp.company)}</div>
               </div>
-              <span class="timeline-period">${exp.period}</span>
+              <span class="timeline-period">${escapeHtml(exp.period)}</span>
             </div>
             <ul class="timeline-list">
-              ${exp.tasks.map(t => `<li>${t}</li>`).join("")}
+              ${exp.tasks.map(t => `<li>${escapeHtml(t)}</li>`).join("")}
             </ul>
           </div>
         </div>
@@ -2972,8 +2822,8 @@
       const filters = I18N_DATA[currentLang].portfolio.filters;
 
       filterBar.innerHTML = filters.map(f => `
-        <button type="button" class="filter-btn ${activePortfolioFilter === f.key ? 'active' : ''}" data-filter="${f.key}">
-          ${f.label}
+        <button type="button" class="filter-btn ${activePortfolioFilter === f.key ? 'active' : ''}" data-filter="${escapeHtml(f.key)}">
+          ${escapeHtml(f.label)}
         </button>
       `).join("");
 
@@ -3004,46 +2854,46 @@
         // Tombol aksi dinamis: hanya tampilkan jika link tidak kosong
         const actionButtons = [];
         actionButtons.push(`
-          <button type="button" class="btn btn-outline btn-sm" data-open-modal="${proj.id}">
-            🔍 ${t.btnDetail}
+          <button type="button" class="btn btn-outline btn-sm" data-open-modal="${escapeHtml(proj.id)}">
+            ${escapeHtml(t.btnDetail)}
           </button>
         `);
 
         if (!isPlaceholderLink(proj.demoUrl)) {
-          actionButtons.push(`<a href="${proj.demoUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">🌐 ${t.btnDemo}</a>`);
+          actionButtons.push(`<a href="${safeHref(proj.demoUrl)}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">${escapeHtml(t.btnDemo)}</a>`);
         }
         if (!isPlaceholderLink(proj.docUrl)) {
-          actionButtons.push(`<a href="${proj.docUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">📁 ${t.btnDoc}</a>`);
+          actionButtons.push(`<a href="${safeHref(proj.docUrl)}" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">${escapeHtml(t.btnDoc)}</a>`);
         }
         if (!isPlaceholderLink(proj.pdfUrl)) {
-          actionButtons.push(`<a href="${proj.pdfUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">📄 ${t.btnPdf}</a>`);
+          actionButtons.push(`<a href="${safeHref(proj.pdfUrl)}" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">${escapeHtml(t.btnPdf)}</a>`);
         }
         if (!isPlaceholderLink(proj.videoUrl)) {
-          actionButtons.push(`<a href="${proj.videoUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">▶️ ${t.btnVideo}</a>`);
+          actionButtons.push(`<a href="${safeHref(proj.videoUrl)}" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">${escapeHtml(t.btnVideo)}</a>`);
         }
         if (!isPlaceholderLink(proj.image) && isPlaceholderLink(proj.demoUrl) && isPlaceholderLink(proj.docUrl)) {
-          actionButtons.push(`<a href="${proj.image}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">🖼️ ${t.btnVisual}</a>`);
+          actionButtons.push(`<a href="${safeHref(proj.image)}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">${escapeHtml(t.btnVisual)}</a>`);
         }
 
         return `
           <article class="glass-card project-card reveal visible">
             <div class="project-thumb">
-              ${proj.isDemoConcept !== false ? `<span class="demo-badge">${t.demoLabel}</span>` : ""}
+              ${proj.isDemoConcept !== false ? `<span class="demo-badge">${escapeHtml(t.demoLabel)}</span>` : ""}
               ${imgUrl
-                ? `<img src="${imgUrl}" alt="${title}" loading="lazy" onerror="this.outerHTML='<div class=\\'project-fallback\\'><strong style=\\'font-family:var(--font-heading);font-size:1.1rem;\\'>${title}</strong><span style=\\'font-size:0.8rem;color:var(--accent-cyan);margin-top:6px;\\'>${catLabel}</span></div>'" />`
+                ? `<img src="${escapeHtml(imgUrl)}" alt="${escapeHtml(title)}" loading="lazy" width="1600" height="900" data-fallback data-title="${escapeHtml(title)}" data-cat="${escapeHtml(catLabel)}" />`
                 : `<div class="project-fallback">
-                     <strong style="font-family: var(--font-heading); font-size: 1.15rem;">${title}</strong>
-                     <span style="font-size: 0.82rem; color: var(--accent-cyan); margin-top: 6px;">${catLabel}</span>
+                     <strong style="font-family: var(--font-heading); font-size: 1.15rem;">${escapeHtml(title)}</strong>
+                     <span style="font-size: 0.82rem; color: var(--accent-cyan); margin-top: 6px;">${escapeHtml(catLabel)}</span>
                    </div>`
               }
             </div>
             <div class="project-body">
               <div>
-                <div class="project-cat">${catLabel}</div>
-                <h3 class="project-title">${title}</h3>
-                <p class="project-desc">${desc}</p>
+                <div class="project-cat">${escapeHtml(catLabel)}</div>
+                <h3 class="project-title">${escapeHtml(title)}</h3>
+                <p class="project-desc">${escapeHtml(desc)}</p>
                 <div class="project-tools">
-                  ${(proj.tools || []).map(tool => `<span class="tool-pill">${tool}</span>`).join("")}
+                  ${(proj.tools || []).map(tool => `<span class="tool-pill">${escapeHtml(tool)}</span>`).join("")}
                 </div>
               </div>
               <div class="project-actions">
@@ -3053,6 +2903,21 @@
           </article>
         `;
       }).join("");
+
+      grid.querySelectorAll("img[data-fallback]").forEach(img => {
+        img.addEventListener("error", () => {
+          const box = document.createElement("div");
+          box.className = "project-fallback";
+          const strong = document.createElement("strong");
+          strong.style.cssText = "font-family: var(--font-heading); font-size: 1.1rem;";
+          strong.textContent = img.dataset.title;
+          const span = document.createElement("span");
+          span.style.cssText = "font-size: 0.8rem; color: var(--accent-cyan); margin-top: 6px;";
+          span.textContent = img.dataset.cat;
+          box.append(strong, span);
+          img.replaceWith(box);
+        }, { once: true });
+      });
 
       // Pasang event listener untuk modal detail proyek
       grid.querySelectorAll("[data-open-modal]").forEach(btn => {
@@ -3069,13 +2934,13 @@
       const eduList = document.getElementById("education-list");
 
       eduList.innerHTML = eduData.eduItems.map(item => `
-        <div style="padding: 16px; border-radius: 12px; background: rgba(56, 189, 248, 0.06); border: 1px solid var(--border-color);">
+        <div style="padding: 16px; border-radius: 12px; background: rgba(232, 176, 75, 0.06); border: 1px solid var(--border-color);">
           <div style="display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap;">
-            <strong style="font-family: var(--font-heading); font-size: 1.05rem;">${item.degree}</strong>
-            <span class="timeline-period">${item.period}</span>
+            <strong style="font-family: var(--font-heading); font-size: 1.05rem;">${escapeHtml(item.degree)}</strong>
+            <span class="timeline-period">${escapeHtml(item.period)}</span>
           </div>
-          <div style="color: var(--accent-cyan); font-weight: 600; font-size: 0.9rem; margin-top: 4px;">${item.school}</div>
-          <div style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 4px;">GPA: ${item.GPA}</div>
+          <div style="color: var(--accent-cyan); font-weight: 600; font-size: 0.9rem; margin-top: 4px;">${escapeHtml(item.school)}</div>
+          <div style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 4px;">GPA: ${escapeHtml(item.GPA)}</div>
         </div>
       `).join("");
 
@@ -3093,19 +2958,16 @@
       
       const titleText = currentLang === "id" ? cert.title_id : cert.title_en;
       
-      // Fallback yang jauh lebih rapi, sentral, dan elegan
       const certFallbackHtml = `
-        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; padding: 24px; background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.15), transparent);">
-          <div style="font-size: 2.8rem; margin-bottom: 12px; filter: drop-shadow(0 0 12px rgba(56,189,248,0.4));">🏅</div>
-          <div style="font-weight: 800; font-size: 1.1rem; font-family: var(--font-heading); color: var(--text-primary); margin-bottom: 6px;">${titleText}</div>
-          <div style="font-size: 0.8rem; color: var(--accent-cyan); text-transform: uppercase; letter-spacing: 0.05em;">Dokumen Tersedia</div>
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; padding: 24px; background: radial-gradient(circle at 50% 50%, rgba(232, 176, 75, 0.15), transparent);">
+          <div style="font-size: 2.8rem; margin-bottom: 12px; filter: drop-shadow(0 0 12px rgba(56,189,248,0.4));"></div>
+          <div style="font-weight: 800; font-size: 1.1rem; font-family: var(--font-heading); color: var(--text-primary); margin-bottom: 6px;">${escapeHtml(titleText)}</div>
+          <div style="font-size: 0.8rem; color: var(--accent-cyan); text-transform: uppercase; letter-spacing: 0.05em;">${currentLang === "id" ? "Dokumen tersedia" : "Document available"}</div>
         </div>
       `;
 
-      // Jika ada URL gambar, kita buat elemen img. Jika gagal (onerror), baru kita ganti isi container-nya.
       if (certImgUrl) {
-        certBox.innerHTML = `<img src="${certImgUrl}" alt="${titleText}" loading="lazy" style="width: 100%; height: 100%; object-fit: contain; padding: 4px;" />`;
-        // Penanganan error pada gambar
+        certBox.innerHTML = `<img src="${escapeHtml(certImgUrl)}" alt="${escapeHtml(titleText)}" loading="lazy" style="width: 100%; height: 100%; object-fit: contain; padding: 4px;" />`;
         const imgEl = certBox.querySelector('img');
         imgEl.onerror = function() {
            certBox.innerHTML = certFallbackHtml;
@@ -3118,8 +2980,8 @@
       const certLink = !isPlaceholderLink(cert.docUrl) ? cert.docUrl : (!isPlaceholderLink(cert.image) ? cert.image : "");
       if (certLink) {
         certActionWrap.innerHTML = `
-          <a href="${certLink}" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: 100%;">
-            📄 ${currentLang === "id" ? "Lihat Dokumen Sertifikat" : "View Certificate Document"}
+          <a href="${safeHref(certLink)}" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: 100%;">
+            ${currentLang === "id" ? "Lihat Dokumen Sertifikat" : "View Certificate Document"}
           </a>
         `;
       } else {
@@ -3144,6 +3006,13 @@
           el.textContent = val;
         }
       });
+      document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
+        const keys = el.getAttribute("data-i18n-placeholder").split(".");
+        let val = dict;
+        for (const k of keys) { if (val && val[k] !== undefined) val = val[k]; }
+        if (typeof val === "string") el.placeholder = val;
+      });
+      savePref("mw-lang", lang);
 
       renderValues();
       renderSkills();
@@ -3155,10 +3024,10 @@
       setupConfiguredLinks();
     }
 
-    /**************************************************************************
-     * 5. MODAL DETAIL PROYEK (DENGAN TOMBOL CLOSE, ESCAPE, & KLIK LUAR)
-     **************************************************************************/
+    // ---- Modal detail proyek ----
     const modalEl = document.getElementById("project-modal");
+
+    let lastFocusedEl = null;
 
     function openProjectModal(projId) {
       const proj = SITE_CONFIG.projects.find(p => p.id === projId);
@@ -3170,51 +3039,54 @@
       const catLabel = currentLang === "id" ? (proj.categoryLabel_id || proj.category) : (proj.categoryLabel_en || proj.category);
       const imgUrl = resolveImageUrl(proj.image);
 
-      document.getElementById("modal-category").textContent = `${catLabel} ${proj.isDemoConcept !== false ? "• " + t.demoLabel : ""}`;
+      document.getElementById("modal-category").textContent = `${escapeHtml(catLabel)} ${proj.isDemoConcept !== false ? "• " + t.demoLabel : ""}`;
       document.getElementById("modal-title").textContent = title;
       document.getElementById("modal-desc").textContent = desc;
 
       const mediaBox = document.getElementById("modal-media-box");
       if (imgUrl) {
-        mediaBox.innerHTML = `<img src="${imgUrl}" alt="${title}" />`;
+        mediaBox.innerHTML = `<img src="${escapeHtml(imgUrl)}" alt="${escapeHtml(title)}" />`;
       } else {
         mediaBox.innerHTML = `
           <div class="project-fallback" style="height: 220px;">
-            <strong style="font-family: var(--font-heading); font-size: 1.3rem;">${title}</strong>
-            <span style="color: var(--accent-cyan); margin-top: 8px;">${t.demoLabel}</span>
+            <strong style="font-family: var(--font-heading); font-size: 1.3rem;">${escapeHtml(title)}</strong>
+            <span style="color: var(--accent-cyan); margin-top: 8px;">${escapeHtml(t.demoLabel)}</span>
           </div>
         `;
       }
 
       document.getElementById("modal-tools").innerHTML = (proj.tools || [])
-        .map(tool => `<span class="tool-pill">${tool}</span>`)
+        .map(tool => `<span class="tool-pill">${escapeHtml(tool)}</span>`)
         .join("");
 
       const links = [];
       if (!isPlaceholderLink(proj.demoUrl)) {
-        links.push(`<a href="${proj.demoUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">🌐 ${t.btnDemo}</a>`);
+        links.push(`<a href="${safeHref(proj.demoUrl)}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">${escapeHtml(t.btnDemo)}</a>`);
       }
       if (!isPlaceholderLink(proj.docUrl)) {
-        links.push(`<a href="${proj.docUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">📁 ${t.btnDoc}</a>`);
+        links.push(`<a href="${safeHref(proj.docUrl)}" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">${escapeHtml(t.btnDoc)}</a>`);
       }
       if (!isPlaceholderLink(proj.pdfUrl)) {
-        links.push(`<a href="${proj.pdfUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">📄 ${t.btnPdf}</a>`);
+        links.push(`<a href="${safeHref(proj.pdfUrl)}" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">${escapeHtml(t.btnPdf)}</a>`);
       }
       if (!isPlaceholderLink(proj.videoUrl)) {
-        links.push(`<a href="${proj.videoUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">▶️ ${t.btnVideo}</a>`);
+        links.push(`<a href="${safeHref(proj.videoUrl)}" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">${escapeHtml(t.btnVideo)}</a>`);
       }
       if (!isPlaceholderLink(proj.image)) {
-        links.push(`<a href="${proj.image}" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">🖼️ Google Drive</a>`);
+        links.push(`<a href="${safeHref(proj.image)}" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">Google Drive</a>`);
       }
       document.getElementById("modal-links").innerHTML = links.join("");
 
+      lastFocusedEl = document.activeElement;
       modalEl.classList.add("open");
       document.body.style.overflow = "hidden";
+      setTimeout(() => document.getElementById("modal-close-btn").focus(), 60);
     }
 
     function closeProjectModal() {
       modalEl.classList.remove("open");
       document.body.style.overflow = "";
+      if (lastFocusedEl && lastFocusedEl.focus) lastFocusedEl.focus();
     }
 
     document.getElementById("modal-close-btn").addEventListener("click", closeProjectModal);
@@ -3222,14 +3094,19 @@
       if (e.target === modalEl) closeProjectModal();
     });
     window.addEventListener("keydown", (e) => {
-      if (e.key === "Escape" && modalEl.classList.contains("open")) {
+      if (!modalEl.classList.contains("open")) return;
+      if (e.key === "Escape") {
         closeProjectModal();
+      } else if (e.key === "Tab") {
+        const items = modalEl.querySelectorAll("a[href], button:not([disabled])");
+        if (!items.length) return;
+        const first = items[0], last = items[items.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
       }
     });
 
-    /**************************************************************************
-     * 6. INTERAKSI NAVBAR, DARK MODE, FORMULIR KONTAK, & PARALLAX 3D
-     **************************************************************************/
+    // ---- Interaksi halaman ----
     function initInteractions() {
       // Tahun Dinamis Footer
       document.getElementById("current-year").textContent = new Date().getFullYear();
@@ -3242,11 +3119,10 @@
 
       // Toggle Dark / Light Mode
       const themeBtn = document.getElementById("theme-toggle");
-      const themeIcon = document.getElementById("theme-icon");
       themeBtn.addEventListener("click", () => {
         currentTheme = currentTheme === "dark" ? "light" : "dark";
         document.documentElement.setAttribute("data-theme", currentTheme);
-        themeIcon.textContent = currentTheme === "dark" ? "☀️" : "🌙";
+        savePref("mw-theme", currentTheme);
       });
 
       // Hamburger Mobile Menu
@@ -3299,27 +3175,46 @@
         window.scrollTo({ top: 0, behavior: "smooth" });
       });
 
-      // Tombol Copy Email
+      // Tombol salin email
       const copyBtn = document.getElementById("copy-email-btn");
+      function showCopied() {
+        const originalText = I18N_DATA[currentLang].contact.copyEmail;
+        const copiedText = I18N_DATA[currentLang].contact.copiedEmail;
+        copyBtn.innerHTML = `<span>${copiedText}</span>`;
+        setTimeout(() => { copyBtn.innerHTML = `<span>${originalText}</span>`; }, 2200);
+      }
+      function copyFallback() {
+        const ta = document.createElement("textarea");
+        ta.value = SITE_CONFIG.contact.email;
+        ta.style.cssText = "position:fixed;opacity:0;";
+        document.body.appendChild(ta);
+        ta.select();
+        let ok = false;
+        try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
+        ta.remove();
+        if (ok) showCopied();
+        else window.prompt(I18N_DATA[currentLang].contact.copyEmail, SITE_CONFIG.contact.email);
+      }
       copyBtn.addEventListener("click", () => {
-        navigator.clipboard.writeText(SITE_CONFIG.contact.email).then(() => {
-          const originalText = I18N_DATA[currentLang].contact.copyEmail;
-          const copiedText = I18N_DATA[currentLang].contact.copiedEmail;
-          copyBtn.innerHTML = `✅ <span>${copiedText}</span>`;
-          setTimeout(() => {
-            copyBtn.innerHTML = `📋 <span>${originalText}</span>`;
-          }, 2200);
-        });
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(SITE_CONFIG.contact.email).then(showCopied).catch(copyFallback);
+        } else {
+          copyFallback();
+        }
       });
 
       // Formulir Kontak -> WhatsApp atau Aplikasi Email
       const contactForm = document.getElementById("contact-form");
       function getFormPayload() {
-        const name = document.getElementById("sender-name").value.trim();
-        const email = document.getElementById("sender-email").value.trim();
-        const category = document.getElementById("sender-category").value;
-        const subject = document.getElementById("sender-subject").value.trim();
-        const message = document.getElementById("sender-message").value.trim();
+        const oneLine = (v, max) => String(v).replace(/[\u0000-\u001F\u007F]/g, " ").replace(/\s+/g, " ").trim().slice(0, max);
+        const multiLine = (v, max) => String(v).replace(/[\u0000-\u0009\u000B\u000C\u000E-\u001F\u007F]/g, "").trim().slice(0, max);
+        const name = oneLine(document.getElementById("sender-name").value, 80);
+        const email = oneLine(document.getElementById("sender-email").value, 120);
+        const allowedCategories = Array.from(document.querySelectorAll("#sender-category option")).map(o => o.value);
+        const rawCategory = document.getElementById("sender-category").value;
+        const category = allowedCategories.includes(rawCategory) ? rawCategory : allowedCategories[0];
+        const subject = oneLine(document.getElementById("sender-subject").value, 120);
+        const message = multiLine(document.getElementById("sender-message").value, 1500);
         return { name, email, category, subject, message };
       }
 
@@ -3344,24 +3239,6 @@
         window.location.href = `mailto:${SITE_CONFIG.contact.email}?subject=${mailSubject}&body=${mailBody}`;
       });
 
-      // Custom Cursor Glow & Hero 3D Parallax pada Desktop
-      const cursorGlow = document.getElementById("cursor-glow");
-      const profileStage = document.getElementById("profile-stage");
-      const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-      if (!prefersReducedMotion && window.matchMedia("(pointer: fine)").matches) {
-        window.addEventListener("mousemove", (e) => {
-          cursorGlow.style.left = `${e.clientX}px`;
-          cursorGlow.style.top = `${e.clientY}px`;
-
-          if (profileStage && window.innerWidth > 992) {
-            const xAxis = (window.innerWidth / 2 - e.clientX) / 38;
-            const yAxis = (window.innerHeight / 2 - e.clientY) / 38;
-            profileStage.style.transform = `rotateY(${-xAxis}deg) rotateX(${yAxis}deg)`;
-          }
-        }, { passive: true });
-      }
-
       // Intersection Observer untuk Scroll Reveal
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -3374,99 +3251,12 @@
       document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
     }
 
-    /**************************************************************************
-     * 7. OBJEK 3D & PARTIKEL FUTURISTIK (THREE.JS + FALLBACK AMAN)
-     **************************************************************************/
-    function init3DBackground() {
-      const canvas = document.getElementById("bg-canvas");
-      const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-      if (!SITE_CONFIG.settings.enable3D || prefersReducedMotion || typeof THREE === "undefined") {
-        // Fallback visual berbasis CSS tetap aktif dari body::before
-        return;
-      }
-
-      try {
-        const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(65, window.innerWidth / window.innerHeight, 0.1, 1000);
-        camera.position.z = 26;
-
-        const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-
-        // 1. Wireframe 3D Icosahedron Geometris di sisi kanan belakang
-        const icoGeo = new THREE.IcosahedronGeometry(9, 1);
-        const icoMat = new THREE.MeshBasicMaterial({
-          color: 0x38BDF8,
-          wireframe: true,
-          transparent: true,
-          opacity: 0.14
-        });
-        const icosahedron = new THREE.Mesh(icoGeo, icoMat);
-        icosahedron.position.set(11, 2, -6);
-        scene.add(icosahedron);
-
-        // 2. Partikel Digital
-        const isMobile = window.innerWidth < 768;
-        const particleCount = isMobile ? 90 : 220;
-        const positions = new Float32Array(particleCount * 3);
-
-        for (let i = 0; i < particleCount * 3; i++) {
-          positions[i] = (Math.random() - 0.5) * 65;
-        }
-
-        const partGeo = new THREE.BufferGeometry();
-        partGeo.setAttribute("position", new THREE.BufferAttribute(positions, 3));
-
-        const partMat = new THREE.PointsMaterial({
-          color: 0x3B82F6,
-          size: 0.18,
-          transparent: true,
-          opacity: 0.55
-        });
-
-        const particles = new THREE.Points(partGeo, partMat);
-        scene.add(particles);
-
-        let mouseX = 0;
-        let mouseY = 0;
-        window.addEventListener("mousemove", (e) => {
-          mouseX = (e.clientX / window.innerWidth - 0.5) * 2;
-          mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
-        }, { passive: true });
-
-        function animate() {
-          requestAnimationFrame(animate);
-          icosahedron.rotation.x += 0.0018;
-          icosahedron.rotation.y += 0.0025;
-          particles.rotation.y += 0.0007;
-
-          camera.position.x += (mouseX * 1.6 - camera.position.x) * 0.03;
-          camera.position.y += (-mouseY * 1.6 - camera.position.y) * 0.03;
-          renderer.render(scene, camera);
-        }
-        animate();
-
-        window.addEventListener("resize", () => {
-          camera.aspect = window.innerWidth / window.innerHeight;
-          camera.updateProjectionMatrix();
-          renderer.setSize(window.innerWidth, window.innerHeight);
-        });
-      } catch (err) {
-        // Jika WebGL gagal, halaman tetap berfungsi penuh dengan background CSS
-        console.warn("3D WebGL fallback ke CSS aktif:", err);
-      }
-    }
-
-    /**************************************************************************
-     * 8. INISIALISASI SAAT HALAMAN DIMUAT
-     **************************************************************************/
+    // ---- Inisialisasi ----
     window.addEventListener("DOMContentLoaded", () => {
+      document.documentElement.setAttribute("data-theme", currentTheme);
       renderProfilePhoto();
       applyLanguage(currentLang);
       initInteractions();
-      init3DBackground();
     });
   </script>
 </body>
