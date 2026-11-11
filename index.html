@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="id" data-theme="dark">
+<html lang="id" data-theme="light">
 <head>
-  <meta name="google-site-verification" content="64HwCtoIaGlxEZmCWLqpm9ar32eCGv4QzORq8Qm5pjg" />
   <meta charset="UTF-8" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-kGKDkP4uC8relycoqxKRFSIllGzR2NvaVLJWxPaouFA=' 'sha256-flNbosXuzwbMghcWSHzC0GRHCqs9ltMsiOhkdtjvMIY='; style-src-elem 'sha256-816TIMVfUs5YziRQMAzs9xiFbNNByveZhQ4D7Ly2SDs=' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://drive.google.com https://*.googleusercontent.com; connect-src 'none'; frame-src 'none'; object-src 'none'; media-src 'none'; manifest-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests" />
+  <meta name="google-site-verification" content="64HwCtoIaGlxEZmCWLqpm9ar32eCGv4QzORq8Qm5pjg" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-kGKDkP4uC8relycoqxKRFSIllGzR2NvaVLJWxPaouFA=' 'sha256-oC3oaA8F70HbAyr5tmcwwru46Fq4isOXGa0oPOrvRFw='; style-src-elem 'sha256-xXWlagZGl1I+7BMCc3kCnnt8Nu9LY1689YJy8mmrqww=' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://drive.google.com https://*.googleusercontent.com; connect-src 'none'; frame-src 'none'; object-src 'none'; media-src 'none'; manifest-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
   <script>
 (function () {
@@ -38,7 +38,7 @@
   <meta name="twitter:card" content="summary" />
 
   <!-- Favicon SVG Inline -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23E8B04B'/%3E%3Cstop offset='100%25' stop-color='%23E8B04B'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='%230E1013'/%3E%3Crect x='4' y='4' width='92' height='92' rx='18' fill='none' stroke='url(%23g)' stroke-width='4'/%3E%3Ctext x='50' y='65' font-family='sans-serif' font-size='44' font-weight='800' fill='%23F4F1EA' text-anchor='middle'%3EMW%3C/text%3E%3C/svg%3E" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%231F5C4A'/%3E%3Cstop offset='100%25' stop-color='%231F5C4A'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='%230E1013'/%3E%3Crect x='4' y='4' width='92' height='92' rx='18' fill='none' stroke='url(%23g)' stroke-width='4'/%3E%3Ctext x='50' y='65' font-family='sans-serif' font-size='44' font-weight='800' fill='%231F5C4A' text-anchor='middle'%3EMW%3C/text%3E%3C/svg%3E" />
 
   <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -71,20 +71,22 @@
   <style>
     /* Css variables & theme palette */
     :root {
-      --bg-primary: #0E1013;
-      --bg-secondary: #14171C;
-      --bg-card: rgba(20, 23, 28, 0.68);
-      --bg-card-hover: rgba(28, 32, 39, 0.85);
-      --bg-glass: rgba(14, 16, 19, 0.78);
-      --on-accent: #1B1406;
-      --text-primary: #F4F1EA;
-      --text-secondary: #A8A196;
-      --text-muted: #7C766C;
-      --accent-blue: #E8B04B;
-      --accent-cyan: #E8B04B;
+      --bg-primary: #0F1815;
+      --bg-secondary: #15211D;
+      --bg-card: rgba(21, 33, 29, 0.72);
+      --bg-card-hover: rgba(30, 44, 39, 0.88);
+      --bg-glass: rgba(15, 24, 21, 0.82);
+      --on-accent: #0C1511;
+      --text-primary: #F3EFE4;
+      --text-secondary: #A9B3AC;
+      --text-muted: #7F8B84;
+      /* Aksen utama (tombol, tautan aktif) dan aksen sorot (judul kecil, slogan) */
+      --accent-blue: #8DBFA3;
+      --accent-cyan: #E39A73;
+      --accent-rgb: 141, 191, 163;
       --accent-gradient: var(--accent-blue);
-      --border-color: rgba(232, 176, 75, 0.16);
-      --border-hover: rgba(232, 176, 75, 0.45);
+      --border-color: rgba(var(--accent-rgb), 0.16);
+      --border-hover: rgba(var(--accent-rgb), 0.45);
       --glow-blue: 0 0 0 0 transparent;
       --glow-cyan: 0 0 0 0 transparent;
       --shadow-card: 0 18px 40px -15px rgba(0, 0, 0, 0.6);
@@ -98,22 +100,23 @@
 
     [data-theme="light"] {
       --on-accent: #FFFFFF;
-      --bg-primary: #F5F2EC;
-      --bg-secondary: #E9E4DA;
-      --bg-card: rgba(255, 255, 255, 0.85);
+      --bg-primary: #F5F0E4;
+      --bg-secondary: #EAE3D2;
+      --bg-card: rgba(255, 255, 255, 0.82);
       --bg-card-hover: rgba(255, 255, 255, 0.98);
-      --bg-glass: rgba(245, 242, 236, 0.85);
-      --text-primary: #1C1A17;
-      --text-secondary: #3F3A33;
-      --text-muted: #7C766C;
-      --accent-blue: #B45309;
-      --accent-cyan: #B45309;
+      --bg-glass: rgba(245, 240, 228, 0.88);
+      --text-primary: #1B2420;
+      --text-secondary: #3A4640;
+      --text-muted: #59635C;
+      --accent-blue: #1F5C4A;
+      --accent-cyan: #B24A25;
+      --accent-rgb: 31, 92, 74;
       --accent-gradient: var(--accent-blue);
-      --border-color: rgba(180, 83, 9, 0.15);
-      --border-hover: rgba(180, 83, 9, 0.45);
+      --border-color: rgba(var(--accent-rgb), 0.16);
+      --border-hover: rgba(var(--accent-rgb), 0.45);
       --glow-blue: 0 0 0 0 transparent;
       --glow-cyan: 0 0 0 0 transparent;
-      --shadow-card: 0 14px 32px -10px rgba(28, 26, 23, 0.08);
+      --shadow-card: 0 14px 32px -10px rgba(27, 36, 32, 0.10);
     }
 
     /* Reset & base styles */
@@ -204,7 +207,7 @@
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--accent-cyan);
-      background: rgba(232, 176, 75, 0.1);
+      background: rgba(var(--accent-rgb), 0.1);
       border: 1px solid var(--border-color);
       margin-bottom: 16px;
     }
@@ -254,18 +257,18 @@
 
     .btn-primary:hover {
       transform: translateY(-3px);
-      box-shadow: 0 12px 28px rgba(232, 176, 75, 0.45);
+      box-shadow: 0 12px 28px rgba(var(--accent-rgb), 0.45);
     }
 
     .btn-outline {
-      background: rgba(232, 176, 75, 0.06);
+      background: rgba(var(--accent-rgb), 0.06);
       color: var(--text-primary);
       border-color: var(--border-hover);
       backdrop-filter: blur(10px);
     }
 
     .btn-outline:hover {
-      background: rgba(232, 176, 75, 0.16);
+      background: rgba(var(--accent-rgb), 0.16);
       border-color: var(--accent-cyan);
       transform: translateY(-3px);
       box-shadow: var(--glow-cyan);
@@ -363,7 +366,7 @@
     .nav-link:hover,
     .nav-link.active {
       color: var(--text-primary);
-      background: rgba(232, 176, 75, 0.12);
+      background: rgba(var(--accent-rgb), 0.12);
     }
 
     .nav-link.active {
@@ -381,7 +384,7 @@
       height: 38px;
       padding: 0 12px;
       border-radius: 9px;
-      background: rgba(232, 176, 75, 0.08);
+      background: rgba(var(--accent-rgb), 0.08);
       border: 1px solid var(--border-color);
       color: var(--text-primary);
       display: inline-flex;
@@ -396,7 +399,7 @@
 
     .icon-btn:hover {
       border-color: var(--accent-cyan);
-      background: rgba(232, 176, 75, 0.18);
+      background: rgba(var(--accent-rgb), 0.18);
     }
 
     .hamburger {
@@ -429,7 +432,7 @@
       gap: 10px;
       padding: 7px 16px;
       border-radius: 999px;
-      background: rgba(232, 176, 75, 0.12);
+      background: rgba(var(--accent-rgb), 0.12);
       border: 1px solid var(--border-hover);
       font-size: 0.8rem;
       font-weight: 700;
@@ -556,8 +559,8 @@
       width: 100%;
       height: 100%;
       border-radius: 24px;
-      background: linear-gradient(160deg, rgba(232, 176, 75, 0.22), rgba(20, 23, 28, 0.9));
-      border: 1.5px solid rgba(232, 176, 75, 0.45);
+      background: linear-gradient(160deg, rgba(var(--accent-rgb), 0.22), rgba(21, 33, 29, 0.9));
+      border: 1.5px solid rgba(var(--accent-rgb), 0.45);
       box-shadow: 0 25px 60px rgba(0, 0, 0, 0.65), var(--glow-blue);
       overflow: hidden;
       display: flex;
@@ -570,7 +573,7 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(to top, rgba(14, 16, 19, 0.85) 0%, transparent 45%);
+      background: linear-gradient(to top, rgba(15, 24, 21, 0.85) 0%, transparent 45%);
       pointer-events: none;
     }
 
@@ -650,7 +653,7 @@
       width: 42px;
       height: 42px;
       border-radius: 10px;
-      background: rgba(232, 176, 75, 0.12);
+      background: rgba(var(--accent-rgb), 0.12);
       color: var(--accent-cyan);
       display: grid;
       place-items: center;
@@ -714,7 +717,7 @@
       border-radius: 8px;
       font-size: 0.84rem;
       font-weight: 500;
-      background: rgba(232, 176, 75, 0.08);
+      background: rgba(var(--accent-rgb), 0.08);
       border: 1px solid var(--border-color);
       color: var(--text-primary);
       transition: var(--transition);
@@ -722,7 +725,7 @@
 
     .skill-tag:hover {
       border-color: var(--accent-cyan);
-      background: rgba(232, 176, 75, 0.18);
+      background: rgba(var(--accent-rgb), 0.18);
       transform: translateY(-2px);
     }
 
@@ -764,7 +767,7 @@
       width: 52px;
       height: 52px;
       border-radius: 14px;
-      background: rgba(232, 176, 75, 0.15);
+      background: rgba(var(--accent-rgb), 0.15);
       border: 1px solid var(--border-hover);
       color: var(--accent-cyan);
       display: grid;
@@ -809,7 +812,7 @@
     .service-benefit {
       padding: 12px 14px;
       border-radius: 10px;
-      background: rgba(232, 176, 75, 0.07);
+      background: rgba(var(--accent-rgb), 0.07);
       border-left: 3px solid var(--accent-cyan);
       font-size: 0.83rem;
       color: var(--text-primary);
@@ -884,7 +887,7 @@
       border-radius: 999px;
       font-size: 0.8rem;
       font-weight: 600;
-      background: rgba(232, 176, 75, 0.14);
+      background: rgba(var(--accent-rgb), 0.14);
       border: 1px solid var(--border-color);
       color: var(--accent-cyan);
     }
@@ -954,7 +957,7 @@
     .project-thumb {
       position: relative;
       height: 220px;
-      background: linear-gradient(135deg, #14171C 0%, #232830 100%);
+      background: linear-gradient(135deg, #15211D 0%, #1F2D28 100%);
       overflow: hidden;
       border-bottom: 1px solid var(--border-color);
     }
@@ -980,7 +983,7 @@
       font-weight: 800;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      background: rgba(14, 16, 19, 0.88);
+      background: rgba(15, 24, 21, 0.88);
       color: var(--accent-cyan);
       border: 1px solid var(--accent-cyan);
       backdrop-filter: blur(8px);
@@ -996,7 +999,7 @@
       justify-content: center;
       padding: 24px;
       text-align: center;
-      background: radial-gradient(circle at 50% 30%, rgba(232, 176, 75, 0.24), rgba(20, 23, 28, 0.95));
+      background: radial-gradient(circle at 50% 30%, rgba(var(--accent-rgb), 0.24), rgba(21, 33, 29, 0.95));
     }
 
     .project-body {
@@ -1041,7 +1044,7 @@
       font-size: 0.75rem;
       padding: 4px 10px;
       border-radius: 6px;
-      background: rgba(232, 176, 75, 0.09);
+      background: rgba(var(--accent-rgb), 0.09);
       color: var(--text-secondary);
       border: 1px solid var(--border-color);
     }
@@ -1075,7 +1078,7 @@
       border-radius: 12px;
       overflow: hidden;
       border: 1px solid var(--border-color);
-      background: rgba(14, 16, 19, 0.55);
+      background: rgba(15, 24, 21, 0.55);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1121,7 +1124,7 @@
       width: 44px;
       height: 44px;
       border-radius: 11px;
-      background: rgba(232, 176, 75, 0.12);
+      background: rgba(var(--accent-rgb), 0.12);
       border: 1px solid var(--border-color);
       color: var(--accent-cyan);
       display: grid;
@@ -1168,7 +1171,7 @@
       width: 100%;
       padding: 12px 15px;
       border-radius: 10px;
-      background: rgba(14, 16, 19, 0.55);
+      background: rgba(15, 24, 21, 0.55);
       border: 1px solid var(--border-color);
       color: var(--text-primary);
       font-size: 0.94rem;
@@ -1181,7 +1184,7 @@
 
     .form-control:focus {
       border-color: var(--accent-cyan);
-      box-shadow: 0 0 0 3px rgba(232, 176, 75, 0.18);
+      box-shadow: 0 0 0 3px rgba(var(--accent-rgb), 0.18);
       outline: none;
     }
 
@@ -1201,7 +1204,7 @@
     .cta-banner {
       padding: 56px 40px;
       text-align: center;
-      background: linear-gradient(135deg, rgba(232, 176, 75, 0.18) 0%, rgba(232, 176, 75, 0.08) 100%);
+      background: linear-gradient(135deg, rgba(var(--accent-rgb), 0.18) 0%, rgba(var(--accent-rgb), 0.08) 100%);
       border: 1px solid var(--border-hover);
       border-radius: 26px;
       margin-bottom: 80px;
@@ -1314,7 +1317,7 @@
       width: 38px;
       height: 38px;
       border-radius: 10px;
-      background: rgba(232, 176, 75, 0.12);
+      background: rgba(var(--accent-rgb), 0.12);
       border: 1px solid var(--border-color);
       color: var(--text-primary);
       cursor: pointer;
@@ -1329,7 +1332,7 @@
       overflow: hidden;
       margin-bottom: 22px;
       border: 1px solid var(--border-color);
-      background: #0E1013;
+      background: #0F1815;
     }
 
     .modal-media img {
@@ -1428,6 +1431,37 @@
     .value-icon, .skill-cat-icon, .service-icon, .brand-logo {
       font-family: var(--font-heading); font-weight: 600; font-size: 0.95rem; letter-spacing: 0.02em;
     }
+
+    /* Foto profil 3D: lapisan belakang, kilau mengikuti kursor, bayangan menyesuaikan tema */
+    .profile-3d-stage::before {
+      content: "";
+      position: absolute;
+      inset: 16px -16px -16px 16px;
+      border-radius: 24px;
+      border: 1.5px solid rgba(var(--accent-rgb), 0.35);
+      background: rgba(var(--accent-rgb), 0.06);
+      transform: translateZ(-34px);
+      pointer-events: none;
+    }
+    .profile-frame::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 3;
+      background: radial-gradient(circle at var(--gx, 50%) var(--gy, 25%), rgba(255, 255, 255, 0.28), transparent 55%);
+      opacity: var(--glare, 0);
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+    [data-theme="light"] .profile-3d-stage::before { border-color: rgba(var(--accent-rgb), 0.35); background: rgba(var(--accent-rgb), 0.06); }
+    [data-theme="light"] .profile-frame {
+      box-shadow: 0 28px 50px rgba(27, 36, 32, 0.22), 0 6px 14px rgba(27, 36, 32, 0.12);
+      border-color: rgba(var(--accent-rgb), 0.4);
+      background: linear-gradient(160deg, rgba(var(--accent-rgb), 0.14), rgba(245, 240, 228, 0.95));
+    }
+    [data-theme="light"] .profile-frame::after {
+      background: linear-gradient(to top, rgba(245, 240, 228, 0.75) 0%, transparent 40%);
+    }
   </style>
 </head>
 <body>
@@ -1482,7 +1516,7 @@
           </div>
 
           <p class="hero-name">Machael Wijaya, S.Kom.</p>
-          <h1 class="hero-title" data-i18n="hero.title">Membantu bisnis merapikan sistem, pembukuan, dan kehadiran digitalnya.</h1>
+          <h1 class="hero-title" data-i18n="hero.title">Membantu bisnis merapikan sistem, pembukuan, perpajakan, dan go digital.</h1>
           <p class="hero-slogan" data-i18n="hero.slogan">
             “Solusi Tepat, Kerja Berkualitas, Bisnis Lebih Berkembang.”
           </p>
@@ -1925,13 +1959,13 @@
     const SITE_CONFIG = {
       profileImage: "https://drive.google.com/file/d/1hVpqPhzY5xV8nmDkqgY8XIHsmBDDVO0W/view?usp=drive_link",
 
-      cvUrl: "https://drive.google.com/file/d/1howy048LJxIVGaGMhI8L458VhMdP0P71/view?usp=drive_link",
+      cvUrl: "https://drive.google.com/file/d/1PVZyTucPPctKJqCcXP4Aa6T6eeDEHT9w/view?usp=drive_link",
 
       domain: "https://machaelwijaya.my.id",
 
       settings: {
         defaultLanguage: "id",
-        defaultTheme: "dark" 
+        defaultTheme: "light" 
       },
 
       // Informasi Kontak Resmi
@@ -2086,7 +2120,7 @@
           desc: "Saya membantu mengembangkan solusi digital melalui teknologi, analisis, kreativitas, dan pemahaman bisnis.",
           location: "Bekasi, Jawa Barat, Indonesia",
           status: "Terbuka untuk peluang kerja, freelance, proyek digital, kerja jarak jauh, dan kolaborasi bisnis",
-          title: "Membantu bisnis merapikan sistem, pembukuan, dan kehadiran digitalnya.",
+          title: "Membantu bisnis merapikan sistem, pembukuan, perpajakan, dan go digital.",
           btnPortfolio: "Lihat Portofolio",
           btnContact: "Hubungi Saya",
           btnCv: "Lihat CV",
@@ -2265,11 +2299,11 @@
               role: "Staff Konsultan Akuntansi dan Perpajakan",
               period: "Februari 2025 – Oktober 2026",
               tasks: [
-                "Menganalisis kebutuhan bisnis dan administrasi klien.",
-                "Mengolah data keuangan, pencatatan transaksi, rekonsiliasi, dan laporan keuangan.",
-                "Membantu administrasi perpajakan dan dokumentasi.",
-                "Berkomunikasi dengan klien serta membantu pengelolaan dokumen dan tenggat pekerjaan.",
-                "Mendukung perbaikan proses kerja melalui pemanfaatan teknologi."
+                "Menghitung, menyusun, dan melaporkan administrasi pajak bulanan yang meliputi SPT PPh 21, 23, 25, PPh Final, serta PPN.",
+                "Menyusun laporan keuangan perusahaan secara komprehensif dan akurat dengan mematuhi Standar Akuntansi Keuangan (SAK) yang berlaku.",
+                "Menangani penyusunan dan pelaporan SPT Tahunan secara tepat waktu, baik untuk Wajib Pajak Orang Pribadi (OP) maupun Wajib Pajak Badan.",
+                "Menyiapkan, memverifikasi, dan merapikan dokumen pendukung laporan keuangan guna menjamin validitas data serta kesiapan menghadapi audit.",
+                "Menyelaraskan pencatatan akuntansi komersial dengan regulasi perpajakan terkini untuk memastikan kepatuhan penuh dan meminimalisasi risiko sanksi pajak."
               ]
             },
             {
@@ -2378,7 +2412,7 @@
           contact: "Contact"
         },
         hero: {
-          title: "Helping businesses organize their systems, bookkeeping, and digital presence.",
+          title: "Helping businesses organize their systems, bookkeeping, taxation, and go digital.",
           badge: "DIGITAL SOLUTIONS SPECIALIST",
           slogan: "“Right Solutions, Quality Work, Growing Your Business.”",
           desc: "I help develop digital solutions through technology, analysis, creativity, and business understanding.",
@@ -2655,7 +2689,7 @@
 
     // ---- Render konten ----
     let currentLang = ["id", "en"].includes(loadPref("mw-lang")) ? loadPref("mw-lang") : (SITE_CONFIG.settings.defaultLanguage || "id");
-    let currentTheme = ["dark", "light"].includes(loadPref("mw-theme")) ? loadPref("mw-theme") : (SITE_CONFIG.settings.defaultTheme || "dark");
+    let currentTheme = ["dark", "light"].includes(loadPref("mw-theme")) ? loadPref("mw-theme") : (SITE_CONFIG.settings.defaultTheme || "light");
     if (!["id", "en"].includes(currentLang)) currentLang = "id";
     let activePortfolioFilter = "all";
 
@@ -2934,7 +2968,7 @@
       const eduList = document.getElementById("education-list");
 
       eduList.innerHTML = eduData.eduItems.map(item => `
-        <div style="padding: 16px; border-radius: 12px; background: rgba(232, 176, 75, 0.06); border: 1px solid var(--border-color);">
+        <div style="padding: 16px; border-radius: 12px; background: rgba(var(--accent-rgb), 0.06); border: 1px solid var(--border-color);">
           <div style="display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap;">
             <strong style="font-family: var(--font-heading); font-size: 1.05rem;">${escapeHtml(item.degree)}</strong>
             <span class="timeline-period">${escapeHtml(item.period)}</span>
@@ -2959,7 +2993,7 @@
       const titleText = currentLang === "id" ? cert.title_id : cert.title_en;
       
       const certFallbackHtml = `
-        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; padding: 24px; background: radial-gradient(circle at 50% 50%, rgba(232, 176, 75, 0.15), transparent);">
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; padding: 24px; background: radial-gradient(circle at 50% 50%, rgba(var(--accent-rgb), 0.15), transparent);">
           <div style="font-size: 2.8rem; margin-bottom: 12px; filter: drop-shadow(0 0 12px rgba(56,189,248,0.4));"></div>
           <div style="font-weight: 800; font-size: 1.1rem; font-family: var(--font-heading); color: var(--text-primary); margin-bottom: 6px;">${escapeHtml(titleText)}</div>
           <div style="font-size: 0.8rem; color: var(--accent-cyan); text-transform: uppercase; letter-spacing: 0.05em;">${currentLang === "id" ? "Dokumen tersedia" : "Document available"}</div>
@@ -3238,6 +3272,31 @@
         );
         window.location.href = `mailto:${SITE_CONFIG.contact.email}?subject=${mailSubject}&body=${mailBody}`;
       });
+
+      // Efek miring 3D pada foto profil. Hanya untuk mouse, dan mati jika pengguna memilih mengurangi animasi.
+      const tiltStage = document.getElementById("profile-stage");
+      const tiltFrame = document.getElementById("profile-frame-container");
+      const canTilt = window.matchMedia("(hover: hover) and (pointer: fine)").matches &&
+                      !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (tiltStage && tiltFrame && canTilt) {
+        const area = tiltStage.parentElement; // area tetap (tidak ikut berputar) agar gerakan tidak bergetar
+        const MAX_DEG = 11;
+        area.addEventListener("pointermove", (e) => {
+          const r = area.getBoundingClientRect();
+          const px = Math.min(Math.max((e.clientX - r.left) / r.width, 0), 1);
+          const py = Math.min(Math.max((e.clientY - r.top) / r.height, 0), 1);
+          tiltStage.style.transition = "transform 0.12s ease-out";
+          tiltStage.style.transform = "rotateX(" + ((0.5 - py) * MAX_DEG * 2).toFixed(2) + "deg) rotateY(" + ((px - 0.5) * MAX_DEG * 2).toFixed(2) + "deg)";
+          tiltFrame.style.setProperty("--gx", (px * 100).toFixed(1) + "%");
+          tiltFrame.style.setProperty("--gy", (py * 100).toFixed(1) + "%");
+          tiltFrame.style.setProperty("--glare", "1");
+        });
+        area.addEventListener("pointerleave", () => {
+          tiltStage.style.transition = "transform 0.6s ease";
+          tiltStage.style.transform = "rotateX(0deg) rotateY(0deg)";
+          tiltFrame.style.setProperty("--glare", "0");
+        });
+      }
 
       // Intersection Observer untuk Scroll Reveal
       const observer = new IntersectionObserver((entries) => {
