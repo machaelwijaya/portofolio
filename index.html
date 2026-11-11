@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="google-site-verification" content="64HwCtoIaGlxEZmCWLqpm9ar32eCGv4QzORq8Qm5pjg" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-kGKDkP4uC8relycoqxKRFSIllGzR2NvaVLJWxPaouFA=' 'sha256-oC3oaA8F70HbAyr5tmcwwru46Fq4isOXGa0oPOrvRFw='; style-src-elem 'sha256-xXWlagZGl1I+7BMCc3kCnnt8Nu9LY1689YJy8mmrqww=' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://drive.google.com https://*.googleusercontent.com; connect-src 'none'; frame-src 'none'; object-src 'none'; media-src 'none'; manifest-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-kGKDkP4uC8relycoqxKRFSIllGzR2NvaVLJWxPaouFA=' 'sha256-oC3oaA8F70HbAyr5tmcwwru46Fq4isOXGa0oPOrvRFw='; style-src-elem 'sha256-ZJ7zLx7nsczfqcELjkaY0WfPauIDalYYQiI+XpgYCOY=' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://drive.google.com https://*.googleusercontent.com; connect-src 'none'; frame-src 'none'; object-src 'none'; media-src 'none'; manifest-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
   <script>
 (function () {
@@ -38,12 +38,13 @@
   <meta name="twitter:card" content="summary" />
 
   <!-- Favicon SVG Inline -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%231F5C4A'/%3E%3Cstop offset='100%25' stop-color='%231F5C4A'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='%230E1013'/%3E%3Crect x='4' y='4' width='92' height='92' rx='18' fill='none' stroke='url(%23g)' stroke-width='4'/%3E%3Ctext x='50' y='65' font-family='sans-serif' font-size='44' font-weight='800' fill='%231F5C4A' text-anchor='middle'%3EMW%3C/text%3E%3C/svg%3E" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="favicon.png" type="image/png" sizes="192x192" />
 
   <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
   <!-- Schema.org Structured Data (Person) -->
   <script type="application/ld+json">
@@ -71,52 +72,55 @@
   <style>
     /* Css variables & theme palette */
     :root {
-      --bg-primary: #0F1815;
-      --bg-secondary: #15211D;
-      --bg-card: rgba(21, 33, 29, 0.72);
-      --bg-card-hover: rgba(30, 44, 39, 0.88);
-      --bg-glass: rgba(15, 24, 21, 0.82);
-      --on-accent: #0C1511;
-      --text-primary: #F3EFE4;
-      --text-secondary: #A9B3AC;
-      --text-muted: #7F8B84;
-      /* Aksen utama (tombol, tautan aktif) dan aksen sorot (judul kecil, slogan) */
-      --accent-blue: #8DBFA3;
-      --accent-cyan: #E39A73;
-      --accent-rgb: 141, 191, 163;
+      --bg-primary: #0B131B;
+      --bg-secondary: #111C27;
+      --bg-card: rgba(17, 28, 39, 0.78);
+      --bg-card-hover: rgba(26, 40, 54, 0.92);
+      --bg-glass: rgba(11, 19, 27, 0.88);
+      --on-accent: #0A121A;
+      --text-primary: #EDEFEA;
+      --text-secondary: #A5B0BB;
+      --text-muted: #7E8A96;
+      /* Aksen utama: biru baja (tombol, elemen aktif). Aksen sorot: kuningan (label, slogan). */
+      --accent-blue: #93B4D4;
+      --accent-cyan: #D8B56A;
+      --accent-rgb: 147, 180, 212;
+      --rule: rgba(147, 180, 212, 0.05);
       --accent-gradient: var(--accent-blue);
-      --border-color: rgba(var(--accent-rgb), 0.16);
-      --border-hover: rgba(var(--accent-rgb), 0.45);
+      --border-color: rgba(var(--accent-rgb), 0.17);
+      --border-hover: rgba(var(--accent-rgb), 0.5);
       --glow-blue: 0 0 0 0 transparent;
       --glow-cyan: 0 0 0 0 transparent;
-      --shadow-card: 0 18px 40px -15px rgba(0, 0, 0, 0.6);
-      --radius-lg: 20px;
-      --radius-md: 14px;
-      --radius-sm: 10px;
+      --shadow-card: 0 18px 40px -16px rgba(0, 0, 0, 0.65);
+      --radius-lg: 14px;
+      --radius-md: 10px;
+      --radius-sm: 6px;
       --font-heading: 'Fraunces', Georgia, serif;
       --font-body: 'DM Sans', system-ui, sans-serif;
+      --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
       --transition: all 0.32s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     [data-theme="light"] {
       --on-accent: #FFFFFF;
-      --bg-primary: #F5F0E4;
-      --bg-secondary: #EAE3D2;
-      --bg-card: rgba(255, 255, 255, 0.82);
-      --bg-card-hover: rgba(255, 255, 255, 0.98);
-      --bg-glass: rgba(245, 240, 228, 0.88);
-      --text-primary: #1B2420;
-      --text-secondary: #3A4640;
-      --text-muted: #59635C;
-      --accent-blue: #1F5C4A;
-      --accent-cyan: #B24A25;
-      --accent-rgb: 31, 92, 74;
+      --bg-primary: #FAF7F0;
+      --bg-secondary: #F1ECE0;
+      --bg-card: rgba(255, 255, 255, 0.9);
+      --bg-card-hover: #FFFFFF;
+      --bg-glass: rgba(250, 247, 240, 0.9);
+      --text-primary: #14202B;
+      --text-secondary: #3A4755;
+      --text-muted: #5A6672;
+      --accent-blue: #1B3A57;
+      --accent-cyan: #82621F;
+      --accent-rgb: 27, 58, 87;
+      --rule: rgba(27, 58, 87, 0.06);
       --accent-gradient: var(--accent-blue);
-      --border-color: rgba(var(--accent-rgb), 0.16);
+      --border-color: rgba(var(--accent-rgb), 0.15);
       --border-hover: rgba(var(--accent-rgb), 0.45);
       --glow-blue: 0 0 0 0 transparent;
       --glow-cyan: 0 0 0 0 transparent;
-      --shadow-card: 0 14px 32px -10px rgba(27, 36, 32, 0.10);
+      --shadow-card: 0 14px 30px -12px rgba(20, 32, 43, 0.12);
     }
 
     /* Reset & base styles */
@@ -201,7 +205,7 @@
       align-items: center;
       gap: 8px;
       padding: 6px 16px;
-      border-radius: 999px;
+      border-radius: 6px;
       font-size: 0.78rem;
       font-weight: 700;
       letter-spacing: 0.12em;
@@ -431,7 +435,7 @@
       align-items: center;
       gap: 10px;
       padding: 7px 16px;
-      border-radius: 999px;
+      border-radius: 6px;
       background: rgba(var(--accent-rgb), 0.12);
       border: 1px solid var(--border-hover);
       font-size: 0.8rem;
@@ -558,8 +562,8 @@
       position: relative;
       width: 100%;
       height: 100%;
-      border-radius: 24px;
-      background: linear-gradient(160deg, rgba(var(--accent-rgb), 0.22), rgba(21, 33, 29, 0.9));
+      border-radius: 16px;
+      background: linear-gradient(160deg, rgba(var(--accent-rgb), 0.22), rgba(17, 28, 39, 0.9));
       border: 1.5px solid rgba(var(--accent-rgb), 0.45);
       box-shadow: 0 25px 60px rgba(0, 0, 0, 0.65), var(--glow-blue);
       overflow: hidden;
@@ -573,7 +577,7 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(to top, rgba(15, 24, 21, 0.85) 0%, transparent 45%);
+      background: linear-gradient(to top, rgba(11, 19, 27, 0.85) 0%, transparent 45%);
       pointer-events: none;
     }
 
@@ -884,7 +888,7 @@
 
     .timeline-period {
       padding: 5px 13px;
-      border-radius: 999px;
+      border-radius: 6px;
       font-size: 0.8rem;
       font-weight: 600;
       background: rgba(var(--accent-rgb), 0.14);
@@ -924,7 +928,7 @@
 
     .filter-btn {
       padding: 9px 18px;
-      border-radius: 999px;
+      border-radius: 6px;
       font-size: 0.86rem;
       font-weight: 600;
       background: var(--bg-card);
@@ -957,7 +961,7 @@
     .project-thumb {
       position: relative;
       height: 220px;
-      background: linear-gradient(135deg, #15211D 0%, #1F2D28 100%);
+      background: linear-gradient(135deg, #111C27 0%, #1E2D3B 100%);
       overflow: hidden;
       border-bottom: 1px solid var(--border-color);
     }
@@ -978,12 +982,12 @@
       top: 14px;
       left: 14px;
       padding: 5px 12px;
-      border-radius: 999px;
+      border-radius: 6px;
       font-size: 0.72rem;
       font-weight: 800;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      background: rgba(15, 24, 21, 0.88);
+      background: rgba(11, 19, 27, 0.88);
       color: var(--accent-cyan);
       border: 1px solid var(--accent-cyan);
       backdrop-filter: blur(8px);
@@ -999,7 +1003,7 @@
       justify-content: center;
       padding: 24px;
       text-align: center;
-      background: radial-gradient(circle at 50% 30%, rgba(var(--accent-rgb), 0.24), rgba(21, 33, 29, 0.95));
+      background: radial-gradient(circle at 50% 30%, rgba(var(--accent-rgb), 0.24), rgba(17, 28, 39, 0.95));
     }
 
     .project-body {
@@ -1078,7 +1082,7 @@
       border-radius: 12px;
       overflow: hidden;
       border: 1px solid var(--border-color);
-      background: rgba(15, 24, 21, 0.55);
+      background: rgba(11, 19, 27, 0.55);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1171,7 +1175,7 @@
       width: 100%;
       padding: 12px 15px;
       border-radius: 10px;
-      background: rgba(15, 24, 21, 0.55);
+      background: rgba(11, 19, 27, 0.55);
       border: 1px solid var(--border-color);
       color: var(--text-primary);
       font-size: 0.94rem;
@@ -1206,7 +1210,7 @@
       text-align: center;
       background: linear-gradient(135deg, rgba(var(--accent-rgb), 0.18) 0%, rgba(var(--accent-rgb), 0.08) 100%);
       border: 1px solid var(--border-hover);
-      border-radius: 26px;
+      border-radius: 16px;
       margin-bottom: 80px;
     }
 
@@ -1332,7 +1336,7 @@
       overflow: hidden;
       margin-bottom: 22px;
       border: 1px solid var(--border-color);
-      background: #0F1815;
+      background: #0B131B;
     }
 
     .modal-media img {
@@ -1437,7 +1441,7 @@
       content: "";
       position: absolute;
       inset: 16px -16px -16px 16px;
-      border-radius: 24px;
+      border-radius: 16px;
       border: 1.5px solid rgba(var(--accent-rgb), 0.35);
       background: rgba(var(--accent-rgb), 0.06);
       transform: translateZ(-34px);
@@ -1455,13 +1459,31 @@
     }
     [data-theme="light"] .profile-3d-stage::before { border-color: rgba(var(--accent-rgb), 0.35); background: rgba(var(--accent-rgb), 0.06); }
     [data-theme="light"] .profile-frame {
-      box-shadow: 0 28px 50px rgba(27, 36, 32, 0.22), 0 6px 14px rgba(27, 36, 32, 0.12);
+      box-shadow: 0 28px 50px rgba(20, 32, 43, 0.22), 0 6px 14px rgba(20, 32, 43, 0.12);
       border-color: rgba(var(--accent-rgb), 0.4);
-      background: linear-gradient(160deg, rgba(var(--accent-rgb), 0.14), rgba(245, 240, 228, 0.95));
+      background: linear-gradient(160deg, rgba(var(--accent-rgb), 0.14), rgba(250, 247, 240, 0.95));
     }
     [data-theme="light"] .profile-frame::after {
-      background: linear-gradient(to top, rgba(245, 240, 228, 0.75) 0%, transparent 40%);
+      background: linear-gradient(to top, rgba(250, 247, 240, 0.75) 0%, transparent 40%);
     }
+
+    /* Gaya buku besar: garis kertas halus, label monospace, pemisah tipis */
+    body {
+      font-variant-numeric: tabular-nums;
+      background-image: repeating-linear-gradient(to bottom, transparent 0, transparent 35px, var(--rule) 35px, var(--rule) 36px);
+    }
+    main > section + section { border-top: 1px solid var(--border-color); }
+    .section-badge, .contact-label, .status-pill, .filter-btn, .skill-tag {
+      font-family: var(--font-mono);
+    }
+    .section-badge, .contact-label, .status-pill {
+      font-size: 0.72rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase;
+    }
+    .skill-tag { font-size: 0.78rem; }
+    .value-icon, .skill-cat-icon, .service-icon, .brand-logo {
+      font-family: var(--font-mono); font-weight: 500; letter-spacing: 0;
+    }
+    ::selection { background: rgba(var(--accent-rgb), 0.28); }
   </style>
 </head>
 <body>
@@ -1757,7 +1779,7 @@
 
               <div class="contact-list" style="margin-top: 24px;">
                 <div class="contact-item">
-                  <div class="contact-icon"></div>
+                  <div class="contact-icon"><svg aria-hidden="true" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
                   <div>
                     <div class="contact-label">Email</div>
                     <div class="contact-value" id="display-email">machael.wijaya@alumni.rosma.ac.id</div>
@@ -1768,7 +1790,7 @@
                 </div>
 
                 <div class="contact-item">
-                  <div class="contact-icon"></div>
+                  <div class="contact-icon"><svg aria-hidden="true" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.126.556 4.124 1.529 5.855l-1.529 5.581 5.729-1.503c1.694.909 3.631 1.427 5.691 1.427 6.627 0 12-5.373 12-12s-5.373-11.36-11.42-11.36z"/></svg></div>
                   <div>
                     <div class="contact-label">WhatsApp</div>
                     <div class="contact-value">085158902121</div>
@@ -1776,7 +1798,7 @@
                 </div>
 
                 <div class="contact-item">
-                  <div class="contact-icon"></div>
+                  <div class="contact-icon"><svg aria-hidden="true" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></div>
                   <div>
                     <div class="contact-label">Instagram</div>
                     <div class="contact-value">@mcalls__</div>
@@ -1784,7 +1806,7 @@
                 </div>
 
                 <div class="contact-item">
-                  <div class="contact-icon"></div>
+                  <div class="contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.686 7-11a7 7 0 1 0-14 0c0 5.314 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
                   <div>
                     <div class="contact-label" data-i18n="contact.locLabel">Lokasi & Ketersediaan</div>
                     <div class="contact-value" data-i18n="contact.locValue">
